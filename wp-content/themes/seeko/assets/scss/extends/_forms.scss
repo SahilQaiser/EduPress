@@ -1,0 +1,33 @@
+// forms extends
+
+// form control sm
+
+
+// form groups
+
+%form-group {
+  margin-bottom: $form-group-margin-bottom;
+}
+
+// form text
+
+%form-text {
+  display: block;
+  margin-top: $form-text-margin-top;
+  font-size: $font-size-sm;
+}
+
+
+// label grey
+
+%label {
+  font-size: $font-size-sm;
+  color: $secondary;
+}
+
+%form-control-sm {
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  font-size: $font-size-sm;
+  line-height: $input-line-height-sm;
+  @include border-radius($input-border-radius-sm);
+}

@@ -1,0 +1,78 @@
+@if $enable-big-shadow {
+	.enable-shadow {
+		@include all-inputs {
+			@include big-shadow-focus($input-big-shadow-focus);
+			&[disabled], &[readonly], &.form-control-plaintext {
+			}
+		}
+		.fluid-width-video-wrapper, .sq-big-shadow {
+		}
+		& .enable-dark, &.enable-dark, .enable-dark & {
+			@include all-inputs {
+			}
+		}
+		input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before, input[type="checkbox"]:checked + .check-icon:before, input[type="radio"]:checked + .check-icon:before {
+			box-shadow: $check-big-shadow-focus;
+		}
+		& .enable-accent, &.enable-accent, .enable-accent & {
+			input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
+				box-shadow: $dark-form-check-shadow-focus;
+			}
+		}
+		.was-validated .form-control:not([disabled]):not([readonly]):valid, .form-control:not([disabled]):not([readonly]).is-valid, .was-validated .custom-select:valid, .custom-select.is-valid {
+			box-shadow: $big-shadow-base $input-big-shadow-valid;
+		}
+		.was-validated .form-control:not([disabled]):not([readonly]):invalid, .form-control:not([disabled]):not([readonly]).is-invalid, .was-validated .custom-select:invalid, .custom-select.is-invalid {
+			box-shadow: $big-shadow-base $input-big-shadow-invalid;
+		}
+		.btn-outline-facebook {
+		}
+		.btn-outline-google {
+		}
+		.no-shadow {
+		}
+		.accordion-card.show {
+		}
+		& .enable-dark, &.enable-dark, .enable-dark & {
+			.accordion-card.show {
+				@include big-shadow-default($dark-accordion-card-big-shadow-default, $dark-accordion-card-big-shadow-hover);
+				@include big-shadow-focus($dark-accordion-card-big-shadow-hover);
+			}
+		}
+		.accordion-card {
+			@include all-inputs {
+			}
+		}
+		.page-numbers, .page-links > *:not(.page-links-title) {
+			&:hover {
+			}
+		}
+		.page-numbers.current, .page-numbers:focus, .page-links > span:not(.page-links-title), .page-links > span:not(.page-links-title):hover, .widget_calendar #today {
+			box-shadow: $pagination-big-shadow-focus;
+		}
+		.next.page-numbers, .prev.page-numbers {
+			@include hover-focus {
+			}
+		}
+		#whats-new-content {
+			&.active {
+				@include big-shadow-focus($input-big-shadow-focus);
+			}
+		}
+		.pricing-basic {
+			@include big-shadow-default($pricing-card-basic-bg, $pricing-card-basic-bg);
+		}
+		.pricing-intermediate {
+			@include big-shadow-default($pricing-card-intermediate-bg, $pricing-card-intermediate-bg);
+		}
+		.pricing-pro {
+			@include big-shadow-default($pricing-card-pro-bg, $pricing-card-pro-bg);
+		}
+		.filter-search-module input#members_search, .filter-search-module input[data-toggle="modal"] {
+			@include big-shadow-focus($filter-search-module-shadow-focus);
+		}
+		.filter-search-module.filter-search-shortcode input[data-toggle="modal"] {
+			@include big-shadow-default($filter-search-module-shadow-default);
+		}
+	}
+}

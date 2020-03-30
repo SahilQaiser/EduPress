@@ -1,0 +1,67 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	color: $headings-color;
+}
+h1, .h1 {
+	@extend %h1;
+}
+h2, .h2 {
+	@extend %h2;
+}
+h3, .h3 {
+	@extend %h3;
+}
+h4, .h4 {
+	@extend %h4;
+}
+h5, .h5 {
+	@extend %h5;
+}
+h6, .h6 {
+	@extend %h6;
+}
+.display {
+	@include heading-modular-scale(display);
+	//font-weight: $display-font-weight;
+}
+.hr {
+	span {
+		background: $body-bg;
+	}
+}
+.hr-label::before, .hr-label::after {
+	background: $border-color;
+}
+ul.list-styled {
+	li {
+		&:before {
+			background-color: $primary;
+			box-shadow: 0 4px 7px 0 rgba($primary, .34);
+		}
+		li {
+			&::before {
+				border: 2px solid $primary;
+			}
+		}
+	}
+}
+.blockquote, blockquote {
+	font-family: $blockquote-font-family;
+	border-left: 4px solid $primary;
+	color: $blockquote-color;
+}
+.bq-right, blockquote[style="text-align:right"] {
+	border-right: 4px solid $primary;
+	.blockquote-footer {
+		&::before, &::after {
+			right: calc(-#{$blockquote-spacing} - 1px);
+		}
+		&::after {
+			border-radius: 0 0 $border-radius 0;
+			border-right: 1px solid $primary;
+			border-bottom: 1px solid $primary;
+		}
+	}
+}
+cite, cite a {
+	font-family: $font-family-primary;
+}

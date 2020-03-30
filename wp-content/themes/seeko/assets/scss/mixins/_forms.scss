@@ -1,0 +1,277 @@
+// Form control focus state
+//
+// Generate a customized focus state and for any input with the specified color,
+// which defaults to the `$input-focus-border-color` variable.
+//
+// We highly encourage you to not customize the default value, but instead use
+// this to tweak colors on an as-needed basis. This aesthetic change is based on
+// WebKit's default styles, but applicable to a wider range of browsers. Its
+// usability and accessibility should be taken into account with any change.
+//
+// Example usage: change the default blue border and shadow to white for better
+// contrast against a dark gray background.
+
+@mixin placeholder {
+  &::-moz-placeholder {
+    @content;
+  }
+  
+  &:-ms-input-placeholder {
+    @content;
+  }
+  
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin all-inputs {
+  input:not([type]),
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="text"],
+  input[type="url"],
+  textarea,
+  select,
+  .form-control {
+    @content;
+  }
+}
+
+
+@mixin all-height-inputs {
+  input:not([type]),
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="text"],
+  input[type="url"],
+  select:not([size]):not([multiple]),
+  .form-control {
+    @content;
+  }
+}
+
+
+@mixin form-control-colors($background-color, $color, $placeholder-color, $border-color, $disabled-background ) {
+  background-color: $background-color;
+  color: $color;
+  border-color: $border-color;
+  
+ @include placeholder {
+    color: $placeholder-color;
+  }
+  &:disabled,
+  &[readonly] {
+    background-color: $disabled-background;
+  }
+}
+
+
+@mixin form-control-hover($hover-border-color) {
+  &:hover {
+    border-color: $hover-border-color;
+  }
+}
+
+@mixin form-control-focus($focus-border-color) {
+  
+  &:focus,
+  &:hover:focus {
+    border-color: $focus-border-color;
+    outline: 0;
+  }
+}
+
+
+
+@mixin form-validation-state($state, $color) {
+
+  .#{$state}-feedback {
+    display: none;
+    width: 100%;
+    margin-top: $form-feedback-margin-top;
+    font-size: $form-feedback-font-size;
+    color: darken($color, 5);
+  }
+
+  .#{$state}-tooltip {
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    display: none;
+    width: 250px;
+    padding: .5rem;
+    margin-top: .1rem;
+    font-size: .875rem;
+    line-height: 1;
+    color: #fff;
+    background-color: rgba($color, .8);
+    border-radius: .2rem;
+  }
+
+  .form-control:not([disabled]):not([readonly]),
+  .custom-select {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      border-color: rgba($color, .5);
+
+      &:focus {
+       border-color: rgba($color, .5);
+      //box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  .form-check-input {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      ~ .form-check-label {
+        color: darken($color, 5);
+      }
+    }
+  }
+
+  .custom-control-input {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      ~ .custom-control-label {
+       color: darken($color, 5);
+
+        &::before {
+          background-color: lighten($color, 25%);
+        }
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+
+      &:checked {
+        ~ .custom-control-label::before {
+          @include gradient-bg(lighten($color, 10%));
+        }
+      }
+
+      &:focus {
+        ~ .custom-control-label::before {
+          //box-shadow: 0 0 0 1px $body-bg, 0 0 0 $input-focus-width rgba($color, .25);
+        }
+      }
+    }
+  }
+
+  // custom file
+  .custom-file-input {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      ~ .custom-file-label {
+       border-color: rgba($color, .5);
+
+        &::before { border-color: inherit; }
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+
+      &:focus {
+        ~ .custom-file-label {
+          //box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        }
+      }
+    }
+  }
+}
+
+
+@mixin form-check-colors($label-color, $label-hover-color, $label-disabled-color, $icon-bg, $icon-border-color, $icon-disabled-border-color) {
+  input[type="checkbox"] + label,
+  input[type="radio"] + label,
+  .form-check-label,
+  .form-check-wrapper {
+    color: $label-color;
+  }
+  
+  input[type="checkbox"] + .check-icon,
+  input[type="radio"] + .check-icon,
+  input[type="checkbox"] + label,
+  input[type="radio"] + label,
+  .form-check-label {
+    &:before {
+      background-color: $icon-bg;
+      border-color: $icon-border-color;
+    }
+  }
+  
+  //hover
+  input[type="checkbox"]:not([disabled]) + label:hover,
+  input[type="radio"]:not([disabled]) + label:hover,
+  .form-check-input:not([disabled]) ~ .form-check-label:hover,
+  .form-check-wrapper:hover{
+    &:hover {
+      color: $label-hover-color;
+    }
+  }
+  
+  
+  
+  //disabled
+  input[type="checkbox"]:disabled + label,
+  input[type="radio"]:disabled + label,
+  .form-check-input:disabled ~ .form-check-label {
+      color: $label-disabled-color;
+  }
+  
+  input[type="checkbox"]:disabled + label,
+  input[type="radio"]:disabled + label,
+  .form-check-input:disabled ~ .form-check-label,
+  input[type="checkbox"]:disabled + .check-icon,
+  input[type="radio"]:disabled + .check-icon {
+      &:before {
+        border-color: $icon-disabled-border-color;
+      }
+  }
+}
+
+@mixin form-check-colors-checked($icon-checked-color, $icon-checked-border-color, $checked-text-color) {
+  //checked colors
+  
+  input[type="checkbox"] + label:after,
+  input[type="checkbox"] + .check-icon:after {
+    color: $icon-checked-color;
+  }
+  
+  input[type="radio"] + label:after,
+  input[type="radio"] + .check-icon:after {
+    background-color: $icon-checked-color;
+  }
+  
+  input[type="checkbox"]:checked + label,
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + .check-icon,
+  input[type="radio"]:checked + .check-icon {
+    color: $checked-text-color;
+    &:before {
+      border-color: $icon-checked-border-color;
+    }
+  }
+}

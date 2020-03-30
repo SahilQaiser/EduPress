@@ -1,0 +1,162 @@
+/* Seeko Feature List */
+
+.sko-feature-list {
+  @extend %list-unstyled;
+
+  .sko-item-title {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: calc((#{$h3-font-size-lg} * #{$headings-line-height} - #{$spacer}/2) / 2);
+      left: unquote("calc(-#{spacer(2)} / 2)");
+      width: spacer(2);
+      height: spacer(2);
+      background: $primary;
+      border-radius: 50%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(#{$h3-font-size-lg} * #{$headings-line-height});
+      bottom: 0;
+      left: 0;
+      width: 1px;
+    }
+  }
+
+  .sko-item-right,
+  .sko-item-left {
+    @include flex();
+    @include flex-direction(column);
+  }
+
+  .sko-item-left {
+    @include justify-content(center);
+  }
+  .sko-item-right {
+    @include justify-content(space-between);
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      @include flex-grow(1);
+      padding-top: spacer(5);
+    }
+
+  }
+
+  .sko-item-content {
+    > h3 {
+      margin: 0;
+      padding-bottom: $spacer;
+    }
+  }
+
+  .sko-item-left,
+  .sko-item-right:before,
+  .sko-item-right:after,
+  .sko-item-content > div,
+  .sko-item-title:after {
+    border-left: 1px solid $primary;
+  }
+
+  .sko-item-content > h3,
+  .sko-item-content > div,
+  .sko-item-left {
+    padding-left: spacer(6);
+    padding-right: spacer(6);
+  }
+
+  .sko-item-left {
+    padding-top: spacer(5);
+    padding-bottom: spacer(5);
+  }
+}
+
+
+@include media-breakpoint-up(lg) {
+  .sko-feature-list {
+    li {
+      @include flex();
+
+      .sko-item-left,
+      .sko-item-right {
+        width: 50%;
+      }
+
+
+      &:nth-child(2n) {
+        @include flex-direction(row-reverse);
+
+        .sko-item-right {
+          margin-right: -1px;
+          text-align: right;
+        }
+
+        .sko-item-right:before,
+        .sko-item-right:after,
+        .sko-item-content > div {
+          border-left: none;
+          border-right: 1px solid $primary;
+        }
+
+        .sko-item-title {
+          &:before,
+          &:after {
+            left: inherit;
+          }
+          &:before {
+            right: unquote("calc(-#{spacer(2)} / 2)");
+          }
+          &:after {
+            right: 0;
+          }
+        }
+      }
+
+      &:first-child {
+        .sko-item-right:before {
+          border: none;
+        }
+      }
+
+      &:last-child {
+        .sko-item-right:after,
+        .sko-item-content > div,
+        .sko-item-title:after{
+          border: none;
+        }
+      }
+    }
+    .sko-item-left {
+      border: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

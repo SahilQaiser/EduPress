@@ -1,0 +1,334 @@
+// stylelint-disable declaration-no-important, selector-list-comma-newline-after
+
+
+/* Typography */
+
+//
+// Headings
+//
+
+html {
+  @include html-font-base();
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $headings-color;
+  clear: both;
+}
+
+p:not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6),
+blockquote,
+img,
+figure,
+pre,
+ul,
+ol,
+dl,
+table,
+.wp-block-cover {
+  @extend %headings-margin-top;
+}
+
+h1, .h1 { @extend %h1; }
+h2, .h2 { @extend %h2; }
+h3, .h3 { @extend %h3; }
+h4, .h4 { @extend %h4; }
+h5, .h5 { @extend %h5; }
+h6, .h6 { @extend %h6; }
+
+ h2, h3, h4, h5, h6,
+.h2, .h3, .h4, .h5, .h6,
+p {
+  margin-bottom: spacer(4);
+}
+ .entry-content div {
+   @extend %headings-margin-top;
+ }
+
+.lead, big {
+  @extend %lead;
+}
+
+// Type display classes
+
+
+// The theme uses one single display heading
+.display {
+  @include heading-modular-scale(display);
+  //font-weight: $display-font-weight;
+}
+
+
+
+//
+// Horizontal rules
+//
+
+hr {
+  margin: spacer(4) 0;
+}
+
+hr, 
+.hr {
+  @extend %hr;
+}
+
+.hr {
+  position: relative;
+  
+  span {
+    display: inline-block;
+    background: $body-bg;
+    padding: 0 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    
+  }
+}
+
+.hr-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hr-label::before,
+.hr-label::after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 20px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background: $border-color;
+  vertical-align: middle;
+}
+.hr-label span {
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 .5rem;
+}
+
+//
+// Emphasis
+//
+
+small,
+.small {
+  @extend %small;
+}
+
+mark,
+.mark {
+  padding: $mark-padding;
+  background-color: $mark-bg;
+}
+
+
+//
+// Unordered Lists
+//
+
+
+$list-dot-size: map-get($spacers, 2);
+
+ul.list-styled {
+  
+  &, ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding-left: map-get($spacers, 3)*2;
+    margin: 0;
+    position: relative;
+    
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0.5em;
+      left: map-get($spacers, 1);
+      @include size($list-dot-size, $list-dot-size);
+      background-color: $primary;
+      border-radius: 50%;
+      @include box-sizing(border-box);
+      box-shadow: 0 4px 7px 0 rgba($primary, 0.34);
+    }
+    
+    li {
+      &::before {
+        background-color: transparent;
+        border: 2px solid $primary;
+      }
+      
+      li {
+        &:before {
+          border-width: 1px;
+        }
+      }
+    }
+    
+  }
+}
+
+ul {
+  padding-left: spacer(5);
+}
+
+// List unstyled
+
+.list-unstyled {
+  @extend %list-unstyled;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @extend %list-inline;
+}
+
+//Ordered List
+
+ol {
+  padding-left: map-get($spacers, 3)*2;
+  
+  > li {
+    padding-left: map-get($spacers, 1);
+    
+    &:before {
+      content: '';
+      display: none;
+      position: inherit;
+      top: inherit;
+      left: inherit;
+      width: inherit;
+      height: inherit;
+      background-color: inherit;
+      border-radius: inherit;
+      box-shadow: inherit;
+      @include box-sizing(inherit);
+    }
+  }
+}
+
+//
+// Misc
+//
+
+// Builds on `abbr`
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+
+
+.blockquote,
+blockquote {
+  margin-bottom: spacer(5);
+  font-family: $blockquote-font-family;
+  font-size: $blockquote-font-size;
+  font-style: italic;
+  font-weight: $blockquote-font-weight;
+  border-left: 4px solid $primary;
+  word-wrap: break-word;
+  color: $blockquote-color;
+  padding-left: $blockquote-spacing;
+}
+
+p + blockquote {
+  margin-top: spacer(5);
+}
+
+
+blockquote + cite,
+blockquote + p cite {
+  padding-left: spacer(5);
+}
+
+blockquote + cite,
+blockquote + p cite,
+blockquote cite {
+  padding-top: 0;
+  margin-top: 0;
+  
+  &:after {
+    top: -1.5rem;
+    height: calc(50% + 1.5rem);
+  }
+}
+
+//blockquote
+
+// blockquote align right
+.bq-right,
+blockquote[style="text-align:right"] {
+  border-left: none;
+  padding-left: 0;
+  padding-right: $blockquote-spacing;
+  border-right: 4px solid $primary;
+  
+  .blockquote-footer {
+    &::before,
+    &::after {
+      left: inherit;
+      right: calc(-#{$blockquote-spacing} - 1px);
+    }
+
+    &::after {
+      border-left: none;
+      border-radius: 0 0 $border-radius 0; 
+      border-right: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+    }
+  }
+}
+
+
+// blockquote align center
+.bq-center,
+blockquote[style="text-align:center"] {
+  @extend %bq-center;
+  @extend %bq-center-lg;
+}
+
+// quote tag
+q {
+  font-size: $blockquote-font-size;
+  font-style: italic;
+}
+
+// cite tag
+
+cite,
+cite a {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-sm;
+  color: $blockquote-small-color;
+}
+
+cite a:hover {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+

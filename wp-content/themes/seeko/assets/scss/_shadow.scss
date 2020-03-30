@@ -1,0 +1,154 @@
+/* Enable Shadow */
+
+@if $enable-big-shadow {
+     .enable-shadow {
+      
+      //form elements
+      @include all-inputs {
+        @include big-shadow-focus($input-big-shadow-focus);
+        
+        &[disabled],
+        &[readonly],
+        &.form-control-plaintext {
+          box-shadow: none !important;
+        }
+      }
+      
+      .fluid-width-video-wrapper,
+      .sq-big-shadow {
+        @include big-shadow-default($input-big-shadow-default, $input-big-shadow-hover);
+      }
+      
+      //form elements - enable-dark
+      & .enable-dark,
+      &.enable-dark,
+      .enable-dark & {
+        @include all-inputs {
+          box-shadow: none;
+        }
+      }
+      
+      // checkbox & radio
+      input[type="checkbox"]:checked + label:before,
+      input[type="radio"]:checked + label:before,
+      input[type="checkbox"]:checked + .check-icon:before,
+      input[type="radio"]:checked + .check-icon:before {
+        box-shadow: $check-big-shadow-focus;
+      }
+      
+      // enable-accent - checkbox & radio
+      & .enable-accent,
+      &.enable-accent,
+      .enable-accent & {
+        input[type="checkbox"]:checked + label:before,
+        input[type="radio"]:checked + label:before {
+          box-shadow: $dark-form-check-shadow-focus;
+        }
+      }
+      
+      //valid or invalid
+      .was-validated .form-control:not([disabled]):not([readonly]):valid, 
+      .form-control:not([disabled]):not([readonly]).is-valid, 
+      .was-validated .custom-select:valid, 
+      .custom-select.is-valid {
+        box-shadow: $big-shadow-base $input-big-shadow-valid;
+      }
+
+      .was-validated .form-control:not([disabled]):not([readonly]):invalid, 
+      .form-control:not([disabled]):not([readonly]).is-invalid, 
+      .was-validated .custom-select:invalid, 
+      .custom-select.is-invalid {
+        box-shadow: $big-shadow-base $input-big-shadow-invalid;
+      }
+      
+      // social buttons 
+      .btn-outline-facebook {
+        @include big-shadow-default($facebook-color);
+        @include big-shadow-focus($facebook-color);
+      }
+      
+      .btn-outline-google {
+        @include big-shadow-default($google-color);
+        @include big-shadow-focus($google-color);
+      }
+
+      .no-shadow {
+        box-shadow: none !important;
+      }
+
+      //accordion
+      .accordion-card.show {
+        @include big-shadow-default($accordion-card-big-shadow-default, $accordion-card-big-shadow-hover);
+        @include big-shadow-focus($accordion-card-big-shadow-hover);
+      }
+      
+      //enable-dark - accordion
+      & .enable-dark,
+      &.enable-dark,
+      .enable-dark & {
+        .accordion-card.show {
+          @include big-shadow-default($dark-accordion-card-big-shadow-default, $dark-accordion-card-big-shadow-hover);
+          @include big-shadow-focus($dark-accordion-card-big-shadow-hover);
+        }
+      }
+
+      .accordion-card {
+        @include all-inputs {
+          box-shadow: none !important;
+        }
+      }
+
+      //pagination
+      .page-numbers,
+      .page-links > *:not(.page-links-title) {
+        &:hover {
+          box-shadow: $pagination-big-shadow-hover;
+        }
+      }
+      
+      .page-numbers.current,
+      .page-numbers:focus,
+      .page-links > span:not(.page-links-title),
+      .page-links > span:not(.page-links-title):hover,
+      .widget_calendar #today {
+        box-shadow: $pagination-big-shadow-focus;
+      }
+
+      .next.page-numbers, .prev.page-numbers {
+        @include hover-focus {
+          box-shadow: none;
+        }
+      }
+      
+      
+      //bp member page
+      #whats-new-content {
+        &.active {
+          @include big-shadow-focus($input-big-shadow-focus);
+        }
+      }
+      
+      // pricing card
+      .pricing-basic {
+        @include big-shadow-default($pricing-card-basic-bg, $pricing-card-basic-bg);
+      }
+      .pricing-intermediate {
+        @include big-shadow-default($pricing-card-intermediate-bg, $pricing-card-intermediate-bg);
+      }
+      .pricing-pro {
+        @include big-shadow-default($pricing-card-pro-bg, $pricing-card-pro-bg);
+      }
+      
+      // filter search side trigger
+      .filter-search-module input#members_search,
+      .filter-search-module input[data-toggle="modal"] {
+        @include big-shadow-focus($filter-search-module-shadow-focus);
+      }
+      
+      .filter-search-module.filter-search-shortcode input[data-toggle="modal"] {
+        @include big-shadow-default($filter-search-module-shadow-default);
+      }
+      
+  }
+
+  }

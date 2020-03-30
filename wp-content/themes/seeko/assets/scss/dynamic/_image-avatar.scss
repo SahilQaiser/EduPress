@@ -1,0 +1,25 @@
+.img-dynamic {
+	background: $img-default-bg;
+}
+.img-round {
+	.img-card {
+		border-radius: $border-radius;
+	}
+}
+.avatar {
+	&, & .img-card {
+		border-radius: $avatar-border-radius;
+	}
+}
+.avatar-square-xs {
+	@include avatar-square($avatar-square-size-xs, .25rem, $avatar-square-border-radius-xs);
+}
+.avatar-square-sm {
+	@include avatar-square($avatar-square-size-sm, .25rem, $avatar-square-border-radius-sm);
+}
+.avatar-square {
+	@include avatar-square($avatar-square-size, .375rem, $avatar-square-border-radius);
+}
+.avatar-square-lg {
+	@include avatar-square($avatar-square-size-lg, .375rem, $avatar-square-border-radius-lg);
+}

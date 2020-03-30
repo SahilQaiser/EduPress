@@ -1,0 +1,72 @@
+// posts extends
+
+// date sm
+
+
+%date {
+  @extend %date-sm;
+  @include order(3);
+  //width: 100%;
+  margin-bottom: .5rem;
+}
+
+%date-sm {
+  font-size: $font-size-xs; //12px
+  &,
+  &:hover {
+    color: $gray-400;
+  }
+}
+
+%featured-image {
+  $gutter-lg: map-get($grid-gutter-widths, lg);
+  $gutter-xl: map-get($grid-gutter-widths, xl);
+  
+  @if $gutter-lg != $gutter-xl {
+    @include media-breakpoint-up(xl) {
+      margin-left: -$gutter-xl;
+      margin-right: -$gutter-xl
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    margin-left: -$gutter-lg;
+    margin-right: -$gutter-lg;
+  }
+}
+
+
+@mixin outside(){
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: auto;
+  max-width: 1000%;
+}
+
+%outside-xs {
+  @include media-breakpoint-only(xs) {
+    $gutter: map-get($grid-gutter-widths, xs);
+    $extra-gutter: map-get($container-extra-gutters, xs);
+    $container-padding: ($gutter + $extra-gutter) / 2;
+    
+    margin-left: -$container-padding;
+    margin-right: -$container-padding;
+    width: auto;
+  }
+}
+
+%outside-sidebar {
+  @include media-breakpoint-between(sm, md) {
+    @include outside();
+  }
+}
+
+
+%outside-full {
+  @include media-breakpoint-up(sm) {
+    @include outside();
+  }
+}
+
+
+

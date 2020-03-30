@@ -1,0 +1,164 @@
+.tags-links {
+	font-size: $small-font-size;
+}
+.post-password-form {
+	border-radius: $border-radius;
+	border: 1px solid $border-color;
+	input[type="submit"] {
+		@extend %btn-primary;
+	}
+}
+div .wp-caption {
+	border-color: $border-color;
+	border-radius: $border-radius-lg;
+	img {
+		border-radius: $border-radius;
+	}
+}
+.search-form {
+	.search-submit {
+		@extend %btn-sm;
+		@extend %btn-primary;
+	}
+}
+@include media-breakpoint-up(md) {
+	.tpl-full {
+		.alignfull {
+			img {
+			}
+		}
+	}
+}
+p.has-drop-cap:not(:focus):first-letter {
+	font-size: calc(#{$line-height-base} * 2em);
+	font-family: $headings-font-family;
+}
+.wp-block-gallery figcaption, .wp-block-gallery .blocks-gallery-image figcaption, .wp-block-gallery .blocks-gallery-item figcaption, figcaption {
+	border-bottom-left-radius: $border-radius;
+	border-bottom-right-radius: $border-radius;
+}
+.wp-block-embed.alignwide .wp-block-embed__wrapper, body.tpl-left .wp-block-embed.alignfull .wp-block-embed__wrapper, body.tpl-left .wp-block-embed.alignfull .wp-block-embed__wrapper, .wp-block-cover-image, .wp-block-gallery img {
+	border-radius: $border-radius;
+}
+.wp-block-image:not(.alignfull) img {
+	border-radius: $border-radius;
+}
+body.single, body.page:not(.tpl-left):not(.tpl-right) {
+	$gutter-lg: map-get($grid-gutter-widths, lg);
+	$gutter-xl: map-get($grid-gutter-widths, xl);
+	@if $gutter-lg != $gutter-xl {
+		@include media-breakpoint-up(xl) {
+			.wp-block-image .alignright, .wp-block-cover-image.alignright {
+			}
+			.wp-block-image .alignleft, .wp-block-cover-image.alignleft {
+			}
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		.wp-block-image .alignright, .wp-block-cover-image.alignright {
+		}
+		.wp-block-image .alignleft, .wp-block-cover-image.alignleft {
+		}
+	}
+}
+body.single.tpl-right .alignfull, body.single.tpl-left .alignfull, body.single .alignwide, body.page:not(.tpl-left):not(.tpl-right) .alignwide {
+	figcaption {
+		$gutter-lg: map-get($grid-gutter-widths, lg);
+		$gutter-xl: map-get($grid-gutter-widths, xl);
+		@if $gutter-lg != $gutter-xl {
+			@include media-breakpoint-up(xl) {
+			}
+		}
+		@include media-breakpoint-up(lg) {
+		}
+	}
+}
+.tpl-right .alignfull, .tpl-left .alignfull {
+	@include media-breakpoint-up(lg) {
+		img {
+			border-radius: $border-radius;
+		}
+	}
+}
+.wp-block-pullquote {
+	blockquote {
+		color: $pullquote-color;
+	}
+	&.is-style-default {
+		border-top: 1px solid $primary;
+		border-bottom: 1px solid $primary;
+	}
+	&.is-style-solid-color {
+		border-radius: $border-radius;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.wp-block-pullquote {
+		p {
+			font-size: calc(#{$pullquote-font-size} / 1.3) !important;
+		}
+	}
+}
+.wp-block-quote.is-large, .wp-block-quote.is-large p, .wp-block-quote.is-style-large, .wp-block-quote.is-style-large p {
+	color: $headings-color;
+}
+.has-primary-background-color.has-primary-background-color {
+	background-color: $primary ;
+}
+.has-primary-color.has-primary-color {
+	color: $primary;
+}
+.has-secondary-background-color.has-secondary-background-color {
+	background-color: $secondary ;
+}
+.has-secondary-color.has-secondary-color {
+	color: $secondary;
+}
+.has-tertiary-background-color.has-tertiary-background-color {
+	background-color: $tertiary ;
+}
+.has-tertiary-color.has-tertiary-color {
+	color: $tertiary;
+}
+.wpcf7-form {
+	.wpcf7-submit {
+		@extend %btn-primary;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+	}
+	.wp-block-media-text.is-stacked-on-mobile {
+		&:not(.has-media-on-the-right) {
+		}
+		&.has-media-on-the-right {
+		}
+		&.alignfull {
+			.wp-block-media-text__media {
+			}
+		}
+		.wp-block-media-text__media {
+		}
+		.wp-block-media-text__content {
+		}
+	}
+}
+@include media-breakpoint-up(sm) {
+	.wp-block-media-text:not(.has-media-on-the-right) {
+		.wp-block-media-text__content p:last-child {
+		}
+	}
+}
+.wp-block-media-text__media {
+	img {
+		border-radius: $border-radius;
+	}
+}
+.wp-block-latest-comments .avatar, .wp-block-latest-comments__comment-avatar {
+	border-radius: $avatar-border-radius;
+}
+.wp-block-latest-comments__comment-author, .wp-block-latest-comments__comment-link {
+	&, &:hover {
+		color: $body-color;
+	}
+}

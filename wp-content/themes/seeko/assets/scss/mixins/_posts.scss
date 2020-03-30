@@ -1,0 +1,54 @@
+// Post Card
+
+
+@mixin entire-post-card-height() {
+  $sm : $h4-font-size * 1.15 * 3 + spacer(3) + spacer(7);
+  $md : $h4-font-size-md * 1.15 * 3 + spacer(3) + spacer(7);
+  $lg : $h4-font-size-lg * 1.15 * 3 + spacer(3) + spacer(7);
+
+  height: $post-card-top-height + $sm + $post-card-footer-height;
+  
+  @if $sm != $md {
+    @include media-breakpoint-up(md) {
+      height: $post-card-top-height + $md + $post-card-footer-height;
+    }
+  }
+  @if $md != $lg {
+    @include media-breakpoint-up(lg) {
+      height: $post-card-top-height + $lg + $post-card-footer-height;
+    }      
+  }
+}
+
+@mixin post-card-col () {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $gutter: map-get($grid-gutter-widths, $breakpoint);
+    $container-width: map-get($container-max-widths, $breakpoint);
+    
+    @if $breakpoint == 'md' {
+      @include media-breakpoint-up($breakpoint) {
+        width: calc((#{$container-width} - 2 * #{$gutter})/2);
+      }
+      
+    } @else if $breakpoint == 'lg' {
+        @include media-breakpoint-up($breakpoint) {
+          width: calc((#{$container-width} - 3 * #{$gutter})/3);
+        }
+      
+    } @else if $breakpoint == 'xl' {
+        @include media-breakpoint-up($breakpoint) {
+          width: calc((#{$container-width} - 4 * #{$gutter})/4);
+        }
+    }
+    
+  }
+}
+
+@mixin quote-color-verify() {
+  @if ($quote-post-card-bg-second-color) {
+    background-image: $quote-post-card-bg;
+  } @else {
+    background-color: $quote-post-card-bg-first-color;
+  }
+}
+

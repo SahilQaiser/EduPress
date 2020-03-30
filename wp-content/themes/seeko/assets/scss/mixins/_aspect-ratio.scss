@@ -1,0 +1,9 @@
+// Aspect Ratio
+
+@mixin aspect-ratio($width, $height) {
+  .aspect-ratio.ratio-#{$width}-#{$height} {
+    &:before {
+      padding-top: $height / $width * 100%;
+    }
+  }
+}

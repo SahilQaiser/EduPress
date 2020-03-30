@@ -1,0 +1,53 @@
+// Accordion
+
+@mixin accordion-dash() {
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc((#{$line-height-base}*#{$font-size-base} - 2px)/2 + #{$accordion-head-padding});
+  left: 0;
+  height: 2px;
+  width: 0.75rem;
+}
+
+
+@mixin accordion-card-colors($acc-head-color, $acc-dash-color, $acc-arrow-color, $acc-bg, $acc-border-color, $acc-hover-border-color) {
+  .accordion-header a[data-toggle="collapse"],
+  .accordion-header .accordion-head {
+    color: rgba($acc-head-color, .85);
+    &:hover {
+      color: $acc-head-color;
+    }
+    &:before {
+      background: $acc-dash-color;
+    }
+    &:after {
+      background-image: str-replace(url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1rem' height='1rem' viewBox='0 0 32 32'><polygon fill='#{$acc-arrow-color}' fill-rule='evenodd' points='16.5 9 28 20.2 25.125 23 16.5 14.6 7.875 23 5 20.2' transform='matrix(1 0 0 -1 0 32)'/></svg>"), "#", "%23");
+    }
+  }
+  
+  .accordion-card.show {
+      background-color: $acc-bg;
+      border-color: $acc-border-color;
+    
+      &:hover {
+        border-color: $acc-hover-border-color;
+      }
+    
+    .accordion-header a[data-toggle="collapse"] {
+      color: $acc-head-color;
+      
+      &:after {
+        background-image: str-replace(url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1rem' height='1rem' viewBox='0 0 32 32'><polygon fill='#{$acc-arrow-color}' fill-rule='evenodd' points='16.5 9 28 20.2 25.125 23 16.5 14.6 7.875 23 5 20.2'/></svg>"), "#", "%23");
+      }
+    }
+  }
+  
+  .accordion-remove-trigger {
+    &:before,
+    &:after {
+      background: $acc-dash-color;
+    }
+  }
+  
+}

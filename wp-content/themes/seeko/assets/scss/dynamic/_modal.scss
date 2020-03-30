@@ -1,0 +1,39 @@
+.modal-dialog-centered {
+	min-height: calc(100% - (#{$modal-dialog-margin} * 2));
+}
+.modal-header {
+	@include border-top-radius($border-radius-lg);
+}
+@include media-breakpoint-up(sm) {
+	.modal-dialog {
+	}
+	.modal-dialog-centered {
+		min-height: calc(100% - (#{$modal-dialog-margin-y-sm-up} * 2));
+	}
+	.modal-content {
+	}
+	.modal-sm {
+	}
+}
+@include media-breakpoint-up(lg) {
+	.modal-lg {
+	}
+}
+.terms-and-services {
+	&, a {
+		color: $secondary;
+	}
+	a {
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+.svq-booster-footer {
+	font-size: $small-font-size;
+}
+.svq-login-form {
+	.text-sm-right, .form-check-label {
+		font-size: $small-font-size;
+	}
+}

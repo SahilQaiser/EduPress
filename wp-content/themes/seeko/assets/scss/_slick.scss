@@ -1,0 +1,421 @@
+/* Slick slider */
+
+$slick-loader-path: "./img/" !default;
+
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+
+$slick-prev-character: "\e900" !default;
+$slick-next-character: "\e901" !default;
+$slick-dot-character: "\2022" !default;
+$slick-dot-size: 6px !default;
+
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+    }
+}
+
+.svq-slick:not(.slick-initialized) > *:not(:first-child) {
+  visibility: hidden;
+  height: 0;
+}
+.slick-slide[class^="col-"] {
+  max-width: none;
+}
+
+// Arrows
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    border: none;
+    outline: none;
+  
+    &:hover, &:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+        &:before {
+            opacity: $slick-opacity-on-hover;
+        }
+    }
+    &.slick-disabled:before {
+        opacity: $slick-opacity-not-active;
+    }
+    &:before {
+        font-size: 20px;
+        line-height: 1;
+        color: $slick-arrow-color;
+        opacity: $slick-opacity-default;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.slick-prev {
+    left: -25px;
+    [dir="rtl"] & {
+        left: auto;
+        right: -25px;
+    }
+    &:before {
+        content: $slick-prev-character;
+        [dir="rtl"] & {
+            content: $slick-next-character;
+        }
+    }
+}
+.slick-arrow:before {
+  @extend %icon-font-family;
+}
+
+.slick-next {
+    right: -25px;
+    [dir="rtl"] & {
+        left: -25px;
+        right: auto;
+    }
+    &:before {
+        content: $slick-next-character;
+        [dir="rtl"] & {
+            content: $slick-prev-character;
+        }
+    }
+}
+
+// Dots
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    li {
+        position: relative;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 20px;
+            width: 20px;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer;
+            &:hover, &:focus {
+                outline: none;
+                &:before {
+                    opacity: $slick-opacity-on-hover;
+                }
+            }
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: $slick-dot-character;
+                width: 20px;
+                height: 20px;
+                font-size: $slick-dot-size;
+                line-height: 20px;
+                text-align: center;
+                color: $slick-dot-color;
+                opacity: $slick-opacity-not-active;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+        &.slick-active button:before {
+            color: $slick-dot-color-active;
+            opacity: $slick-opacity-default;
+        }
+    }
+}
+
+
+// Default slick
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.svq-slick .slick-slide {
+  @include dynamic-gutter("col");
+  outline: none;
+}
+
+
+// Carousel Shortcode
+
+.svq-sh-carousel {
+  .btn-xs {
+    background: transparent;
+    color: $secondary;
+    
+    
+    &:hover,
+    &:focus {
+      background: $light;
+      color: $body-color;
+    }
+  }
+  .svq-slick-prev {
+    margin-right: .5rem;
+  }
+  
+  .svq-slick-filter {
+    margin-left: spacer(2);
+    margin-right: spacer(2);
+    
+    &:hover,
+    &.active {
+      .icon {
+        color: $primary;
+      }
+    }
+    &.btn {
+      padding: 0.5rem 1rem;
+    }
+    
+    &.btn.active {
+      background: $light;
+    }
+
+    i.fa.icon {
+      font-family: FontAwesome !important;
+    }
+  }
+  
+  .media .media-body {
+    > small {
+      @include text-overflow($small-font-size, $line-height-base, 1);
+      height: text-height($small-font-size, $line-height-base, 1, 0);
+    }
+    .activity-read-more {
+      display: none;
+    }
+  }
+
+  
+  &.svq-sh-carousel-full {
+    .svq-slick .slick-list {
+      overflow: visible;
+    }
+  }
+   
+}
+
+@include media-breakpoint-up(sm){
+  
+  .svq-sh-carousel .svq-slick-filter {
+    margin-left: .5rem;
+  }
+  
+}
+
+// Carousel inner arrrows
+
+.svq-slick-inner-arrows {
+  .slick-slide {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .slick-arrow {
+    z-index: 3;
+    bottom: 1rem;
+    top: inherit;
+    transform: none;
+    background: rgba($light, .15);
+    color: rgba($white, .8);
+  
+    &:before {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background: rgba($light, .25);
+      color: $white;
+    }
+  }
+  
+  .slick-prev {
+    left: inherit;
+    right: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - 2px + #{$btn-padding-x-xs} * 2 + 1.5rem);
+  }
+
+  .slick-next {
+    right: 1rem;
+    
+    // i need this to avoid image hover between slick arrows
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -.5rem;
+      width: .5rem;
+      height: $icon-size;
+    }
+  }
+
+}
+
+.enable-shadow.tpl-left .svq-slick .post-card,
+.enable-shadow.tpl-right .svq-slick .post-card,
+.svq-slick.item-list .item-container,
+.enable-shadow .svq-slick .post-card {
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+}
+
+.enable-shadow.tpl-left .svq-slick .post-card:hover,
+.enable-shadow.tpl-right .svq-slick .post-card:hover,
+.svq-slick.item-list .item-container:hover,
+.enable-shadow .svq-slick .post-card:hover {
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+
+
+
+
+
+
+

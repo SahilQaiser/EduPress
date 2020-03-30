@@ -1,0 +1,123 @@
+// Filter Search Mixin
+
+@mixin dynamic-padding($value : 0) {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+      @include media-breakpoint-up($breakpoint) {
+        
+          $padding: map-get($grid-gutter-widths, $breakpoint);
+          padding-left: $padding;
+          padding-right: $padding;
+        
+          @if $value == "footer" {
+            padding-bottom: calc(#{$font-size-sm} * #{$line-height-sm} + (#{$btn-padding-y-sm} * 2) + 0.125rem + (#{$padding} * 2));
+            
+          } @else if $value == "bottom" {
+            
+              @if $breakpoint == "xs" or $breakpoint == "sm" {
+                padding-bottom: calc(#{$font-size-sm} * #{$line-height-sm} + (#{$btn-padding-y-sm} * 2) + 0.125rem + (#{$padding} * 2));
+              } @else {
+                padding-bottom: $padding;
+              }
+            
+        } @else if $value == "footer double" {
+            padding-bottom: calc(#{$font-size-sm} * #{$line-height-sm} + (#{$btn-padding-y-sm} * 2) + 0.125rem + #{$padding} + 1rem);
+          
+        } @else if $value == "no footer" {
+           padding-bottom: $padding;
+        }
+      }
+  }
+}
+
+
+@mixin footer-dynamic-height($value : 0) {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      
+      $padding: map-get($grid-gutter-widths, $breakpoint);
+      height: calc(#{$font-size-base} * #{$line-height-base} + (#{$btn-padding-y} * 2) + 0.125rem + #{$padding});
+      padding-bottom: $padding;
+      
+    }
+  }
+}
+
+
+@mixin dash-to-arrow ($value, $scale-value, $position ) {
+  $translateY : $value * $scale-value / 2.828;
+  $translateX : ($value / 2) - $translateY;
+  
+  @if $position == "top" {
+    transform: translate3d(-$translateX, -$translateY, 0) rotate(-45deg) scale($scale-value, 1);
+      
+  } @else if $position == "bottom" {
+    transform: translate3d(-$translateX, $translateY, 0) rotate(45deg) scale($scale-value, 1);    
+      
+  }
+}
+
+
+@mixin dynamic-filter-search-side() {
+  $prev-width: "";
+  
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    $width: map-get($filter-search-side-widths, $breakpoint);
+    
+   @if $width and $width != $prev-width and $width != "" and $breakpoint != "xs" and $breakpoint != "sm" {
+      
+      @include animate-keyframe( bounceInBody#{$infix} ) {
+            0% {
+              transform: translateX(0);
+            }
+
+            100% {
+              transform: translateX(#{$width});
+            }
+        }
+
+      @include animate-keyframe( bounceInBodyReverse#{$infix}) {
+        0% {
+          transform: translateX(#{$width});
+        }
+
+        60% {
+          transform: translateX($width - 10px);
+        }
+
+        80% {
+          transform: translateX($width + 30px);
+        }
+
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+    }
+
+    @if $width and $width != $prev-width and $width != "" and $breakpoint != "xs" and $breakpoint != "sm" {
+      @include media-breakpoint-up($breakpoint) {
+        .filter-search-side {
+          .filters-col,
+          .filters-footer {
+            width: $width;
+          }
+        }
+        body.filter-search-side-open #page-wrapper {
+          animation: none;
+          animation: bounceInBody#{$infix} .4s forwards /*.025s*/; // bounce delay
+        }
+
+        body.reverse-effect #page-wrapper {
+          animation: none;
+          animation: bounceInBodyReverse#{$infix} .6s forwards;
+        }
+      
+      }
+       
+    }
+
+    $prev-width: $width;
+  }
+}

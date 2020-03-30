@@ -1,0 +1,15 @@
+// Dark Style Mixins
+
+@mixin enable-dark($value: "outside") {
+  @if $enable-dark-style {
+    @if $value == "inside" {
+      .enable-dark & {
+        @content;
+      }
+    } @else if $value == "outside" {
+      .enable-dark {
+        @content;
+      }
+    }
+  }
+}

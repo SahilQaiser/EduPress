@@ -1,0 +1,177 @@
+// Bootstrap functions
+//
+// Utility mixins and functions for evalutating source code across our variables, maps, and mixins.
+
+// Ascending
+// Used to evaluate Sass maps like our grid breakpoints.
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+// Starts at zero
+// Another grid mixin that ensures the min-width of the lowest breakpoint starts at 0.
+@mixin _assert-starts-at-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 0 {
+    @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+  }
+}
+
+// Replace `$search` with `$replace` in `$string`
+// Used on our SVG icon backgrounds for custom forms.
+//
+// @author Hugo Giraudel
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
+// @return {String} - Updated string
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// Color contrast
+@function color-yiq($color, $threshold: $yiq-contrasted-threshold) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= $threshold) {
+    @return $yiq-text-dark;
+  } @else {
+    @return $yiq-text-light;
+  }
+}
+
+// Retrieve color Sass maps
+@function color($key: "blue") {
+  @return map-get($colors, $key);
+}
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function theme-gradients($key: "primary") {
+  @return map-get($theme-gradients, $key);
+}
+
+@function gray($key: "100") {
+  @return map-get($grays, $key);
+}
+
+// Request a theme color level
+@function theme-color-level($color-name: "primary", $level: 0) {
+  $color: theme-color($color-name);
+  $color-base: if($level > 0, #000, #fff);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+@function spacer($key: "3") {
+  @return map-get($spacers, $key);
+}
+
+// Posts
+@function text-height($font-size, $line-height, $lines-to-show, $margin) {
+  $height: $font-size * $line-height * $lines-to-show + $margin;
+  @return $height;
+}
+
+//Slick
+@function slick-image-url($url) {
+  @if function-exists(image-url) {
+    @return image-url($url);
+  }
+  @else {
+    @return url($slick-loader-path + $url);
+  }
+}
+
+
+// Typography Modular Scale function
+
+@function modular-scale($value, $rank) {
+  $aux: 1rem;
+  
+  @if $rank != 0 {
+    
+    @if $rank > 0 {
+      @for $i from 1 through $rank {
+        $aux: $aux * $value;
+      }
+    } @else {
+      @for $i from $rank + 1 through 0 {
+        $aux: $aux / $value;
+      }
+    }
+  } 
+  
+  @return $aux;
+}
+
+@function round-height($size) {
+  $aux: $size * 16;
+  $new: $aux / ($aux * 0 + 1); // remove units
+  $round-size: round($new)/16 * 1rem;
+  @return $round-size;
+}
+
+
+// remove unit
+
+@function no-unit($value, $base: 16) {
+  $new: $value / ($value * 0 + 1);
+  @return $new;
+}
+
+
+
+// Convet rem to px
+
+@function rem-px($rem, $base: 16) {
+  $new: $rem * $base;
+  $new: no-unit($new);
+  $round-size: round($new) * 1px;
+  @return $round-size;
+}
+
+
+// No unit but base
+
+@function no-unit-base($value, $base: 16) {
+  
+  @if unit($value) == 'px' {
+    @return no-unit($value);
+    
+  } @else if unit($value) == 'rem' {
+    @return no-unit($value * $base);
+  }
+
+}
+
+
+
+
+

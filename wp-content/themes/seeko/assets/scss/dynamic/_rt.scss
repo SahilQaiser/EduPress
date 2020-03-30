@@ -1,0 +1,397 @@
+@include media-breakpoint-up(md) {
+	#whats-new-content #whats-new-options .rtmedia-plupload-container {
+	}
+	.rtmedia-uploader-div {
+	}
+}
+.rtmedia-add-media-button, .rtmedia-comment-media-upload {
+	@extend %btn-sm;
+	&:hover, &:focus {
+		background: $light;
+	}
+}
+#rtm-drop-files-title {
+	color: mix($success, $black, 70%);
+	&:before {
+		width: $icon-size;
+	}
+}
+#whats-new-content #rtm-drop-files-title {
+	border-radius: $input-border-radius;
+	border: 2px dashed $success;
+}
+#drag-drop-area {
+	border: 2px dashed $border-color !important;
+	border-radius: $border-radius-lg;
+	&.rtm-drag-drop-active {
+		border-color: $success;
+		&:before {
+			background: $body-bg;
+			border-radius: $input-border-radius;
+		}
+	}
+}
+$uploads-elements-height: $icon-size - 2 * $uploads-padding-y;
+#rtmedia-uploader-form .rtm-plupload-list li, form .rtmedia-container .rtm-plupload-list li, #rtmedia_uploader_filelist li {
+	background: $light;
+	border-radius: $border-radius;
+	padding-right: $icon-size + 1rem;
+}
+@include media-breakpoint-only(xs) {
+	#rtmedia-uploader-form .rtm-plupload-list li, form .rtmedia-container .rtm-plupload-list li, #rtmedia_uploader_filelist li {
+	}
+}
+.plupload_file_thumb {
+	width: $icon-size;
+}
+.plupload_file_name_wrapper, .plupload_file_name a {
+	color: $body-color;
+}
+.plupload_file_name .dashicons, .plupload_action_icon > .dashicons {
+	font-size: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - .125rem);
+	height: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - .125rem);
+}
+.plupload_file_name .dashicons {
+	border-left: 1px solid $border-color;
+	color: rgba($body-color, .8);
+	&:hover {
+		color: $body-color;
+	}
+	&.dashicons-yes {
+		background: $success;
+		border-radius: $border-radius;
+		&:hover {
+			background: darken($success, .9);
+		}
+	}
+}
+.plupload_file_size {
+	color: $secondary;
+	right: $icon-size + 1rem;
+}
+.plupload_file_action {
+	width: $icon-size;
+	height: calc(#{$icon-size} - .375rem);
+}
+.plupload_delete, .plupload_action_icon {
+	> .remove-from-queue {
+		color: $danger;
+		width: $icon-size;
+	}
+}
+.plupload_file_progress {
+	background: $success;
+}
+#media_search, #rtm-media-gallery-uploader #drag-drop-area .start-media-upload, #rtmedia_create_new_album {
+	@extend %btn-primary;
+}
+.media_search_remove {
+	> i {
+		color: $secondary;
+	}
+}
+#media_search {
+	> i {
+		height: $icon-size;
+	}
+}
+#rtm-media-options .rtmedia-action-buttons, #rtm-media-options .rtmedia-upload-media-link {
+	color: $body-color;
+	&:hover {
+		background-color: $light;
+	}
+}
+.rtmedia-list {
+	> li.rtmedia-list-item {
+		.rtmedia-item-thumbnail {
+			border-radius: $border-radius;
+			> img {
+				border-radius: $border-radius;
+			}
+		}
+	}
+}
+@include media-breakpoint-up(sm) {
+	.activity-inner .rtmedia-list > li.rtmedia-list-item:not(.masonry-brick) {
+		&:nth-last-child(2) {
+		}
+	}
+}
+@include media-breakpoint-up(md) {
+	.activity-inner .rtmedia-list > li.rtmedia-list-item:not(.masonry-brick) {
+		&:nth-last-child(3) {
+		}
+	}
+}
+.rtmedia-container ul.rtmedia-list.rtmedia-list-media > li.rtmedia-list-item div.rtmedia-item-thumbnail {
+	line-height: $line-height-base;
+}
+.rtmedia-list.rtmedia-list-media {
+	> li.rtmedia-list-item {
+		.rtmedia-gallery-item-actions {
+			> a:not(.rtm-delete-media) {
+				background: rgba($light, .15);
+			}
+		}
+	}
+}
+@include media-breakpoint-up(sm) {
+	.rtmedia-list {
+		> li.rtmedia-list-item {
+			&:nth-child(2n+1) {
+			}
+		}
+	}
+	.rtmedia-container .rtmedia-list > li.rtmedia-list-item {
+	}
+}
+@include media-breakpoint-up(md) {
+	.rtmedia-list {
+		> li.rtmedia-list-item {
+			&:nth-child(3n) {
+			}
+			&:hover {
+				.rtmedia-item-thumbnail > img {
+				}
+			}
+		}
+		&.rtm-activity-media-list {
+			> li.rtmedia-list-item {
+				&:nth-child(3n) {
+				}
+			}
+		}
+	}
+	.rtmedia-container .rtmedia-list > li.rtmedia-list-item {
+	}
+	.rtmedia-list.rtmedia-list-media {
+		> li.rtmedia-list-item {
+			.rtmedia-gallery-item-actions {
+				> a:not(.rtm-delete-media):hover {
+					background: rgba($light, .2);
+				}
+				.rtm-delete-media {
+					&:hover {
+						color: $danger;
+					}
+				}
+			}
+			.rtmedia-item-thumbnail img {
+			}
+			&:hover {
+				.rtmedia-item-thumbnail > img {
+				}
+				.rtmedia-gallery-item-actions {
+				}
+			}
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.rtmedia-list {
+		> li.rtmedia-list-item {
+			&:nth-child(3n) {
+			}
+		}
+	}
+	.rtmedia-container .rtmedia-list.rtmedia-list-media > li.rtmedia-list-item {
+		&:nth-child(5n) {
+		}
+	}
+}
+.rtm-options.rtm-options {
+	@extend %dropdown-menu;
+}
+.rtm-media-options .rtm-options a {
+	@extend %dropdown-item;
+	&:before {
+		top: calc((#{$line-height-base}*#{$font-size-xs} - 2px)/2 + #{$dropdown-item-padding-y});
+	}
+}
+.mfp-close {
+	background-color: $primary !important;
+	color: color-yiq($primary) !important;
+}
+.mfp-container {
+	.mfp-close {
+		@include media-breakpoint-up(sm) {
+		}
+	}
+}
+.mfp-content .rtm-lightbox-container {
+	@include media-breakpoint-up(sm) {
+		border-radius: $border-radius;
+	}
+}
+.rtmedia-item-actions {
+	border-bottom: 1px solid $border-color;
+}
+.rtm-ltb-action-container .rtmedia-actions, .rtmedia-item-actions {
+	.button {
+		&.rtmedia-delete-media {
+			&:hover, &:focus {
+				color: $danger;
+			}
+		}
+		&.rtmedia-like {
+			background-color: rgba($light, .15);
+			&:hover, &:focus {
+				background: rgba($light, .25);
+				&:before {
+					color: $primary;
+				}
+			}
+		}
+	}
+}
+.rtmedia-item-actions {
+	.button {
+		&.rtmedia-edit, &.rtmedia-delete-media {
+			color: rgba($body-color, .7);
+		}
+		&.rtmedia-edit {
+			&:hover {
+				color: rgba($body-color, 1);
+			}
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.mfp-content .rtm-single-meta {
+	}
+	.mfp-content .rtm-lightbox-container {
+	}
+	.mfp-content .rtm-mfp-close {
+	}
+	.mfp-content .rtm-single-media {
+	}
+}
+.rtmedia-container {
+	.mfp-arrow {
+		@include media-breakpoint-up(sm) {
+		}
+	}
+}
+.previous-pagination a, .next-pagination a {
+	@extend %btn;
+	@extend %btn-sm;
+}
+.userprofile {
+	img {
+		border-radius: $avatar-square-border-radius-sm;
+	}
+}
+.rtm-user-meta-details .username {
+	&, & a {
+		color: $body-color;
+	}
+}
+.rtmedia-actions-before-comments .rtmedia-comment-link, .rtmedia-actions-before-comments .rtmedia-view-conversation, #buddypress .rtmedia-actions-before-comments .rtmedia-like {
+	color: $secondary;
+	&:hover, &:focus {
+		color: $body-color;
+	}
+}
+#buddypress .rtmedia-actions-before-comments .rtmedia-like {
+	&:hover, &:focus {
+		&:before {
+			color: $primary ;
+		}
+	}
+}
+.rtmedia-like-info {
+	background: $light;
+	border-radius: $border-radius;
+}
+.rtm-like-comments-info {
+	:after {
+		border-bottom-color: $light;
+	}
+}
+.rtmedia-comment-user-pic img {
+	border-radius: $avatar-square-border-radius-sm;
+}
+.rtm-comment-list li {
+	background: $light;
+	&:first-child {
+		border-radius: $border-radius $border-radius 0 0;
+	}
+	&:last-child {
+		border-radius: 0 0 $border-radius $border-radius;
+	}
+}
+.rtm-comment-wrap .rtmedia-comment-author {
+	&, & a {
+		color: $body-color;
+	}
+}
+.rtmedia-delete-comment {
+	color: $secondary;
+}
+.mfp-content .rtm-comment-list.rtm-comment-list {
+	@include media-breakpoint-up(sm) {
+	}
+}
+#rt_media_comment_submit {
+	@extend %btn-primary;
+}
+@include media-breakpoint-down(sm) {
+	.rtm-ltb-action-container {
+		.rtm-ltb-title {
+		}
+		.rtmedia-actions {
+		}
+	}
+	.rtm-single-media:hover .rtm-ltb-action-container {
+	}
+	.mfp-arrow {
+	}
+}
+.rtm-tabs {
+	border-bottom: 1px solid $border-color;
+	a {
+		@extend %btn;
+	}
+	.active a, a:hover {
+		background: $light;
+	}
+}
+.rtm-tabs-content {
+	label {
+		color: $secondary;
+	}
+}
+.rtmedia-editor-buttons {
+	border-top: 1px solid $border-color;
+	.rtm-button-save {
+		@extend %btn-primary;
+	}
+	.rtm-button-back {
+		@extend %btn;
+		color: $secondary;
+	}
+}
+.wp_attachment_image .button, .A1B1 .button {
+	@extend %btn-sm;
+}
+.rtmedia-image-editor {
+	h2 {
+		@extend %h4;
+	}
+	.dashicons-editor-help {
+		height: $h4-font-size * $headings-line-height;
+	}
+	.imgedit-settings .imgedit-scale .button, .imgedit-settings .button, .imgedit-settings button:not(.dashicons-editor-help), .imgedit-panel-content button, .imgedit-panel-content button:disabled, .imgedit-panel-content .button {
+		@extend %btn-sm;
+	}
+	.imgedit-settings {
+		border-bottom: 1px solid $border-color;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.rtmedia-image-editor .imgedit-settings .imgedit-group {
+	}
+}
+h2.rtmedia-title {
+	@extend %h4;
+}

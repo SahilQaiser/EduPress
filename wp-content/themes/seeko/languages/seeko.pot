@@ -1,0 +1,2412 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Seeko\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-11 21:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: SQ TEAM <hi@seventhqueen.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.0; wp-5.1-beta1-44642"
+
+#: functions.php:99
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:193 functions.php:195
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:202
+msgid "Footer Column 1"
+msgstr ""
+
+#: functions.php:211
+msgid "Footer Column 2"
+msgstr ""
+
+#: functions.php:220
+msgid "Footer Column 3"
+msgstr ""
+
+#: functions.php:229
+msgid "Footer Column 4"
+msgstr ""
+
+#. %s is the page number.
+#: functions.php:551 sq-framework/lib/function-breadcrumb.php:217
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: 404.php:28
+msgid "Ooooops"
+msgstr ""
+
+#: 404.php:30
+msgid "Don't give up that easy"
+msgstr ""
+
+#: 404.php:32
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: index.php:22 sq-framework/lib/function-core.php:371
+#: lib/components/base.php:358
+msgid "Blog"
+msgstr ""
+
+#: comments.php:38
+msgid "Leave a comment"
+msgstr ""
+
+#. %s: post title
+#: comments.php:47
+#, php-format
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#. 1: number of comments, 2: post title
+#: comments.php:51
+#, php-format
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:72 lib/theme-functions.php:444
+msgid "Reply"
+msgstr ""
+
+#: comments.php:79
+msgid "Previous"
+msgstr ""
+
+#: comments.php:80
+msgid "Next"
+msgstr ""
+
+#: comments.php:89
+msgid "Comments are closed."
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:18
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:31
+msgid ""
+"We cannot find the item you are searching for, maybe a little spelling "
+"mistake?"
+msgstr ""
+
+#: author-bio.php:32
+msgid "About the author"
+msgstr ""
+
+#: page.php:39 buddypress.php:44 image.php:43 page-templates/full-width.php:44
+#: page-templates/left-sidebar.php:45 page-templates/right-sidebar.php:44
+#: page-parts/post/single-content.php:118
+msgid "Pages:"
+msgstr ""
+
+#: page.php:43 page-parts/post/single-content.php:122
+#: sq-framework/lib/function-core.php:381
+msgid "Page"
+msgstr ""
+
+#: image.php:52
+msgid "Previous Image"
+msgstr ""
+
+#: image.php:53
+msgid "Next Image"
+msgstr ""
+
+#: page-parts/forgot-pass-form.php:6
+msgid "Forgot your details?"
+msgstr ""
+
+#: page-parts/forgot-pass-form.php:17
+msgid "Username or Email"
+msgstr ""
+
+#: page-parts/forgot-pass-form.php:23
+msgid "Reset Password"
+msgstr ""
+
+#: page-parts/forgot-pass-form.php:25
+msgid "I remember my details"
+msgstr ""
+
+#: page-parts/header.php:24
+msgid "Toggle navigation"
+msgstr ""
+
+#: sq-framework/framework.php:280
+msgid "Install Required Plugins"
+msgstr ""
+
+#: sq-framework/framework.php:281
+msgid "Install Plugins"
+msgstr ""
+
+#: sq-framework/framework.php:282
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: sq-framework/framework.php:283
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: sq-framework/framework.php:284
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:285
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:286
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s plugins."
+" Contact the administrator of this site for help on getting the plugins "
+"installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:287
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:288
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:289
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s plugin."
+" Contact the administrator of this site for help on getting the plugin "
+"activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:290
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:291
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:292
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:293
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: sq-framework/framework.php:294
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: sq-framework/framework.php:295
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: sq-framework/framework.php:296
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#. Name of the template
+msgid "Full-width"
+msgstr ""
+
+#. Name of the template
+msgid "Blank Page"
+msgstr ""
+
+#. Name of the template
+msgid "Left Sidebar Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "Right Sidebar Page Template"
+msgstr ""
+
+#: lib/gutenberg.php:36
+msgid "Primary theme color"
+msgstr ""
+
+#: lib/gutenberg.php:41
+msgid "Secondary theme color"
+msgstr ""
+
+#: lib/gutenberg.php:46
+msgid "Tertiary theme color"
+msgstr ""
+
+#: lib/gutenberg.php:51
+msgid "Pale pink"
+msgstr ""
+
+#: lib/gutenberg.php:56
+msgid "Vivid red"
+msgstr ""
+
+#: lib/gutenberg.php:61
+msgid "Luminous vivid orange"
+msgstr ""
+
+#: lib/gutenberg.php:66
+msgid "Luminous vivid amber"
+msgstr ""
+
+#: lib/gutenberg.php:71
+msgid "Light green cyan"
+msgstr ""
+
+#: lib/gutenberg.php:76
+msgid "Vivid green cyan"
+msgstr ""
+
+#: lib/gutenberg.php:81
+msgid "Pale cyan blue"
+msgstr ""
+
+#: lib/gutenberg.php:86
+msgid "Vivid cyan blue"
+msgstr ""
+
+#: lib/gutenberg.php:91
+msgid "Very light gray"
+msgstr ""
+
+#: lib/gutenberg.php:96
+msgid "Cyan bluish gray"
+msgstr ""
+
+#: lib/gutenberg.php:101
+msgid "Very dark gray"
+msgstr ""
+
+#: lib/theme-config.php:75
+msgid "Single"
+msgstr ""
+
+#: lib/theme-config.php:76
+msgid "Living together"
+msgstr ""
+
+#: lib/theme-config.php:77
+msgid "Married"
+msgstr ""
+
+#: lib/theme-config.php:78
+msgid "Separated"
+msgstr ""
+
+#: lib/theme-config.php:79
+msgid "Divorced"
+msgstr ""
+
+#: lib/theme-config.php:80
+msgid "Widowed"
+msgstr ""
+
+#: lib/theme-config.php:81
+msgid "Prefer not to say"
+msgstr ""
+
+#: lib/menu.php:365
+msgid "Add a menu"
+msgstr ""
+
+#: lib/theme-functions.php:84
+msgid "<span id=\"older-nav\">Go to article</span>"
+msgstr ""
+
+#: lib/theme-functions.php:91
+msgid "Previous article"
+msgstr ""
+
+#: lib/theme-functions.php:102
+msgid "Next article"
+msgstr ""
+
+#: lib/theme-functions.php:421 sq-framework/lib/function-breadcrumb.php:1237
+#: sq-framework/lib/function-breadcrumb.php:1269
+#: sq-framework/lib/function-breadcrumb.php:1285
+#: sq-framework/lib/function-breadcrumb.php:1315
+msgid "Edit"
+msgstr ""
+
+#: lib/theme-functions.php:426
+msgid "ago"
+msgstr ""
+
+#: lib/theme-functions.php:434
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: lib/theme-functions.php:445
+msgid "Log in to reply."
+msgstr ""
+
+#: lib/theme-functions.php:493
+msgid "Name"
+msgstr ""
+
+#: lib/theme-functions.php:494
+msgid "Email"
+msgstr ""
+
+#: lib/theme-functions.php:495
+msgid "Website"
+msgstr ""
+
+#: lib/theme-functions.php:505
+#, php-format
+msgid "Required fields are marked %s"
+msgstr ""
+
+#: lib/theme-functions.php:509
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: lib/theme-functions.php:513
+msgid "Your email address will not be published."
+msgstr ""
+
+#: lib/theme-functions.php:514
+msgid "Leave a reply"
+msgstr ""
+
+#: lib/theme-functions.php:515
+#, php-format
+msgid "Leave a reply to %s"
+msgstr ""
+
+#: lib/theme-functions.php:523
+msgid "Click here to cancel the reply"
+msgstr ""
+
+#: lib/theme-functions.php:524
+msgid "Post comment"
+msgstr ""
+
+#: lib/theme-functions.php:526
+msgid "Comment"
+msgstr ""
+
+#: lib/theme-functions.php:527
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: lib/theme-functions.php:693
+msgid "Maybe you want to try ..."
+msgstr ""
+
+#: lib/theme-functions.php:786
+msgid "Do you like this article?"
+msgstr ""
+
+#: page-parts/post/related.php:15
+msgid "Related Articles"
+msgstr ""
+
+#: page-parts/post/related.php:31
+msgid "Related"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:210
+msgid "Browse:"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:211
+#: lib/components/breadcrumb.php:26
+msgid "Home"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:212
+msgid "404 Not Found"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:213
+msgid "Archives"
+msgstr ""
+
+#. %s is the search query. The HTML entities are opening and closing curly quotes.
+#: sq-framework/lib/function-breadcrumb.php:215
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#. Minute archive title. %s is the minute time format.
+#: sq-framework/lib/function-breadcrumb.php:219
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#. Weekly archive title. %s is the week date format.
+#: sq-framework/lib/function-breadcrumb.php:221
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:806
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:824
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:842
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:859
+#: sq-framework/lib/function-breadcrumb.php:888
+#: sq-framework/lib/function-breadcrumb.php:918
+#: sq-framework/lib/function-breadcrumb.php:945
+#: sq-framework/lib/function-breadcrumb.php:1143
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:860
+#: sq-framework/lib/function-breadcrumb.php:919
+#: sq-framework/lib/function-breadcrumb.php:1146
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:861
+#: sq-framework/lib/function-breadcrumb.php:1149
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:889
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:1263
+msgid "Split"
+msgstr ""
+
+#: sq-framework/lib/function-breadcrumb.php:1266
+msgid "Merge"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:327
+msgid "Tag Archive for:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:332
+msgid "Archive for category:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:334
+msgid "Archive for date:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:336
+msgid "Archive for month:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:338
+msgid "Archive for year:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:341
+msgid "Author Archive"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:344
+msgid "for:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:352
+msgid "search results for:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:354
+msgid "search result for:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:358
+msgid "Search results for:"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:360
+msgid "To search the site please enter a valid term"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:375
+msgid "Error 404 - Page not found"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:486
+#, php-format
+msgctxt "post type general name"
+msgid "%s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:487
+#, php-format
+msgctxt "post type singular name"
+msgid "%s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:488
+#, php-format
+msgctxt "add new button post"
+msgid "Add New %s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:489
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:490
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:491
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:492
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:493
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:494
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:495
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: sq-framework/lib/function-core.php:496
+#, php-format
+msgid "No %s found in Trash"
+msgstr ""
+
+#: lib/plugins/pmpro.php:121
+msgid "PMPRO Memberships"
+msgstr ""
+
+#: lib/plugins/pmpro.php:129
+msgid "BuddyPress Register integration"
+msgstr ""
+
+#: lib/plugins/pmpro.php:132
+msgid ""
+"Add the membership levels at registration. Users can choose a membership, "
+"confirm their account and redirected at login to pay for the selected "
+"membership"
+msgstr ""
+
+#: lib/plugins/pmpro.php:188
+msgid "Select & Sign Up"
+msgstr ""
+
+#: lib/plugins/pmpro.php:228
+msgid "SEEKO Theme Settings"
+msgstr ""
+
+#: lib/plugins/pmpro.php:237
+msgid "Choose the styling of the level on the Membership levels Page"
+msgstr ""
+
+#: lib/plugins/pmpro.php:246
+msgid "Adds a Popular label on Memberships Levels Page"
+msgstr ""
+
+#: lib/components/extras.php:18
+msgid "Performance"
+msgstr ""
+
+#: lib/components/extras.php:24
+msgid "404 Page"
+msgstr ""
+
+#: lib/components/extras.php:30
+msgid "Miscellaneous"
+msgstr ""
+
+#: lib/components/extras.php:41
+msgid "Lazy Load images"
+msgstr ""
+
+#: lib/components/extras.php:44
+msgid "Load images as you scroll the page. Drastically improves site speed."
+msgstr ""
+
+#: lib/components/extras.php:52
+msgid "Preload theme Css files"
+msgstr ""
+
+#: lib/components/extras.php:55
+#, php-format
+msgid ""
+"Tell the browser to prioritize theme css files. <a target=\"_blank\" "
+"href=\"%s\">Read more</a>"
+msgstr ""
+
+#: lib/components/extras.php:66
+msgid "Custom image"
+msgstr ""
+
+#: lib/components/extras.php:69
+msgid "Change the default image on 404 page"
+msgstr ""
+
+#: lib/components/extras.php:89
+msgid "Suggest pages to visit"
+msgstr ""
+
+#: lib/components/extras.php:96
+msgid "This will show after the search in 404 page."
+msgstr ""
+
+#: lib/components/extras.php:112
+msgid "Maintenance Enabled"
+msgstr ""
+
+#: lib/components/extras.php:115
+msgid "WARNING: It will make the site available to admins only"
+msgstr ""
+
+#: lib/components/extras.php:121
+msgid "Maintenance Message"
+msgstr ""
+
+#: lib/components/extras.php:124
+msgid "The message that is visible for guests if you enabled maintenance"
+msgstr ""
+
+#: lib/components/extras.php:131
+msgid "Disable page comments"
+msgstr ""
+
+#: lib/components/extras.php:134
+msgid "Force disable comments on all pages"
+msgstr ""
+
+#: lib/components/extras.php:139
+msgid "Disable Elementor Mobile animations"
+msgstr ""
+
+#: lib/components/extras.php:142
+msgid "Force disable Elementor animations on mobile on all pages"
+msgstr ""
+
+#: lib/components/extras.php:148
+msgid "Quick Javascript"
+msgstr ""
+
+#: lib/components/extras.php:151
+msgid ""
+"Small code to load in the footer of your site. You need to include the "
+"script tags if adding JS."
+msgstr ""
+
+#: lib/components/extras.php:157
+msgid "Development mode"
+msgstr ""
+
+#: lib/components/extras.php:160
+msgid "This will load css/js files not minified."
+msgstr ""
+
+#: lib/components/breadcrumb.php:43
+msgid "Breadcrumb"
+msgstr ""
+
+#: lib/components/breadcrumb.php:52
+msgid "Enable Breadcrumb section"
+msgstr ""
+
+#: lib/components/breadcrumb.php:55
+msgid "Show the breadcrumb section on your site"
+msgstr ""
+
+#: lib/components/breadcrumb.php:62 lib/components/base.php:114
+#: lib/components/base.php:1162 lib/components/base.php:1236
+msgid "Text color"
+msgstr ""
+
+#: lib/components/base.php:91
+msgid "Primary color"
+msgstr ""
+
+#: lib/components/base.php:93
+msgid "Secondary color"
+msgstr ""
+
+#: lib/components/base.php:98
+msgid "Tertiary color"
+msgstr ""
+
+#: lib/components/base.php:102
+msgid "Success color"
+msgstr ""
+
+#: lib/components/base.php:103
+msgid "Info color"
+msgstr ""
+
+#: lib/components/base.php:104
+msgid "Warning color"
+msgstr ""
+
+#: lib/components/base.php:105
+msgid "Danger color"
+msgstr ""
+
+#: lib/components/base.php:106
+msgid "Light color"
+msgstr ""
+
+#: lib/components/base.php:107
+msgid "Dark color"
+msgstr ""
+
+#: lib/components/base.php:119 lib/components/base.php:1177
+msgid "Headings color"
+msgstr ""
+
+#: lib/components/base.php:124
+msgid "Custom Body Background"
+msgstr ""
+
+#: lib/components/base.php:130
+msgid "BG image"
+msgstr ""
+
+#: lib/components/base.php:155
+msgid "Border color"
+msgstr ""
+
+#: lib/components/base.php:160
+msgid "Border radius"
+msgstr ""
+
+#: lib/components/base.php:185
+msgid "Easily connect with our stories, events and news."
+msgstr ""
+
+#: lib/components/base.php:330
+msgid "Seeko Options"
+msgstr ""
+
+#: lib/components/base.php:331
+msgid "Seeko Theme specific settings"
+msgstr ""
+
+#: lib/components/base.php:336
+msgid "Layout"
+msgstr ""
+
+#: lib/components/base.php:341
+msgid "Site Colors"
+msgstr ""
+
+#: lib/components/base.php:346 lib/components/base.php:605
+msgid "Typography"
+msgstr ""
+
+#: lib/components/base.php:352
+msgid "Header"
+msgstr ""
+
+#: lib/components/base.php:364
+msgid "Footer"
+msgstr ""
+
+#: lib/components/base.php:378
+msgid "Site Layout"
+msgstr ""
+
+#: lib/components/base.php:387
+msgid "Depth effect shadow"
+msgstr ""
+
+#: lib/components/base.php:390
+msgid "Site elements like images and inputs will have nice shadows."
+msgstr ""
+
+#: lib/components/base.php:445
+msgid "Google font load method"
+msgstr ""
+
+#: lib/components/base.php:452
+msgid ""
+"How to load Google fonts. Webfont Loader will get the fonts asynchronous "
+"while Google Link will add a link tag from Google API."
+msgstr ""
+
+#: lib/components/base.php:453
+msgid ""
+"If you check to download the font locally this will be ignored and loaded "
+"with an inline style with font-face declarations."
+msgstr ""
+
+#: lib/components/base.php:468
+msgid "Body Typography"
+msgstr ""
+
+#: lib/components/base.php:493 lib/components/base.php:630
+#: lib/components/base.php:790
+msgid "Font size"
+msgstr ""
+
+#: lib/components/base.php:527 lib/components/base.php:663
+#: lib/components/base.php:825
+msgid "Line height"
+msgstr ""
+
+#: lib/components/base.php:558
+msgid "Headings Default Typography"
+msgstr ""
+
+#: lib/components/base.php:580
+msgid ""
+"It will be used for all H1-H6 tags. You can override a specific heading "
+"below this section"
+msgstr ""
+
+#: lib/components/base.php:695
+msgid "BlockQuote Single Page"
+msgstr ""
+
+#: lib/components/base.php:716
+msgid "It will be used for blockquote tags."
+msgstr ""
+
+#: lib/components/base.php:763
+msgid "Header Typography"
+msgstr ""
+
+#: lib/components/base.php:857 lib/components/base.php:1140
+msgid "Background"
+msgstr ""
+
+#: lib/components/base.php:884
+msgid "Link Color"
+msgstr ""
+
+#: lib/components/base.php:900
+msgid "Background color"
+msgstr ""
+
+#: lib/components/base.php:921
+msgid "Single Post Layout"
+msgstr ""
+
+#: lib/components/base.php:938
+msgid "Archive Layout"
+msgstr ""
+
+#: lib/components/base.php:964
+msgid "Blog Page title"
+msgstr ""
+
+#: lib/components/base.php:967
+msgid "Set the title of the Blog page when is set as homepage"
+msgstr ""
+
+#: lib/components/base.php:974
+msgid "Blog Page Intro Text"
+msgstr ""
+
+#: lib/components/base.php:977
+msgid "Set a small description text to show on the blog page"
+msgstr ""
+
+#: lib/components/base.php:990
+msgid "Show categories on blog page"
+msgstr ""
+
+#: lib/components/base.php:1019
+msgid "Show author meta"
+msgstr ""
+
+#: lib/components/base.php:1022
+msgid "Show author meta under post title"
+msgstr ""
+
+#: lib/components/base.php:1028
+msgid "Prev & Next articles"
+msgstr ""
+
+#: lib/components/base.php:1031
+msgid "Show previous and next articles on post header"
+msgstr ""
+
+#: lib/components/base.php:1047
+msgid "Show author bio"
+msgstr ""
+
+#: lib/components/base.php:1050
+msgid "Show author details on single post page"
+msgstr ""
+
+#: lib/components/base.php:1065
+msgid "Show related articles"
+msgstr ""
+
+#: lib/components/base.php:1068
+msgid "Show related posts on single post page"
+msgstr ""
+
+#: lib/components/base.php:1084
+msgid "Get image from post content"
+msgstr ""
+
+#: lib/components/base.php:1087
+msgid ""
+"Shows on archive only. If no featured image was added, get it from the post "
+"content"
+msgstr ""
+
+#: lib/components/base.php:1097
+msgid "Default Post Image"
+msgstr ""
+
+#: lib/components/base.php:1100
+msgid "Used when post has no featured image"
+msgstr ""
+
+#: lib/components/base.php:1116
+msgid "Default image post formats"
+msgstr ""
+
+#: lib/components/base.php:1119
+msgid "Choose on what post formats to show the default image."
+msgstr ""
+
+#: lib/components/base.php:1128
+msgid "Show featured image on post page"
+msgstr ""
+
+#: lib/components/base.php:1192
+msgid "Link color"
+msgstr ""
+
+#: lib/components/base.php:1213
+msgid "Copyright text"
+msgstr ""
+
+#: lib/components/base.php:1222 lib/plugins/elementor/templates/button.php:334
+#: lib/plugins/elementor/templates/button.php:370
+msgid "Background Color"
+msgstr ""
+
+#: lib/components/base.php:1251
+msgid "Copyright text size"
+msgstr ""
+
+#: lib/components/author-bio.php:6
+msgid "Profession title"
+msgstr ""
+
+#: lib/components/author-bio.php:7
+msgid "Twitter username (without @)"
+msgstr ""
+
+#: lib/components/author-bio.php:9
+msgid "Facebook profile URL"
+msgstr ""
+
+#: lib/components/author-bio.php:12
+msgid "LinkedIn URL"
+msgstr ""
+
+#: sq-framework/lib/dynamic-css/dynamic-css.php:110
+#: sq-framework/lib/dynamic-css/dynamic-css.php:149
+msgid "Something went wrong when compiling less files."
+msgstr ""
+
+#: sq-framework/lib/dynamic-css/dynamic-css.php:181
+msgid ""
+"Cannot write dynamic css file. Please check file permissions with hosting"
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:105
+msgid ""
+"Please install Theme Core plugin to take full advantage of this theme's "
+"customizer capabilities"
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:107
+msgid "Install Theme Core Plugin now"
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:108
+msgid "Install Now"
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:126
+msgid ""
+"You have installed Theme Core plugin. Activate it to start customizing your "
+"site."
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:130
+msgid "Activate Theme Core Plugin now"
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:131
+msgid "Activate Now"
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:150
+#: sq-framework/lib/customizr/recommend.php:151
+msgid "Don't show this again"
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:150
+msgid "Dismiss"
+msgstr ""
+
+#: sq-framework/lib/customizr/recommend.php:161
+msgid ""
+"Are you sure? Dismissing this message will hide the installation "
+"recommendation and you will have to manually install and activate the plugin "
+"in the future."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/init.php:97
+#: sq-framework/lib/theme-welcome/init.php:98
+msgid " Panel"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/init.php:150
+msgid "License successfully activated. Please refresh page."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:289
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:320
+msgid "Active"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:290
+msgid "Child theme installed and active"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:294
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:325
+msgid "Inactive"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:295
+msgid "Activate child theme"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:300
+msgid "Not installed"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:301
+msgid "Install child theme"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:306
+msgid "Permissions needed to install child themes. Contact site administrator."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:315
+msgid "Needs update"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:316
+msgid "Update plugin"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:321
+msgid "Deactivate plugin"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:326
+msgid "Activate plugin"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:331
+msgid "Not Installed"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:332
+msgid "Install plugin"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/class-addons-manager.php:337
+msgid ""
+"You don't have permission to install plugins. Contact site administrator."
+msgstr ""
+
+#: lib/plugins/elementor/elementor.php:196
+msgid "Display"
+msgstr ""
+
+#: lib/plugins/elementor/elementor.php:290
+msgid "SEEKO Settings"
+msgstr ""
+
+#: lib/plugins/elementor/elementor.php:297
+msgid "Hide Header"
+msgstr ""
+
+#: lib/plugins/elementor/elementor.php:299
+#: lib/plugins/elementor/elementor.php:314
+#: lib/plugins/elementor/elementor.php:329
+#: lib/plugins/elementor/templates/bp-counter.php:136
+msgid "Off"
+msgstr ""
+
+#: lib/plugins/elementor/elementor.php:300
+#: lib/plugins/elementor/elementor.php:315
+#: lib/plugins/elementor/elementor.php:330
+#: lib/plugins/elementor/templates/bp-counter.php:137
+msgid "On"
+msgstr ""
+
+#: lib/plugins/elementor/elementor.php:312
+msgid "Hide Title + Breadcrumb"
+msgstr ""
+
+#: lib/plugins/elementor/elementor.php:327
+msgid "Hide Breadcrumb"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:154
+msgid "BuddyPress Settings"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:162
+msgid "Avatars size"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:165
+#: lib/plugins/elementor/templates/button.php:90
+msgid "Small"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:166
+#: lib/plugins/elementor/templates/button.php:92
+msgid "Large"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:175
+#: lib/plugins/elementor/templates/button.php:115
+msgid "Style"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:178
+msgid "Square"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:179
+msgid "Round"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:197
+msgid "BuddyPress Members per page"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:208
+msgid "BuddyPress Groups per page"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:228
+msgid "BuddyPress Pages Default Layout"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:245
+msgid "Members Directory Layout"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:254
+#: lib/plugins/buddypress/buddypress.php:272
+#: lib/plugins/buddypress/buddypress.php:290
+#: lib/plugins/buddypress/buddypress.php:308
+#: lib/plugins/buddypress/buddypress.php:326
+#: lib/plugins/buddypress/buddypress.php:344
+msgid "Default option will use BuddyPress default layout, as set above"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:263
+msgid "Member Profile Layout"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:281
+msgid "Groups Layout"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:299
+msgid "Group Page Layout"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:317
+msgid "Activity Layout"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:335
+msgid "Register page Layout"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:353
+msgid "BuddyPress avatars placeholder"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:356
+msgid "Small Thumb"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:357
+msgid "1x1 pixel"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:360
+msgid "What to load as the initial image source"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:487
+msgid "Pending friend request"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:582
+msgid "Photos"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:613
+#, php-format
+msgid "%s more"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:642
+msgid "Compatibility"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:1306
+msgid "Mention"
+msgstr ""
+
+#: lib/plugins/buddypress/buddypress.php:1316
+msgid "Message"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/class-utils.php:84
+msgid "None"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/class-utils.php:85
+msgid "Underline"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/class-utils.php:86
+msgid "Overline"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/class-utils.php:87
+msgid "Line Through"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/class-utils.php:166
+msgid "All Categories"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:194
+msgid "We&apos;re sorry, something went wrong."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:206
+msgid "Successfully set as homepage!"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:213
+msgid "An error occurred setting the page as home!!!"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:228
+msgid "We&apos;re sorry, the demo failed to import."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:235
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:246
+#: sq-framework/lib/theme-welcome/importer/import.php:256
+#: sq-framework/lib/theme-welcome/importer/import.php:1920
+msgid "Something went wrong with the data sent. Please try again."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:277
+msgid ""
+"There was an error in the import process. Try to do the import once again!"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:510
+msgid "Imported widgets"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:516
+msgid "Imported widgets..."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:529
+msgid "Imported Theme options"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:533
+msgid "Imported Theme Options..."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:556
+#, php-format
+msgid "Imported Revslider %s"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:597
+#, php-format
+msgid "%s complete"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:625
+msgid "Imported BuddyPress profile fields"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:641
+msgid "Imported PMPRO Levels"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:658
+msgid "Awesome. Your import is ready!!!"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:665
+msgid "Set as HomePage"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:668
+msgid "View Page"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:671
+msgid "Edit Page"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:677
+msgid "Your selected page already exists. Please check also Trash!"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:683
+msgid "Imported Pages:"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:689
+msgid "Nothing was selected for import!!!"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:745
+#, php-format
+msgid "Installed %s plugin"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:754
+#, php-format
+msgid "Activated %s plugin"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:774
+msgid "Plugins installed. Starting content import."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:895
+msgid "SQ Import Helper plugin needs to be active. Please try again."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:1447
+msgid "Reading images for the import"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2012
+msgid "Please select data to import."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2107
+msgid "Import successful. Have fun!"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2136
+msgid "PREVIEW"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2147
+msgid "Import Page"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2173
+msgid "Import Widgets"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2180
+msgid "Import Stax Templates"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2187
+msgid "Import Revolution Slider"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2194
+msgid "Import Dummy Profile fields"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2201
+msgid "Import Sample Membership Levels"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2208
+msgid "Import Theme options"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2211
+msgid ""
+"This will change some of your theme options. Make sure to export them first."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/importer/import.php:2221
+msgid "Activate required plugins"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:9
+msgid "Version"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:12
+msgid "Welcome image"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:18
+msgid "Dashboard"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:19
+msgid "Import Demo Data"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:20
+msgid "Theme Add-ons"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:21
+msgid "Status/Extras"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:31
+msgid "Welcome to SEEKO theme"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:34
+msgid "Initial setup steps"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:40
+msgid "Child theme is active, awesome."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:43
+msgid "Child theme is inactive. Enable it from Theme Add-ons tab."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:47
+msgid "It is a good practice to keep main theme files intact."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:51
+msgid "Import pre-made layouts to get started right away."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:55
+msgid "Check out useful add-ons that work well with Seeko."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:61
+msgid "Automatic Updates"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:62
+msgid ""
+"You can receive automatic updates from Themeforest, where our theme is "
+"exclusively sold.\n"
+"\t\t\t\t\t\t\t\t\t\t<br>Just enter your Marketplace token at the link below."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:65
+msgid "Setup updates"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:72
+msgid "Automatic Updates are OFF"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:73
+msgid ""
+"Automatic updates are disabled. Please enable Envato market plugin to "
+"receive automatic updates."
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:74
+msgid "Enable auto updates"
+msgstr ""
+
+#: sq-framework/lib/theme-welcome/templates/welcome.php:97
+msgid "Theme License Activation"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:111
+msgid "Title align"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:115
+#: lib/plugins/elementor/templates/tabs.php:200
+#: lib/plugins/elementor/templates/gallery.php:43
+#: lib/plugins/elementor/templates/button.php:205
+msgid "Left"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:116
+#: lib/plugins/elementor/templates/button.php:209
+msgid "Center"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:117
+#: lib/plugins/elementor/templates/tabs.php:201
+#: lib/plugins/elementor/templates/gallery.php:44
+#: lib/plugins/elementor/templates/button.php:213
+msgid "Right"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:118
+msgid "Full"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:127
+msgid "Tab Icon Type"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:132
+msgid "No Icon"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:133
+msgid "Seeko Icons"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:134
+msgid "Seeko Dual Color Icons"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:135
+msgid "Font Awesome"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:142
+#: lib/plugins/elementor/templates/tabs.php:155
+#: lib/plugins/elementor/templates/tabs.php:168
+#: lib/plugins/elementor/templates/button.php:240
+msgid "Icon"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:196
+msgid "Image align"
+msgstr ""
+
+#: lib/plugins/elementor/templates/tabs.php:333
+msgid "Inactive Icon Color"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:46
+msgid "BP Counter"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:107
+msgid "Members Counter"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:114
+#: lib/plugins/elementor/templates/members-carousel.php:142
+msgid "Field Name"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:117
+msgid "Select the field to get statistics by"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:124
+#: lib/plugins/elementor/templates/members-carousel.php:152
+msgid "Field Value"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:127
+msgid "Value to get same members by. Example: Rome if the Field name is City ."
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:134
+msgid "Get online users only"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:140
+msgid "Enable to count online users only"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:147
+msgid "Starting Number"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:156
+msgid "Number Prefix"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:166
+msgid "Text Prefix"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:176
+msgid "Number Suffix"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:179
+msgid "Plus"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:186
+msgid "Animation Duration"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:197
+msgid "Thousand Separator"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:200
+msgid "Show"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:201
+msgid "Hide"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:208
+msgid "Separator"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:224
+#: lib/plugins/elementor/templates/bp-counter.php:280
+#: lib/plugins/elementor/templates/gallery.php:51
+#: lib/plugins/elementor/templates/gallery.php:105
+msgid "Title"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:227
+#: lib/plugins/elementor/templates/bp-counter.php:228
+msgid "Cool Statistic"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:235
+msgid "View"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:246
+msgid "Number"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:254
+#: lib/plugins/elementor/templates/bp-counter.php:288
+#: lib/plugins/elementor/templates/button.php:322
+#: lib/plugins/elementor/templates/button.php:359
+msgid "Text Color"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-counter.php:327
+msgid "BuddyPress needs to be installed"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-register-xprofile.php:12
+msgid "BP Register - XProfile info"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-register-xprofile.php:28
+#: lib/plugins/elementor/templates/bp-register-account.php:28
+#: lib/plugins/elementor/templates/groups-carousel.php:148
+#: lib/plugins/elementor/templates/members-grid.php:84
+#: lib/plugins/elementor/templates/groups-grid.php:86
+#: lib/plugins/elementor/templates/bp-register-buttons.php:28
+#: lib/plugins/elementor/templates/members-carousel.php:208
+#: lib/plugins/elementor/templates/bp-register-blog.php:28
+msgid "You need BuddyPress plugin to be active!"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:16
+msgid "Photo Gallery (Seeko)"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:32
+msgid "Text Block"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:39
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:78
+#: sq-framework/lib/customizr/includes/control/group/class-box-shadow.php:76
+msgid "Position"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:60
+msgid "Text Typography"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:68
+#: lib/plugins/elementor/templates/button.php:173
+msgid "Text"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:79
+msgid "Image Gallery (max 6)"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:121
+msgid "Custom links"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:149
+#: lib/plugins/elementor/templates/button.php:186
+msgid "Link"
+msgstr ""
+
+#: lib/plugins/elementor/templates/gallery.php:162
+msgid "Images"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-register-account.php:12
+msgid "BP Register - Account info"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:16
+msgid "Groups Carousel"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:36
+#: lib/plugins/elementor/templates/posts-grid.php:36
+#: lib/plugins/elementor/templates/members-grid.php:36
+#: lib/plugins/elementor/templates/groups-grid.php:36
+#: lib/plugins/elementor/templates/posts-carousel.php:36
+#: lib/plugins/elementor/templates/members-carousel.php:36
+msgid "Settings"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:43
+#: lib/plugins/elementor/templates/posts-carousel.php:43
+#: lib/plugins/elementor/templates/members-carousel.php:43
+msgid "Carousel Style"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:45
+#: lib/plugins/elementor/templates/posts-carousel.php:45
+#: lib/plugins/elementor/templates/members-carousel.php:45
+msgid "Boxed"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:46
+#: lib/plugins/elementor/templates/posts-carousel.php:46
+#: lib/plugins/elementor/templates/members-carousel.php:46
+msgid "Full-Width"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:49
+#: lib/plugins/elementor/templates/posts-carousel.php:49
+#: lib/plugins/elementor/templates/members-carousel.php:49
+msgid "Enable Full width Carousel"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:57
+#: lib/plugins/elementor/templates/posts-grid.php:67
+#: lib/plugins/elementor/templates/members-grid.php:43
+#: lib/plugins/elementor/templates/groups-grid.php:43
+#: lib/plugins/elementor/templates/posts-carousel.php:66
+#: lib/plugins/elementor/templates/members-carousel.php:56
+msgid "Sort"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:61
+#: lib/plugins/elementor/templates/posts-grid.php:71
+#: lib/plugins/elementor/templates/members-grid.php:47
+#: lib/plugins/elementor/templates/groups-grid.php:47
+#: lib/plugins/elementor/templates/posts-carousel.php:70
+#: lib/plugins/elementor/templates/members-carousel.php:60
+msgid "Newest"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:62
+#: lib/plugins/elementor/templates/members-grid.php:48
+#: lib/plugins/elementor/templates/groups-grid.php:48
+#: lib/plugins/elementor/templates/members-carousel.php:61
+msgid "Most Active"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:63
+#: lib/plugins/elementor/templates/members-grid.php:49
+#: lib/plugins/elementor/templates/groups-grid.php:49
+#: lib/plugins/elementor/templates/members-carousel.php:62
+msgid "Most Popular"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:64
+#: lib/plugins/elementor/templates/posts-grid.php:73
+#: lib/plugins/elementor/templates/groups-grid.php:50
+#: lib/plugins/elementor/templates/posts-carousel.php:72
+msgid "Random"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:65
+#: lib/plugins/elementor/templates/groups-grid.php:51
+msgid "Alphabetical"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:73
+#: lib/plugins/elementor/templates/groups-carousel.php:76
+#: lib/plugins/elementor/templates/groups-grid.php:59
+#: lib/plugins/elementor/templates/groups-grid.php:62
+msgid "Total groups"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:83
+msgid "Groups to scroll"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:94
+msgid "Visible groups - Large Desktop"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:104
+msgid "Visible groups - Desktop"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:114
+msgid "Visible groups - Tablet"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:124
+msgid "Visible groups - Mobile"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:134
+msgid "Visible groups - Small Mobile"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:154
+#: lib/plugins/elementor/templates/groups-grid.php:92
+msgid "Groups component needs to be active!"
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-carousel.php:278
+#: lib/plugins/elementor/templates/groups-grid.php:193
+msgid "No groups found by the criteria."
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-grid.php:16
+msgid "Posts Grid (Seeko)"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-grid.php:44
+#: lib/plugins/elementor/templates/posts-grid.php:47
+#: lib/plugins/elementor/templates/posts-carousel.php:56
+#: lib/plugins/elementor/templates/posts-carousel.php:59
+msgid "Total posts"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-grid.php:54
+#: lib/plugins/elementor/templates/members-grid.php:67
+#: lib/plugins/elementor/templates/groups-grid.php:69
+msgid "Columns"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-grid.php:72
+#: lib/plugins/elementor/templates/posts-carousel.php:71
+msgid "Oldest"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-grid.php:16
+msgid "Members Grid"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-grid.php:57
+#: lib/plugins/elementor/templates/members-grid.php:60
+#: lib/plugins/elementor/templates/members-carousel.php:70
+#: lib/plugins/elementor/templates/members-carousel.php:73
+msgid "Total members"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-grid.php:182
+#: lib/plugins/elementor/templates/members-carousel.php:356
+msgid "No members found by the criteria."
+msgstr ""
+
+#: lib/plugins/elementor/templates/groups-grid.php:16
+msgid "Groups Grid"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-carousel.php:16
+msgid "Posts Carousel (Seeko)"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-carousel.php:80
+msgid "Posts to scroll"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-carousel.php:91
+msgid "Visible Posts - Large Desktop"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-carousel.php:101
+msgid "Visible Posts - Desktop"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-carousel.php:111
+msgid "Visible Posts - Tablet"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-carousel.php:121
+msgid "Visible Posts - Mobile"
+msgstr ""
+
+#: lib/plugins/elementor/templates/posts-carousel.php:131
+msgid "Visible Posts - Small Mobile"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-register-buttons.php:12
+msgid "BP Register - Submit button"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:16
+msgid "Members Carousel"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:80
+msgid "Members to scroll"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:90
+msgid "Visible members - Large Desktop"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:100
+msgid "Visible members - Desktop"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:110
+msgid "Visible members - Tablet"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:120
+msgid "Visible members - Mobile"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:130
+msgid "Visible members - Small Mobile"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:145
+msgid "List Content"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:161
+msgid "Tab Label"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:170
+msgid "Tab Icon"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:180
+msgid "Member Types"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:185
+msgid "Women"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:186
+#: lib/plugins/elementor/templates/members-carousel.php:192
+msgid "I am a"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:187
+msgid "Woman"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:191
+msgid "Men"
+msgstr ""
+
+#: lib/plugins/elementor/templates/members-carousel.php:193
+msgid "Man"
+msgstr ""
+
+#: lib/plugins/elementor/templates/bp-register-blog.php:12
+msgid "BP Register - Blog info"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:43
+msgid "Button (Seeko)"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:89
+msgid "Extra Small"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:91
+msgid "Medium"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:108
+#: lib/plugins/elementor/templates/button.php:296
+msgid "Button"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:119
+#: lib/plugins/elementor/templates/button.php:134
+msgid "Default"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:120
+msgid "Outline"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:121
+msgid "Gradient"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:130
+#: lib/plugins/elementor/templates/button.php:155
+msgid "Preset"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:135
+#: lib/plugins/elementor/templates/button.php:159
+msgid "Primary"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:136
+#: lib/plugins/elementor/templates/button.php:160
+msgid "Secondary"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:137
+#: lib/plugins/elementor/templates/button.php:161
+msgid "Tertiary"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:138
+msgid "Success"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:139
+#: lib/plugins/elementor/templates/button.php:162
+msgid "Danger"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:140
+msgid "Warning"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:141
+msgid "Info"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:142
+msgid "Light"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:143
+msgid "Dark"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:144
+msgid "Simple Link"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:178
+#: lib/plugins/elementor/templates/button.php:179
+msgid "Click here"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:191
+msgid "https://your-link.com"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:201
+msgid "Alignment"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:217
+msgid "Justified"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:229
+msgid "Size"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:250
+msgid "Icon Position"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:254
+msgid "Before"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:255
+msgid "After"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:263
+msgid "Icon Spacing"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:280
+msgid "Button ID"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:283
+msgid "Add your custom id WITHOUT the Pound key. e.g: my-id"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:285
+msgid ""
+"Please make sure the ID is unique and not used elsewhere on the page this "
+"form is displayed. This field allows <code>A-z 0-9</code> & underscore chars "
+"without spaces."
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:315
+msgid "Normal"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:352
+msgid "Hover"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:381
+msgid "Border Color"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:395
+msgid "Hover Animation"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:418
+msgid "Border Radius"
+msgstr ""
+
+#: lib/plugins/elementor/templates/button.php:438
+#: sq-framework/lib/customizr/includes/control/class-box-model.php:103
+msgid "Padding"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/class-image.php:45
+msgid "Remove image icon"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/class-image.php:46
+msgid "Upload image icon"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/class-image.php:47
+msgid "Click to Upload Image"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/class-box-model.php:99
+msgid "Margin"
+msgstr ""
+
+#: buddypress/legacy/groups/single/admin/manage-members.php:86
+#: buddypress/legacy/groups/single/admin/manage-members.php:191
+msgid "Demote"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:43
+msgid "Background Color Type"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:71
+msgid "BG Image"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:85
+msgid "Repeat"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:107
+msgid "Fixed"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:123
+msgid "Cover"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:171
+#: sq-framework/lib/customizr/includes/control/group/class-box-shadow.php:80
+msgid "Linear"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:174
+msgid "Radial"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:231
+msgid "Social or Self hosted video link"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:233
+msgid "Video Link"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-background.php:240
+msgid "Video Fallback"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-box-shadow.php:44
+msgid "Horizontal"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-box-shadow.php:52
+msgid "Vertical"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-box-shadow.php:60
+msgid "Blur"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-box-shadow.php:68
+msgid "Spread"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-box-shadow.php:83
+msgid "Inset"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-box-shadow.php:90
+msgid "Color"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-border.php:48
+msgid "Dashed"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-border.php:49
+msgid "Dotted"
+msgstr ""
+
+#: sq-framework/lib/customizr/includes/control/group/class-border.php:50
+msgid "Solid"
+msgstr ""
+
+#. Name of the theme
+msgid "Seeko"
+msgstr ""
+
+#. Description of the theme
+msgid "Community Site Builder with BuddyPress SuperPowers"
+msgstr ""
+
+#. URI of the theme
+msgid "http://seventhqueen.com/themes/seeko"
+msgstr ""
+
+#. Author of the theme
+msgid "SeventhQueen"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://themeforest.net/user/SeventhQueen"
+msgstr ""

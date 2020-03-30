@@ -1,0 +1,498 @@
+/* Post Page */
+
+.single-post {
+  .col-inner.entry-content {
+    padding-bottom: spacer(7);
+  }
+  .entry-content > div:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+// standard post-meta default
+.standard-post-meta {
+
+  > *:first-child {
+    margin-top: spacer(6);
+  }
+
+  .entry-title {
+    margin-bottom: spacer(3);
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .meta-category {
+    margin-bottom: spacer(2);
+  }
+
+  .author-wrapper {
+    @include flex();
+    @include align-items(center);
+    margin-bottom: spacer(6);
+  }
+  .avatar {
+    margin-right: spacer(2);
+  }
+
+  .author-name {
+    display: block;
+    color: $body-color;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  .entry-date {
+    display: block;
+    color: $gray-400;
+    line-height: 1;
+    font-size: $font-size-xs;
+  }
+}
+
+body.single .svq-breadcrumb + .entry-header {
+  @include media-breakpoint-up(sm) {
+    padding-top: spacer(3);
+  }
+}
+
+.standard-post-img,
+.video-highlight,
+.quote-highlight,
+.gallery-highlight .img-dynamic {
+  margin-bottom: spacer(5);
+}
+
+.standard-post-img {
+  .img-shadow img {
+    width: 90%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+
+  .standard-post-meta {
+    .entry-title {
+      margin-bottom: spacer(5);
+    }
+    .author-wrapper {
+      margin-bottom: spacer(7);
+    }
+    .standard-post-img {
+      margin-bottom: spacer(6);
+    }
+  }
+
+}
+
+.tpl-full {
+  .standard-post-meta {
+    text-align: center;
+
+    .svq-breadcrumb {
+      @include justify-content(center);
+    }
+
+    .author-wrapper {
+      @include justify-content(center);
+      text-align: left;
+    }
+  }
+}
+
+// col inner
+
+body.single .col-inner {
+  $gutter-lg: map-get($grid-gutter-widths, lg);
+  $gutter-xl: map-get($grid-gutter-widths, xl);
+
+  @if $gutter-lg != $gutter-xl {
+    @include media-breakpoint-up(xl) {
+      padding-left: $gutter-xl;
+      padding-right: $gutter-xl;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: $gutter-lg;
+    padding-right: $gutter-lg;
+  }
+
+  .standard-post-img,
+  .quote-highlight,
+  .video-highlight,
+  .gallery-highlight {
+    @extend %featured-image;
+  }
+}
+
+// post meta-tags
+.entry-content {
+  .meta-tags {
+    margin-bottom: spacer(4);
+    clear: both;
+    .btn-tag {
+      text-transform: none;
+      color: rgba($body-color, .6);
+      background: $light;
+
+      &:hover {
+        color: $body-color;
+        background: $gray-100;
+      }
+    }
+    &:empty {
+      display: none;
+    }
+  }
+  .page-links {
+    margin-bottom: spacer(4);
+    margin-top: spacer(4);
+  }
+  + .page-links {
+    margin-top: spacer(4);
+  }
+  .like-and-share {
+    margin-bottom: spacer(4);
+  }
+}
+
+// like and share
+
+.like-and-share {
+  display: flex;
+  align-items: center;
+  h5 {
+    margin-bottom: 0;
+  }
+  .btn.btn-sm {
+    height: 24px;
+    padding: 0 spacer(3);
+    margin-right: spacer(3);
+    margin-bottom: 0;
+
+    &,
+    &:hover,
+    &:active {
+      background: transparent !important;
+    }
+  }
+  .btn.btn-sm {
+    .icon {
+      color: $red;
+    }
+
+    &:hover {
+      color: $red;
+    }
+
+    &.vote {
+      .icon:before {
+        content: '\e925';
+      }
+    }
+  }
+
+}
+
+// Author Bio
+
+.author-bio {
+  background-color: $light;
+  @include media-breakpoint-up(lg) {
+    border-radius: $border-radius-lg;
+    border-top: none;
+  }
+
+  .author-name {
+    font-weight: $font-weight-bold;
+    color: $body-color;
+  }
+
+  .author-wrapper {
+    @include flex();
+    @include align-items(center);
+  }
+
+  .name-and-entitling {
+    @include flex();
+    @include flex-direction(column);
+  }
+
+  .author-social-links {
+    margin-bottom: 0;
+    &.list-inline {
+      li {
+        display: inline-flex;
+      }
+    }
+    a {
+      background: $black;
+      color: $white;
+      height: 28px;
+      width: 28px;
+      border-radius: 50%;
+      text-align: center;
+      @include transition(opacity .25s ease-out);
+      .icon {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// Leave a Comment
+.comments-area {
+  border-top: 1px solid $border-color;
+
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  .comment-meta-actions .comment-reply-link {
+    background: $white;
+  }
+  .comments-pagination {
+    margin: 2rem 0;
+    > h2 {
+      @extend %h3;
+    }
+    .nav-links {
+      display: inline-flex;
+    }
+  }
+}
+
+// Related Articles
+$related-articles-bg: #fff;
+
+.related-articles {
+  border-top: 1px solid $border-color;
+  background: $related-articles-bg;
+  padding-top: spacer(7);
+
+  .col-inner {
+    @include flex();
+    @include align-items(center);
+    @include justify-content(center);
+    margin-bottom: spacer(5);
+    padding: 0;
+
+    h2 {
+      @include flex-grow(1);
+      margin-bottom: 0;
+    }
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+
+  .svq-slick-prev,
+  .svq-slick-next {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .svq-slick.row {
+
+    @include media-breakpoint-down(sm) {
+      .slick-slide {
+        padding-left: .5rem;
+        padding-right: .5rem;
+      }
+    }
+
+    .post-card {
+      margin-top: spacer(5);
+      margin-bottom: spacer(5);
+    }
+
+  }
+}
+
+.author-bio + .related-articles {
+  border-top: none;
+}
+
+.sidebar-right,
+.sidebar-left {
+  .svq-slick .slick-track {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// all
+
+.comments-area,
+.author-bio,
+.related-articles {
+  @extend %outside-xs;
+
+  padding-top: spacer(7);
+  padding-bottom: spacer(7);
+}
+.comments-area {
+  padding-bottom: 0;
+}
+
+.comments-area,
+.author-bio {
+  h2.svq-section-title {
+    margin-bottom: spacer(6);
+  }
+}
+
+// tpl full
+
+.tpl-full {
+
+  .author-bio,
+  .comments-area,
+  .related-articles {
+    @extend %outside-full;
+  }
+
+  .author-bio {
+    text-align: center;
+
+    .img-dynamic {
+      margin-bottom: spacer(3);
+    }
+
+    .author-wrapper {
+      @include flex-direction(column);
+      margin-bottom: spacer(5);
+    }
+  }
+
+  .comments-area,
+  .related-articles {
+    h2.svq-section-title {
+      text-align: center;
+    }
+  }
+
+  .related-articles {
+    .svq-slick.row {
+      > .slick-list {
+        overflow: visible;
+      }
+    }
+  }
+}
+
+// tpl left & right
+
+.tpl-left,
+.tpl-right {
+  .author-bio,
+  .comments-area,
+  .related-articles {
+    @extend %outside-sidebar;
+
+    > .container {
+      @include media-breakpoint-up(lg) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  .author-bio {
+    .author-wrapper {
+      margin-bottom: spacer(3);
+    }
+    .img-dynamic {
+      margin-right: spacer(4);
+    }
+
+    .author-desc,
+    .author-social-links {
+      @include media-breakpoint-up(md) {
+        margin-left: $avatar-square-size-lg + spacer(4);
+      }
+    }
+  }
+
+  .related-articles {
+    .col-inner {
+      .btn {
+        @include order(2);
+        margin-left: spacer(2);
+      }
+      h2 {
+        @include order(1);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .svq-slick.row {
+        > .slick-list {
+          overflow: visible;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+// POST HIGHLIGHT
+
+.quote-highlight {
+  position: relative;
+  border-radius: $border-radius;
+  padding: spacer(6);
+
+  blockquote {
+    border: none;
+    font-family: $pullquote-font-family;
+    font-size: $pullquote-font-size;
+    line-height: $pullquote-line-height;
+    font-weight: $pullquote-font-weight;
+    margin-bottom: 0;
+    padding: spacer(6) 0 0 0;
+
+    &:before {
+      top: spacer(6);
+      left: spacer(6);
+    }
+  }
+}
+
+.gallery-highlight {
+  .img-dynamic {
+    display: block;
+  }
+  .slick-list {
+    overflow: visible;
+  }
+  .slick-arrow {
+    bottom: spacer(5);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .quote-highlight {
+    padding: 5 * $spacer;
+
+    blockquote {
+      padding: spacer(6) 0 0 0;
+
+      &:before {
+        top: 5 * $spacer;
+        left: 5 * $spacer;
+      }
+    }
+  }
+}
+
+/* Page post type */
+.page .entry-content + .comments-area {
+  margin-top: spacer(7);
+}

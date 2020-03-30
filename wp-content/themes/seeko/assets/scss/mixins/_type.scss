@@ -1,0 +1,41 @@
+// Typography golden rules
+
+
+// Responsive type
+
+@mixin html-font-base() {
+  $prev-font: "";
+  
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $font: map-get($html-font-base, $breakpoint);
+    
+    @if $font and $prev-font != $font {
+      @include media-breakpoint-up($breakpoint) {
+        font-size: $font;
+      }
+    }
+  }
+}
+
+
+
+// typo modular scale
+
+@mixin heading-modular-scale($size) {
+  $sm : map-get($type-scale-sm, $size);
+  $md : map-get($type-scale-md, $size);
+  $lg : map-get($type-scale-lg, $size);
+  
+  font-size: $sm;
+  
+  @if $sm != $md {
+    @include media-breakpoint-up(md) {
+      font-size: $md;
+    }
+  }
+  @if $md != $lg {
+    @include media-breakpoint-up(lg) {
+      font-size: $lg;
+    }
+  }
+}

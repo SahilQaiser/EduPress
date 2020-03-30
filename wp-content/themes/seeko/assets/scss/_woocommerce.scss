@@ -1,0 +1,27 @@
+/* Checkout page */
+.woocommerce {
+
+  .col2-set {
+    .col-1,
+    .col-2 {
+      flex: none;
+      max-width: none;
+      padding: 0;
+    }
+
+  }
+
+  form.checkout {
+
+    .form-row label {
+      display: block;
+      width: 100%;
+    }
+
+    .woocommerce-input-wrapper {
+      width: 100%;
+    }
+
+  }
+
+}

@@ -1,0 +1,8 @@
+#header .flexMenu-viewMore {
+	> a {
+		.icon {
+			font-size: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2);
+			height: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2);
+		}
+	}
+}

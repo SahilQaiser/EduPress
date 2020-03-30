@@ -1,0 +1,24 @@
+.carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right {
+	@supports (transform-style: preserve-3d) {
+	}
+}
+.carousel-item-next, .active.carousel-item-right {
+	@supports (transform-style: preserve-3d) {
+	}
+}
+.carousel-item-prev, .active.carousel-item-left {
+	@supports (transform-style: preserve-3d) {
+	}
+}
+.carousel-control-prev, .carousel-control-next {
+	@include hover-focus {
+	}
+}
+.carousel-control-prev {
+	@if $enable-gradients {
+	}
+}
+.carousel-control-next {
+	@if $enable-gradients {
+	}
+}

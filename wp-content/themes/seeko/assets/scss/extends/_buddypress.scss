@@ -1,0 +1,102 @@
+// buddypress extends
+
+
+// button nav - replacing classic tabs
+
+%button-nav {
+  margin: 1.5rem 0;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid $border-color;
+  
+  .current a {
+    background: $light;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: .75rem;
+    
+    > a {
+      display: block;
+      color: $body-color;
+      text-decoration: none;
+      background-color: $body-bg;
+      @include transition(background-color .25s ease-out);
+      padding-top: $btn-padding-y-xs;
+      padding-bottom: $btn-padding-y-xs;
+      margin-bottom: .75rem;
+
+      &:hover {
+        background-color: $light;
+      }
+    }
+  }
+}
+
+
+// select sm - little select for buddypress
+
+%select-sm {
+  @include flex();
+  @include flex-direction(row);
+  @include align-items(center);
+
+  label, select {
+    font-size: $font-size-sm;
+  }
+
+  label {
+    margin: 0 .5rem 0 0;
+    @include flex-shrink(0);
+  }
+
+  select {
+    padding-top: calc(0.25rem - 1px);
+    padding-bottom: calc(0.25rem - 1px);
+    padding-left: spacer(2);
+    padding-right: spacer(5);
+    background-color: $light;
+    border-color: transparent;
+    box-shadow: none;
+    height: auto;
+    background-position-x: calc(100% - .5rem);
+    width: auto;
+    margin-left: .5rem;
+    margin-bottom: 0;
+  }
+}
+
+%load-more {
+  text-align: center;
+  @include flex();
+  @include justify-content(center);
+
+  > a {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray-100;
+    background: transparent;
+    text-decoration: none;
+    color: $body-color;
+    cursor: pointer;
+    @extend %btn-xs;
+    @include transition(background-color .25s ease-out);
+    
+    &, 
+    &:before {
+      line-height: $font-size-sm * $line-height-base;
+    }
+
+
+    &:hover {
+      background-color: $light;
+    }
+
+    &:before {
+      content: "\e916";
+      @extend %icon-xs;
+      margin-right: .5rem;
+      font-weight: normal;
+    }
+  }
+}

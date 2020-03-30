@@ -1,0 +1,44 @@
+/* Media */
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+body.media {
+  display: block;
+  align-items: initial;
+}
+
+.media-body {
+  flex: 1;
+}
+
+.media-vertical {
+  @include flex-direction(column);
+  
+  .media-body {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+    h6 {
+      margin: 1.5rem 0 0 0;
+      font-weight: $font-weight-bold;
+      @include text-overflow($h6-font-size, $headings-line-height, 1);
+    }
+    small {
+      opacity: .8;
+    }
+  }
+}
+
+.svq-menu-avatar-img {
+  width: 30px;
+  border-radius: 15px;
+}
+
+a span.svq-menu-avatar-text {
+  margin-left: 7px;
+  display: inline-block;
+}

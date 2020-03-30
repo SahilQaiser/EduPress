@@ -1,0 +1,168 @@
+/* Elementor styling */
+
+
+.elementor-page #page-wrapper > .content-wrapper {
+  padding-bottom: 0;
+}
+
+// Elementor cols to match theme settings
+.elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
+  @include dynamic-gutter("col");
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container .elementor-container {
+  @include dynamic-gutter("row");
+}
+
+@include media-breakpoint-only(sm) {
+  .elementor-section-wrap > .elementor-element > .elementor-container {
+    @include dynamic-container-gutter(map-get($container-extra-gutters, sm));
+  }
+}
+
+@include media-breakpoint-only(xs) {
+  .elementor-section-wrap > .elementor-element > .elementor-container {
+    @include dynamic-container-gutter(map-get($container-extra-gutters, xs));
+  }
+}
+
+// Seeko button
+.seeko-button-content-wrapper {
+  @include flex();
+  @include align-items(center);
+  
+  .seeko-button-icon {
+    @include flex();
+    @include align-items(center);
+  }
+  
+  .elementor-align-icon-right {
+    @include order(2);
+     margin-left: spacer(2);
+    
+    + .seeko-button-text {
+      @include order(1);
+    }
+  }
+  
+  .elementor-align-icon-left {
+    margin-right: spacer(2);
+  }
+}
+
+.elementor-heading-title i {
+  font-size: inherit;
+  vertical-align: middle;
+  height: auto;
+}
+
+.elementor-align-justify .seeko-button {
+  display: block;
+  width: 100%;
+}
+
+
+
+// Seeko image outside
+
+.sko-bg-outside-left {
+  > .elementor-column-wrap {
+    width: 100vw;
+    margin-left: -15px !important;
+
+    > .elementor-widget-wrap {
+      padding-left: 15px;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    > .elementor-column-wrap {
+      width: 200vw;
+      margin-left: -100vw !important;
+
+      > .elementor-widget-wrap {
+        padding-left: 100vw;
+      }
+    }
+  }
+}
+
+.sko-bg-outside-right {
+  > .elementor-column-wrap {
+    margin-right: -15px !important;
+    width: 100vw;
+    > .elementor-widget-wrap {
+      padding-right: 15px;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    > .elementor-column-wrap {
+      width: 200vw;
+      margin-right: -100vw !important;
+
+      > .elementor-widget-wrap {
+        padding-right: 100vw;
+      }
+    }
+  }
+}
+
+.elementor-counter .elementor-counter-number-wrapper.h1 {
+  margin-bottom: 0;
+  font-weight: $headings-font-weight;
+}
+
+.elementor-widget-counterbp .elementor-counter-title {
+  font-family: inherit;
+  font-size: $font-size-base;
+}
+
+
+// heading default
+.elementor-widget-heading {
+  .elementor-widget-container {
+    margin-bottom: spacer(3);
+    
+    .elementor-heading-title {
+      line-height: inherit;
+    }
+    
+    .display, h1, h2, h3, h4, h5, h6 {
+      &.elementor-heading-title {
+        line-height: $headings-line-height;
+      }
+    }
+  }
+}
+
+//Icons default
+.elementor-icon i.icon {
+  font-size: inherit;
+}
+.sko-icon .fa.icon-lg {
+  font-size: $icon-size-lg;
+}
+
+.footer-elementor-tpl {
+  position: relative;
+}
+// for footer scenario
+a.svq-hover-edit-notify {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 20px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  &:hover {
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    opacity: 1;
+    text-decoration: none;
+  }
+}

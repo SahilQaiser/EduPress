@@ -1,0 +1,45 @@
+.svq-sh-carousel {
+	.btn-xs {
+		color: $secondary;
+		&:hover, &:focus {
+			background: $light;
+			color: $body-color;
+		}
+	}
+	.svq-slick-filter {
+		&:hover, &.active {
+			.icon {
+				color: $primary;
+			}
+		}
+		&.btn.active {
+			background: $light;
+		}
+	}
+	.media .media-body {
+		> small {
+			@include text-overflow($small-font-size, $line-height-base, 1);
+			height: text-height($small-font-size, $line-height-base, 1, 0);
+		}
+	}
+}
+@include media-breakpoint-up(sm) {
+	.svq-sh-carousel .svq-slick-filter {
+	}
+}
+.svq-slick-inner-arrows {
+	.slick-arrow {
+		background: rgba($light, .15);
+		&:hover, &:focus {
+			background: rgba($light, .25);
+		}
+	}
+	.slick-prev {
+		right: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - 2px + #{$btn-padding-x-xs} * 2 + 1.5rem);
+	}
+	.slick-next {
+		&:after {
+			height: $icon-size;
+		}
+	}
+}

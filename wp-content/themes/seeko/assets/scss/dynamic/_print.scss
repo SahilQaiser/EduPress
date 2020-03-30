@@ -1,0 +1,38 @@
+@if $enable-print-styles {
+	@media print {
+		*, *::before, *::after {
+		}
+		a, a:visited {
+		}
+		//a[href]::after {
+		//}
+		abbr[title]::after {
+		}
+		//a[href^="javascript:"]::after {
+		//}
+		pre {
+		}
+		pre, blockquote {
+		}
+		thead {
+		}
+		tr, img {
+		}
+		p, h2, h3 {
+		}
+		h2, h3 {
+		}
+		.navbar {
+		}
+		.badge {
+		}
+		.table {
+			td, th {
+			}
+		}
+		.table-bordered {
+			th, td {
+			}
+		}
+	}
+}

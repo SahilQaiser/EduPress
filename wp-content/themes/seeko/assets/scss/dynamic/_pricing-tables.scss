@@ -1,0 +1,164 @@
+.pricing-card {
+	border-radius: $pricing-card-border-radius;
+	@include pricing-table-colors($pricing-card-default-bg, $pricing-card-default-bg-end, -135deg);
+	.pricing-price {
+		> strong:first-child {
+			font-size: $h2-font-size;
+		}
+	}
+	.pricing-features {
+		li {
+			> span {
+				&:before {
+					top: calc((#{$line-height-base} * #{$font-size-base} - #{$pricing-card-icon-size}) / 2 + .5rem);
+				}
+			}
+		}
+	}
+	.pricing-desc {
+		line-height: $headings-line-height;
+		@include text-overflow($font-size-xs, $headings-line-height, 3);
+	}
+	.btn-pricing {
+		height: unquote("calc(#{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px)");
+	}
+}
+@include media-breakpoint-only(lg) {
+	.pricing-card {
+	}
+}
+@include media-breakpoint-up(md) {
+	.pricing-card .pricing-desc {
+		height: $font-size-xs * $headings-line-height * 3;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.pricing-card {
+		.pricing-price {
+			padding: unquote("calc((#{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px)/2)") 0 unquote("calc((#{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px)/2)") 0;
+			height: calc(#{$h2-font-size} * #{$headings-line-height} + .9rem * #{$headings-line-height} + #{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px);
+			> span {
+			}
+			strong > span {
+			}
+		}
+		.btn-pricing {
+			height: 0; /* Dynamic */
+			.btn {
+			}
+		}
+	}
+	.pricing-card:hover {
+		.pricing-price {
+			height: calc(#{$h2-font-size} * #{$headings-line-height} + .9rem * #{$headings-line-height});
+			> span {
+			}
+			strong > span {
+			}
+		}
+		.btn-pricing {
+			height: unquote("calc(#{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px)");
+			.btn {
+			}
+		}
+	}
+}
+.pricing-basic {
+	@include pricing-table-colors($pricing-card-basic-bg, $pricing-card-basic-bg-end, -135deg);
+}
+.pricing-intermediate {
+	@include pricing-table-colors($pricing-card-intermediate-bg, $pricing-card-intermediate-bg-end, -135deg);
+}
+.pricing-pro {
+	@include pricing-table-colors($pricing-card-pro-bg, $pricing-card-pro-bg-end, -135deg);
+}
+.pricing-popular.pricing-card {
+	.pricing-title {
+		&:after {
+			line-height: $line-height-base;
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.pricing-popular.pricing-card {
+	}
+}
+#pmpro_account-invoices table a {
+	color: $body-color;
+}
+.pmpro-account .pmpro_actionlinks a {
+	@extend %btn;
+}
+//.pmpro_box {
+//}
+#pmpro_account-membership > .pmpro_actionlinks > a {
+	@extend %btn-sm;
+}
+.pmpro-account {
+	#pmpro_account {
+		.pmpro_box {
+			border: 1px solid $border-color;
+		}
+	}
+	#pmpro_account-membership {
+		@include media-breakpoint-up(lg) {
+		}
+	}
+	#pmpro_account-profile {
+		background: $light;
+		@include media-breakpoint-up(lg) {
+		}
+	}
+	#pmpro_account-invoices {
+		@include media-breakpoint-up(lg) {
+		}
+	}
+}
+.pmpro-checkout {
+	.pmpro_form {
+		#pmpro_message {
+			@include media-breakpoint-up(lg) {
+			}
+		}
+		#pmpro_pricing_fields {
+			@include media-breakpoint-up(lg) {
+			}
+			background: $light;
+		}
+		#pmpro_user_fields {
+			@include media-breakpoint-up(lg) {
+			}
+			border: 1px solid $border-color;
+		}
+		#pmpro_account_loggedin {
+			@include media-breakpoint-up(lg) {
+			}
+		}
+		#pmpro_billing_address_fields {
+			@include media-breakpoint-up(lg) {
+			}
+			border: 1px solid $border-color;
+		}
+		#pmpro_payment_information_fields {
+			background: $light;
+			@include media-breakpoint-up(lg) {
+			}
+		}
+		.pmpro_submit {
+			@include media-breakpoint-up(lg) {
+			}
+		}
+	}
+}
+#pmpro_cancel {
+	.pmpro_yeslink {
+		@extend %btn;
+		@extend %btn-primary;
+	}
+	.pmpro_cancel {
+		@extend %btn;
+	}
+}
+#pmpro_pricing_fields {
+	border-radius: $border-radius;
+}

@@ -1,0 +1,65 @@
+// Display Grid Mixins
+
+@mixin grid($value : grid) {
+  display: -ms-#{$value};
+  display: $value;
+}
+
+@mixin grid-template($type, $value) {
+  @if $type == 'rows' {
+      -ms-grid-rows: $value;
+      grid-template-rows: $value;
+    
+  } @else if $type == 'columns' {
+      -ms-grid-columns: $value;
+      grid-template-columns: $value;
+    
+  } @else if $type == 'areas' {
+      //not for IE
+      grid-template-areas: $value;
+  }
+}
+
+@mixin grid-area($value) {
+  //not for IE
+  grid-area: $value;
+}
+
+
+@mixin grid-column($start, $end : $start) {
+  @if $start != $end {
+    -ms-grid-column: $start;
+    -ms-grid-column-span: $end - $start;
+    
+    $aux: $start + '/' + $end;
+    grid-column: #{$aux};
+    
+  } @else {
+    -ms-grid-column: $start;
+    grid-column: $start;
+  }
+}
+
+@mixin grid-row($start, $end : $start) {
+  @if $start != $end {
+    -ms-grid-row: $start;
+    -ms-grid-row-span: $end - $start;
+    
+    $aux: $start + '/' + $end;
+    grid-row: #{$aux};
+    
+  } @else {
+    -ms-grid-row: $start;
+    grid-row: $start;
+  }
+}
+
+
+@mixin grid-gap($type, $value) {
+  @if $type == 'row' {
+    grid-row-gap: $value;
+    
+  } @else if $type == 'column' {
+    grid-column-gap: $value;
+  }
+}

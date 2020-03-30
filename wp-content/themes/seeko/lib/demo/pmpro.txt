@@ -1,0 +1,72 @@
+{
+  "levels": [
+    {
+      "id": "1",
+      "name": "Free",
+      "description": "<ul><li>View members directory</li><li>View members profile</li><li>[x] Send Private messages</li><li>[x] Add media to your profile</li></ul>",
+      "confirmation": "",
+      "initial_payment": "0",
+      "recurring": "no",
+      "billing_amount": "0",
+      "cycle_number": "0",
+      "cycle_period": "Day",
+      "billing_limit": "0",
+      "trial_amount": "0",
+      "trial_limit": "0",
+	  "expiration_number": "0",
+	  "expiration_period": "Day"
+    },
+    {
+      "id": "2",
+      "name": "Bronze",
+      "description": "<ul><li>View members directory</li><li>View members profile</li><li>[x] Send Private messages</li><li>[x] Add media to your profile</li></ul>",
+      "confirmation": "",
+      "initial_payment": "8",
+      "recurring": "yes",
+      "billing_amount": "8",
+      "cycle_period": "Month",
+      "cycle_number": "1",
+      "billing_limit": "0",
+      "trial_amount": "0",
+      "trial_limit": "0",
+      "expiration_number": "0",
+      "expiration_period": "Day",
+      "seeko_pmpro_color": "basic"
+    },
+    {
+      "id": "3",
+      "name": "Silver",
+      "description": "<ul><li>View members directory</li><li>View members profile</li><li>Send Private messages</li><li>[x] Add media to your profile</li></ul>",
+      "confirmation": "",
+      "initial_payment": "12",
+      "recurring": "yes",
+      "billing_amount": "12",
+      "cycle_period": "Month",
+      "cycle_number": "1",
+      "billing_limit": "0",
+      "trial_amount": "0",
+      "trial_limit": "0",
+      "expiration_number": "0",
+      "expiration_period": "Day",
+      "seeko_pmpro_color": "intermediate",
+      "seeko_pmpro_popular": "yes"
+    },
+    {
+      "id": "4",
+      "name": "Plus",
+      "description": "<ul><li>View members directory</li><li>View members profile</li><li>Send Private messages</li><li>Add media to your profile</li></ul>",
+      "confirmation": "",
+      "initial_payment": "15",
+      "recurring": "yes",
+      "billing_amount": "15",
+      "cycle_period": "Month",
+      "cycle_number": "1",
+      "billing_limit": "0",
+      "trial_amount": "0",
+      "trial_limit": "0",
+      "expiration_number": "0",
+      "expiration_period": "Day",
+      "seeko_pmpro_color": "pro"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+$sko-tab-title-color: $headings-color;
+$sko-tab-active-color: $primary;
+$sko-tab-border-color: $border-color;
+.sko-nav-tabs {
+	.sko-item {
+		.icon {
+			color: $headings-color;
+		}
+		.sko-icon {
+			height: $icon-size-lg;
+		}
+	}
+}
+@include media-breakpoint-down(md) {
+	.sko-nav-tabs {
+		.sko-item {
+		}
+		li > a.active {
+			.sko-item {
+			}
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.sko-nav-tabs {
+		.sko-item {
+		}
+	}
+}

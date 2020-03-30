@@ -1,0 +1,47 @@
+.accordion-card {
+	border-radius: $accordion-card-border-radius;
+}
+.accordion-header {
+	a[data-toggle="collapse"], .accordion-head {
+		&:after {
+			top: calc((#{$line-height-base}*#{$font-size-base} - 1rem)/2 + #{$accordion-head-padding});
+		}
+	}
+}
+.accordion-card.show {
+	.accordion-header {
+		a[data-toggle="collapse"], .accordion-head {
+			&:before {
+				top: calc((#{$line-height-base}*#{$font-size-lg} - 2px)/2 + #{$accordion-head-padding});
+			}
+		}
+	}
+}
+@include accordion-card-colors($accordion-head-color, $accordion-dash-color, $accordion-arrow-color, $accordion-card-bg, $accordion-card-border-color, $accordion-card-hover-border-color);
+@include enable-dark() {
+	@include accordion-card-colors($dark-accordion-head-color, $dark-accordion-dash-color, $dark-accordion-arrow-color, $dark-accordion-card-bg, $dark-accordion-card-border-color, $dark-accordion-card-hover-border-color);
+}
+.accordion-card.is-valid .accordion-remove-trigger:hover {
+	&:before, &:after {
+		background-color: $primary;
+	}
+}
+@include enable-accent() {
+	.accordion-card.is-valid .accordion-remove-trigger:hover {
+		&:before, &:after {
+			background-color: $dark-primary;
+		}
+	}
+}
+.remove-existing-filters, .accordion-remove-trigger {
+	height: $line-height-base*$font-size-lg + 2*$accordion-head-padding;
+}
+.accordion-card.accordion-validation.show {
+	.accordion-header {
+		.accordion-remove-trigger {
+			&:before, &:after {
+				top: calc((#{$line-height-base}*#{$font-size-lg} - 2px)/2 + #{$accordion-head-padding});
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+// bp buttons extends
+
+// bp tooltip
+
+%bp-btn[data-svq-title] {
+  position: relative;
+  
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    z-index: $zindex-tooltip;
+    transform: translateX(-50%);
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  &:before {
+    content: attr(data-svq-title);
+    bottom: calc(100% + #{$tooltip-arrow-height} + 4px);
+    
+    @include reset-text();
+    font-size: $font-size-xs;
+    word-wrap: break-word;
+    white-space: nowrap;
+    
+    max-width: $tooltip-max-width;
+    padding: $tooltip-padding-y $tooltip-padding-x;
+    color: $tooltip-color;
+    text-align: center;
+    background-color: $tooltip-bg;
+    @include border-radius($border-radius-sm);
+  }
+  
+  &:after {
+    content: '';
+    top: calc(-#{$tooltip-arrow-height} - 5px);
+    border-color: transparent;
+    border-style: solid;
+    border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+    border-top-color: $tooltip-arrow-color;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      opacity: $tooltip-opacity;
+      @include transition(opacity .25s ease-out .25s, background .25s ease-out, border-color .25s ease-out);
+    }
+  }
+}
+

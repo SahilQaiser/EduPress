@@ -1,0 +1,148 @@
+// type extends
+
+// heading
+%h1, 
+%h2, 
+%h3, 
+%h4, 
+%h5, 
+%h6 {
+  font-family: $headings-font-family;
+  line-height: $headings-line-height;
+}
+
+%h1 { 
+  @include heading-modular-scale(h1);
+  font-weight: $h1-font-weight;
+  margin-bottom: spacer(5);
+}
+%h2 { 
+  @include heading-modular-scale(h2);
+  font-weight: $h2-font-weight;
+}
+%h3 {
+  @include heading-modular-scale(h3);
+  font-weight: $h3-font-weight;
+}
+%h4 {
+  @include heading-modular-scale(h4);
+  font-weight: $h4-font-weight;
+}
+%h5 {
+  @include heading-modular-scale(h5);
+  font-weight: $h5-font-weight;
+}
+%h6 {
+  @include heading-modular-scale(h6);
+  font-weight: $h6-font-weight;
+}
+
+%headings-margin-top {
+  & + {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      margin-top: spacer(5);
+    }
+  }
+}
+
+
+// subheader or lead
+%lead {
+  font-family: $lead-font-family;
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+  font-style: italic;
+  opacity: .9;
+}
+
+
+// lists
+%list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+%list-inline {
+  @extend %list-unstyled;
+  
+  li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: $list-inline-padding;
+    }
+  }
+}
+
+
+// blockquote
+%bq-center {
+  border: none;
+  text-align: center;
+  padding-left: 0;
+  
+  cite {
+    padding-top: $spacer;
+    position: relative;
+    
+    &::before {
+      display: none;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $blockquote-spacing/2;
+      border-bottom: 1px solid $primary;
+    }
+  }
+}
+
+%bq-center-lg {
+  @include media-breakpoint-up(lg) {
+    padding-left: spacer(5);
+    padding-right: spacer(5);
+  }
+}
+
+
+%hr {
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
+}
+
+%pullquote-type {
+  font-family: $pullquote-font-family;
+  font-size: $pullquote-font-size;
+  line-height: $pullquote-line-height;
+  font-weight: $pullquote-font-weight;
+  margin-bottom: spacer(5);
+}
+
+
+%avatar-status-after {
+  @include avatar-status();
+}
+%small {
+  font-size: $small-font-size;
+  font-weight: $font-weight-normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

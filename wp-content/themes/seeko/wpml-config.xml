@@ -1,0 +1,9 @@
+<wpml-config>
+    <admin-texts>
+        <key name="theme_mods_seeko">
+            <key name="blog_title" />
+            <key name="blog_intro" />
+            <key name="likes_already" />
+        </key>
+	</admin-texts>
+</wpml-config>

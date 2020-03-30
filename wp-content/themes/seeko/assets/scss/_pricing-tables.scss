@@ -1,0 +1,530 @@
+// Pricing Tables
+
+.pricing-card {
+  padding: 2rem;
+  border-radius: $pricing-card-border-radius;
+  margin-bottom: 2rem;
+  @include transition(box-shadow .225s ease-in-out);
+
+  @include pricing-table-colors($pricing-card-default-bg, $pricing-card-default-bg-end, -135deg);
+
+  .pricing-title {
+    padding: 1rem 0;
+  }
+
+  .pricing-title,
+  .pricing-price,
+  .pricing-desc {
+    text-align: center;
+  }
+
+  .pricing-price {
+    padding: 0;
+    font-size: 0.9rem;
+    
+    @include flex();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    
+    @include transition(padding .25s ease-out .15s, height .25s ease-out .15s);
+
+    > strong:first-child {
+      font-size: $h2-font-size;
+    }
+    strong > span {
+      font-weight: $font-weight-normal;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 1;
+      max-width: 100px;
+      @include transition(max-width .15s ease-out .15s, opacity .15s ease-out);
+    }
+
+    strong > span,
+    > span {
+      font-size: $font-size-lg;
+      line-height: 1;
+    }
+
+    > span {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      @include transition(opacity .25s ease-out .35s, height .25s ease-out .15s);
+    }
+
+    > strong:first-child,
+    > span {
+      display: block;
+    }
+  }
+
+  .pricing-features {
+    li {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+
+      > span {
+        padding: .5rem .25rem .5rem $pricing-card-icon-size*2;
+
+        position: relative;
+        display: block;
+
+        &:before {
+          content: '\e91f';
+          display: block;
+          position: absolute;
+          @extend %icon-font-family;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          font-size: $pricing-card-icon-size;
+          line-height: $pricing-card-icon-size;
+          top: calc((#{$line-height-base} * #{$font-size-base} - #{$pricing-card-icon-size}) / 2 + .5rem);
+          left: 0;
+          text-align: center;
+
+          @include size($pricing-card-icon-size, $pricing-card-icon-size);
+        }
+      }
+    }
+    li:not(.unavailable) > span {
+      font-weight: $font-weight-bold;
+    }
+    li.unavailable > span {
+      opacity: .5;
+      &:before {
+        content: '\e91e';
+      }
+    }
+  }
+
+  .pricing-desc {
+    font-size: $font-size-xs;
+    line-height: $headings-line-height;
+    opacity: .7;
+    @include text-overflow($font-size-xs, $headings-line-height, 3);
+  }
+
+  .btn-pricing {
+    height: unquote("calc(#{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px)");
+    overflow: hidden;
+    @include transition(height .25s ease-out .15s);
+
+    .btn {
+      color: $white;
+      background: rgba($black, .3);
+      width: 100%;
+      @include justify-content(center);
+      opacity: 1;
+      @include transition(opacity .15s ease-out);
+
+      &:hover {
+        background: rgba($black, .5);
+      }
+    }
+  }
+}
+
+.enable-shadow {
+  .pricing-card .btn-pricing .btn {
+    box-shadow: none;
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .pricing-card {
+    padding: spacer(4);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .pricing-card .pricing-desc {
+    height: $font-size-xs * $headings-line-height * 3;
+  }
+}
+
+// hover state
+
+@include media-breakpoint-up(lg) {
+  .pricing-card {
+    .pricing-price {
+      padding: unquote("calc((#{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px)/2)") 0 unquote("calc((#{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px)/2)") 0;
+      
+      height: calc(#{$h2-font-size} * #{$headings-line-height} + .9rem * #{$headings-line-height} + #{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px);
+
+      > span {
+        height: $font-size-lg;
+        opacity: 1;
+      }
+
+      strong > span {
+        max-width: 0;
+        opacity: 0;
+      }
+    }
+
+    .btn-pricing {
+      height: 0; /* Dynamic */
+      .btn {
+        opacity: 0;
+      }
+    }
+  }
+
+  .pricing-card:hover {
+
+    .pricing-price {
+      padding-top: 0;
+      padding-bottom: 0;
+      @include transition(padding .25s ease-out .2s, height .25s ease-out .2s);
+      animation: bounceInCheck .5s forwards .28s;
+      
+      height: calc(#{$h2-font-size} * #{$headings-line-height} + .9rem * #{$headings-line-height});
+
+      > span {
+        height: 0;
+        opacity: 0;
+        @include transition(opacity .25s ease-out, height .25s ease-out .2s);
+      }
+
+      strong > span {
+        opacity: 1;
+        max-width: 100px;
+        @include transition(max-width .35s ease-out .35s, opacity .15s ease-out);
+      }
+    }
+
+    .btn-pricing {
+      height: unquote("calc(#{$btn-padding-y}*2 + #{$font-size-base} * #{$btn-line-height} + 2px)");
+      @include transition(height .25s ease-out .2s);
+
+      .btn {
+        opacity: 1;
+        @include transition(opacity .25s ease-out .3s);
+      }
+    }
+  }
+}
+
+// colored styles
+
+// basic
+
+.pricing-basic {
+  @include pricing-table-colors($pricing-card-basic-bg, $pricing-card-basic-bg-end, -135deg);
+}
+
+// intermediate
+
+.pricing-intermediate {
+  @include pricing-table-colors($pricing-card-intermediate-bg, $pricing-card-intermediate-bg-end, -135deg);
+}
+
+// pro
+
+.pricing-pro {
+  @include pricing-table-colors($pricing-card-pro-bg, $pricing-card-pro-bg-end, -135deg);
+}
+
+// popular-plan
+
+.pricing-popular.pricing-card {
+
+  .pricing-title {
+    padding-bottom: .75rem;
+    @include flex();
+    @include flex-direction(column);
+    @include align-items(center);
+
+    &:after {
+      content: attr(data-popular);
+      display: block;
+      font-size: $font-size-sm;
+      background: rgba($black, .3);
+
+      line-height: $line-height-base;
+      padding: 0 1rem;
+      border-radius: $font-size-base;
+      margin-top: .75rem;
+      font-weight: 400;
+
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .pricing-popular.pricing-card {
+    margin-top: -2rem;
+  }
+}
+
+// membership account
+
+.form-asterisk {
+  @include flex();
+  @include align-items(center);
+}
+
+.pmpro_asterisk {
+  padding: 0 .5rem;
+  abbr {
+    text-decoration: none;
+  }
+}
+
+.pmpro_box {
+  margin-bottom: spacer(5);
+}
+
+#pmpro_account-cancel {
+  font-size: $font-size-xs;
+}
+
+#pmpro_account-invoices table a {
+  color: $body-color;
+}
+
+.pmpro_actionlinks .btn {
+  margin-right: .5rem;
+}
+
+#pmpro_levels_table {
+  margin-top: spacer(5);
+}
+
+/* Account page */
+#pmpro_account-profile ul {
+  @extend %list-unstyled;
+}
+
+.pmpro-account .pmpro_actionlinks a {
+  @extend %btn;
+}
+
+.pmpro-account .pmpro_box .pmpro_actionlinks a {
+  margin-bottom: 0;  
+}
+
+.pmpro-account .pmpro_box .pmpro_actionlinks a{
+  @extend %btn-xs;
+}
+
+.pmpro_account-membership-levelname .pmpro_actionlinks {
+  margin-top: spacer(3);
+}
+
+//.pmpro_box {
+//  border-bottom: 1px solid $border-color;
+//  padding-bottom: spacer(5);
+//}
+
+
+#pmpro_account-edit-profile,
+#pmpro_account-change-password,
+#pmpro_account-membership > .pmpro_actionlinks > a {
+  &:before {
+    content: "";
+    @extend %icon-default;
+    @extend %icon-xs;
+    margin-right: .5rem;
+  }
+}
+#pmpro_account-change-password {
+  &:before {
+    content: "\e920";
+  }
+}
+#pmpro_account-edit-profile {
+  &:before {
+    content: "\e918";
+  }
+}
+#pmpro_account-membership > .pmpro_actionlinks > a {
+  @extend %btn-sm;
+  @extend %btn-outline-secondary;
+  &:before {
+    content: "\e929";
+  }
+}
+#pmpro_account-cancel {
+  @extend %btn-link;
+}
+
+.pmpro-account {
+  #pmpro_account {
+    .pmpro_box {
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid $border-color;
+    }
+  }
+  #pmpro_account-membership {
+    @include media-breakpoint-up(lg) {
+      float: left;
+      clear: left;
+      width: 60%;
+    }
+  }
+  #pmpro_account-profile {
+    background: $light;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: none !important;
+    @include media-breakpoint-up(lg) {
+      float: right;
+      width: 38%;
+    }
+  }
+  #pmpro_account-invoices {
+    @include media-breakpoint-up(lg) {
+      float: left;
+      clear: left;
+      width: 60%;
+    }
+  }
+}
+nav.navigation {
+  @extend %small;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Checkout page */
+
+#pmpro_license {
+  background: #FFF;
+  border: 1px solid #CCC;
+  height: 200px;
+  margin: 3px;
+  overflow: auto;
+  padding: 5px;
+}
+
+.pmpro-checkout {
+  .pmpro_form {
+    hr {
+      display: none;
+    }
+    h4 {
+      margin-top: 0;
+    }
+    label {
+      @extend %small;
+    }
+    #pmpro_message {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        clear: left;
+        width: 60%;
+      }
+    }
+    #pmpro_pricing_fields {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        clear: left;
+        width: 60%;
+      }
+      margin-bottom: 1rem;
+      border: none;
+      background: $light;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      #pmpro_level_cost {
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    #pmpro_user_fields {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        clear: left;
+        width: 60%;
+      }
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid $border-color;
+    }
+    #pmpro_account_loggedin {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        clear: left;
+        width: 60%;
+      }
+    }
+    #pmpro_billing_address_fields {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        clear: left;
+        width: 60%;
+      }
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid $border-color;
+    }
+    #pmpro_payment_information_fields {
+      display: flex;
+      flex-wrap: wrap;
+      background: $light;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      @include media-breakpoint-up(lg) {
+        margin-left: 63%;
+      }
+    }
+    .pmpro_submit {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        clear: left;
+        width: 60%;
+      }
+    }
+    .pmpro_hidden {
+      display: none;
+    }
+  }
+}
+
+/* Cancel page */
+#pmpro_cancel {
+  .pmpro_yeslink {
+    @extend %btn;
+    @extend %btn-primary;
+  }
+  .pmpro_cancel {
+    @extend %btn;
+  }
+}
+
+#pmpro_pricing_fields {
+  border:1px solid $gray-100;
+  padding: spacer(4);
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+}
+
+.pmpro-checkout {
+  h4 {
+    margin-top: spacer(6);
+  }
+}
+
+/* Confirmation page */
+.pmpro-confirmation {}
+
+/* Invoice */
+.pmpro-invoice {
+  .pmpro-has-access {}
+}
+
+
+
+

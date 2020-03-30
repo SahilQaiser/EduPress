@@ -1,0 +1,133 @@
+.btn.bp-btn, .btn.btn-sm.bp-btn {
+	&:hover {
+		color: $body-color;
+	}
+}
+.bp-btn.btn-square.btn-sm {
+	padding: rem-px($btn-padding-y-sm, 18);
+}
+.bp-btn.not_friends, .bp-btn.group-button.join-group, .bp-btn.group-button.request-membership {
+	border-color: $primary;
+	background-color: $primary;
+	color: $primary;
+	box-shadow: 0 .65rem 1.5rem -.25rem rgba($primary, .5);
+	&:hover {
+		background-color: darken($primary, 5%);
+		border-color: darken($primary, 5%);
+	}
+	&[data-svq-title] {
+		&:hover {
+			&:before {
+				background: $primary;
+			}
+			&:after {
+				border-top-color: $primary;
+			}
+		}
+	}
+}
+.bp-btn.awaiting_response_friend {
+	border-color: $warning;
+	color: $warning;
+	background: $warning;
+	box-shadow: 0 1rem 2rem -.75rem rgba($warning, .6);
+	&[data-svq-title] {
+		&:hover {
+			&:before {
+				background: $warning;
+			}
+			&:after {
+				border-top-color: $warning;
+			}
+		}
+	}
+}
+.bp-btn.pending_friend, .bp-btn.group-button.membership-requested {
+	border-color: mix($white, $primary, 40%);
+	background: mix($white, $primary, 40%);
+	&:hover {
+		border-color: $secondary;
+		background: $secondary;
+	}
+}
+.bp-btn.is_friend, .bp-btn.group-button.leave-group, .bp-btn.accept {
+	border-color: $tertiary;
+	background-color: $tertiary;
+	box-shadow: 0 .65rem 1.5rem -.25rem rgba($tertiary, .5);
+}
+.bp-btn.is_friend, .bp-btn.group-button.leave-group {
+	&:hover {
+		border-color: $secondary;
+		background: $secondary;
+	}
+}
+.bp-btn.accept {
+	&:hover {
+		border-color: $tertiary;
+		background: $tertiary;
+	}
+	&[data-svq-title] {
+		&:hover {
+			&:before {
+				background: $tertiary;
+			}
+			&:after {
+				border-top-color: $tertiary;
+			}
+		}
+	}
+}
+.bp-btn.reject {
+	border-color: $secondary;
+	background: $secondary;
+}
+.bp-btn.mention {
+	color: $secondary;
+	&:hover {
+		color: $body-color;
+	}
+}
+@include media-breakpoint-up(lg) {
+	#post-mention {
+	}
+}
+[data-svq-title].not_friends {
+	&:before {
+		background: $primary;
+	}
+	&:after {
+		border-top-color: $primary;
+	}
+}
+[data-svq-title].pending_friend, [data-svq-title].is_friend, [data-svq-title].request-membership, [data-svq-title].leave-group {
+	&:before {
+		background: $secondary;
+	}
+	&:after {
+		border-top-color: $secondary;
+	}
+}
+[data-svq-pending].pending_friend, [data-svq-pending].request-membership {
+	&:before {
+		background: mix($white, $primary, 40%);
+	}
+	&:after {
+		border-top-color: mix($white, $primary, 40%);
+	}
+	&:hover {
+		&:before {
+			background: $secondary;
+		}
+		&:after {
+			border-top-color: $secondary;
+		}
+	}
+}
+.member-promote-to-admin, .mod-promote-to-admin {
+	&:before {
+		background: $tertiary;
+	}
+	&:after {
+		border-top-color: $tertiary;
+	}
+}

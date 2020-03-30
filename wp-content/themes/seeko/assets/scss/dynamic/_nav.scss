@@ -1,0 +1,13 @@
+.nav-link {
+	@include hover-focus {
+	}
+	&.active {
+		color: $body-color;
+	}
+}
+.nav-tabs {
+	.nav-link {
+		@include hover-focus {
+		}
+	}
+}

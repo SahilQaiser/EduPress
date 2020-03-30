@@ -1,0 +1,25 @@
+.svq-footer {
+	.footer-sidebar > .widget:last-of-type {
+		@include media-breakpoint-up(lg) {
+		}
+	}
+	.widget_recent_entries {
+		> ul > li {
+			.entry-title {
+				@include text-overflow($font-size-sm, $line-height-base, 1);
+			}
+		}
+	}
+}
+body.svq-footer-round {
+	.svq-footer {
+		@include media-breakpoint-up(md) {
+		}
+		@include media-breakpoint-up(xl) {
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.sko-social-list {
+	}
+}

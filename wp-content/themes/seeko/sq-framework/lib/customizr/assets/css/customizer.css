@@ -1,0 +1,1215 @@
+.customizer-separator {
+    background: #008fd4;
+    color: #fff;
+    padding: 10px;
+    margin: 10px -15px 5px -12px;
+}
+.customize-control hr {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.seeko-col,
+.seeko-col-1,
+.seeko-col-2,
+.seeko-col-3,
+.seeko-col-4,
+.seeko-col-5,
+.seeko-col-6,
+.seeko-col-7,
+.seeko-col-8,
+.seeko-col-9,
+.seeko-col-10,
+.seeko-col-11,
+.seeko-col-12 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: none;
+}
+
+.seeko-col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.seeko-col-1 {
+  -ms-flex-preferred-size: 8.33333333%;
+  flex-basis: 8.33333333%;
+  max-width: 8.33333333%;
+}
+
+.seeko-col-2 {
+  -ms-flex-preferred-size: 20.9999999%;
+  flex-basis: 20.9999999%;
+  max-width: 20.9999999%;
+}
+
+.seeko-col-3 {
+  -ms-flex-preferred-size: 29%;
+  flex-basis: 29%;
+  max-width: 29%;
+}
+
+.seeko-col-4 {
+  -ms-flex-preferred-size: 33.33333333%;
+  flex-basis: 33.33333333%;
+  max-width: 33.33333333%;
+}
+
+.seeko-col-5 {
+  -ms-flex-preferred-size: 41.66666667%;
+  flex-basis: 41.66666667%;
+  max-width: 41.66666667%;
+}
+
+.seeko-col-6 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.seeko-col-7 {
+  -ms-flex-preferred-size: 58.33333333%;
+  flex-basis: 58.33333333%;
+  max-width: 58.33333333%;
+}
+
+.seeko-col-8 {
+  -ms-flex-preferred-size: 66.66666667%;
+  flex-basis: 66.66666667%;
+  max-width: 66.66666667%;
+}
+
+.seeko-col-9 {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.seeko-col-10 {
+  -ms-flex-preferred-size: 83.33333333%;
+  flex-basis: 83.33333333%;
+  max-width: 83.33333333%;
+}
+
+.seeko-col-11 {
+  -ms-flex-preferred-size: 91.66666667%;
+  flex-basis: 91.66666667%;
+  max-width: 91.66666667%;
+}
+
+.seeko-col-12 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.seeko-responsive-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.seeko-responsive-control .customize-control-title {
+  -webkit-box-ordinal-group: -49;
+  -ms-flex-order: -50;
+  order: -50;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  max-width: none;
+  width: auto;
+}
+
+.seeko-responsive-control .seeko-viewport {
+  width: calc(100% - 27px);
+}
+
+.customize-control-seeko-input .seeko-responsive-control .seeko-viewport,
+.customize-control-seeko-textarea .seeko-responsive-control .seeko-viewport {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.seeko-responsive-control .customize-control-title ~ .seeko-viewport {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.seeko-responsive-control .seeko-responsive-switcher {
+  -webkit-box-ordinal-group: 51;
+  -ms-flex-order: 50;
+  order: 50;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  max-width: 22px;
+  width: 22px;
+  margin: 3px 0 0 5px;
+}
+
+.seeko-responsive-control .customize-control-title ~ .seeko-responsive-switcher {
+  -webkit-box-ordinal-group: -24;
+  -ms-flex-order: -25;
+  order: -25;
+  margin: 0 0 0 5px;
+}
+
+.seeko-responsive-switcher {
+  position: relative;
+  width: 22px;
+  height: 22px;
+}
+
+.seeko-responsive-switcher-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: -3px;
+  left: -1px;
+  padding: 3px 2px;
+  margin: 0 0 0 -1px;
+  background-color: transparent;
+  border-radius: 14px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.seeko-responsive-switcher:hover .seeko-responsive-switcher-buttons {
+  background-color: #0096CE;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.seeko-responsive-switcher-button {
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  margin: 0 1px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.seeko-responsive-switcher-button:hover {
+  background-color: #007AB1;
+}
+
+.seeko-responsive-switcher:hover .seeko-responsive-switcher-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.seeko-responsive-switcher-icon,
+.seeko-responsive-switcher-icon img {
+  display: block;
+  line-height: 0;
+}
+
+.seeko-viewport-desktop,
+.seeko-viewport-tablet,
+.seeko-viewport-mobile {
+  display: none;
+}
+
+.preview-desktop .seeko-viewport-desktop,
+.preview-tablet .seeko-viewport-tablet,
+.preview-mobile .seeko-viewport-mobile {
+  display: block;
+}
+
+.preview-desktop .seeko-responsive-switcher-desktop,
+.preview-tablet .seeko-responsive-switcher-tablet,
+.preview-mobile .seeko-responsive-switcher-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.preview-desktop .seeko-responsive-switcher-desktop, .preview-desktop .seeko-responsive-switcher-desktop:hover,
+.preview-tablet .seeko-responsive-switcher-tablet,
+.preview-tablet .seeko-responsive-switcher-tablet:hover,
+.preview-mobile .seeko-responsive-switcher-mobile,
+.preview-mobile .seeko-responsive-switcher-mobile:hover {
+  background-color: #007AB1;
+}
+.seeko-input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.seeko-input-group-wide {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.seeko-input-group.has-unit input {
+  padding-right: 28px;
+}
+
+.seeko-input-group.has-icon input {
+  width: calc(100% - 27px);
+}
+
+.seeko-input-group-icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 30px;
+  height: 27px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.seeko-input-group-text {
+  display: block;
+  padding-right: 6px;
+  font-size: 12px;
+  line-height: 27px;
+  white-space: nowrap;
+}
+
+.seeko-input-group-unit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  max-height: 100%;
+  height: 27px;
+  width: 28px;
+  color: #999;
+  font-size: 11px;
+  line-height: 26px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.seeko-unit-selector-wrapper {
+  position: relative;
+  top: 34px;
+  left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 34px;
+}
+
+.seeko-unit-selector-label {
+  text-transform: capitalize;
+  font-size: 10px;
+  color: #949494;
+  padding-left: 2px;
+  line-height: 1;
+}
+
+.seeko-control-unit-selector {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 35px;
+  height: 27px;
+  color: #ccc;
+  font-size: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  overflow: hidden;
+}
+
+.seeko-control-unit-selector.open {
+  overflow: visible;
+  height: auto;
+  background-color: #007AB1;
+  z-index: 300;
+}
+
+.seeko-control-unit-selector.open li:not(.selected-unit) {
+  margin: 0 1px 1px 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.seeko-control-unit-selector.open .selected-unit {
+  margin-bottom: -3px;
+}
+
+.seeko-control-unit-selector li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1px 4px;
+  background-color: #007AB1;
+    color: #fff;
+  width: 30px;
+  display: none;
+}
+
+.seeko-control-unit-selector li:not(.selected-unit):hover {
+  background-color: #0096CE;
+}
+
+.seeko-control-unit-selector li.disabled {
+    background-color: #ccc;
+    color: #333;
+}
+
+.seeko-control-unit-selector .selected-unit {
+  height: 19px;
+  border-radius: 2px;
+  margin: 2px 1px 3px 2px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.seeko-row .seeko-group-controls {
+  margin-bottom: -12px;
+}
+
+.seeko-input-control {
+  position: relative;
+}
+
+.seeko-input-control input {
+  width: 100%;
+  height: 27px;
+  padding: 3px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  outline: none;
+}
+
+.seeko-input-control input::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+.seeko-input-control input:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+.seeko-input-control input::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+.seeko-input-control input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+.seeko-input-control input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #999999;
+}
+
+.seeko-input-control input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #999999;
+}
+
+.seeko-input-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #37c4fc;
+}
+
+.seeko-input-control input {
+  height: 27px;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.seeko-input-control input[type=number]::-webkit-inner-spin-button,
+.seeko-input-control input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.seeko-input-group.has-unit.input {
+  padding-right: 30px;
+}
+
+.seeko-textarea-control textarea {
+  display: block;
+  width: 100%;
+  min-height: 58px;
+  padding: 5px 8px;
+  border: 1px solid #363636;
+  border-radius: 2px;
+  background-color: #3d3d3d;
+  color: white;
+  outline: none;
+  resize: none;
+}
+
+.seeko-textarea-control textarea:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #37c4fc;
+}
+
+.seeko-select-control {
+  position: relative;
+}
+
+.seeko-select-control:after {
+  content: "\f140";
+  font-family: dashicons;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  padding: 0 5px;
+  pointer-events: none;
+}
+
+.seeko-select-control-plain:after {
+  content: none;
+}
+
+.seeko-select-control select,
+select.seeko-select-field {
+  display: block;
+  width: 100%;
+  height: 28px;
+  font-size: 12px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0 20px 0 10px;
+  color: #fff;
+  background-color: #757575;
+  border: none;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.seeko-select-control select::-ms-expand,
+select.seeko-select-field::-ms-expand {
+  display: none;
+}
+
+.seeko-select-control select:focus::-ms-value,
+select.seeko-select-field:focus::-ms-value {
+  background-color: inherit;
+  color: inherit;
+}
+
+.seeko-input-group.has-icon select {
+  width: calc( 100% - 30px);
+}
+
+.seeko-toggle-control {
+  line-height: 0;
+}
+
+.seeko-toggle-control-label {
+  display: inline-block;
+}
+
+.seeko-toggle-control-switch {
+  display: block;
+  position: relative;
+  width: 33px;
+  height: 12px;
+  border: 1px solid #363636;
+  border-radius: 25px;
+  background-color: #3d3d3d;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.seeko-toggle-control-switch:hover:before {
+  background-color: #999999;
+}
+
+.seeko-toggle-control-switch:before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #808080;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translateY(-50%) translateX(-2px);
+  transform: translateY(-50%) translateX(-2px);
+  -webkit-transition: -webkit-transform 0.1s ease;
+  transition: -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+  content: '';
+}
+
+input[type=checkbox].seeko-toggle-control-checkbox:checked + .seeko-toggle-control-switch {
+  background-color: #46626e;
+}
+
+input[type=checkbox].seeko-toggle-control-checkbox:checked + .seeko-toggle-control-switch:before {
+  -webkit-transform: translateY(-50%) translateX(18px);
+  transform: translateY(-50%) translateX(18px);
+  background-color: #37c4ff;
+}
+
+.seeko-toggle-control.seeko-input-group {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.seeko-toggle-control .seeko-input-group-text {
+  padding-right: 13px;
+}
+
+.seeko-choose-control-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+input[type=radio].seeko-choose-control-radio,
+input[type=checkbox].seeko-choose-control-radio {
+  display: none;
+}
+
+.seeko-choose-control-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  background-color: #0096CE;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.seeko-choose-control-button:first-of-type {
+  border-radius: 2px 0 0 2px;
+}
+
+.seeko-choose-control-button:last-of-type {
+  border-radius: 0 2px 2px 0;
+}
+
+input[type=radio].seeko-choose-control-radio:checked + .seeko-choose-control-button,
+input[type=checkbox].seeko-choose-control-radio:checked + .seeko-choose-control-button {
+  background-color: #3d3d3d;
+  border: 1px solid #363636;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.seeko-choose-control-fit .seeko-choose-control-button {
+  width: 100%;
+}
+
+.seeko-choose-control-icon {
+  padding: 0 4px;
+}
+
+.seeko-choose-control-label {
+  padding: 0 8px;
+}
+
+.seeko-multicheck-control-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: -10px;
+}
+
+input[type=checkbox].seeko-multicheck-control-checkbox {
+  display: none;
+}
+
+.seeko-multicheck-control-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 0 6px 10px 0;
+}
+
+.seeko-multicheck-control-item:nth-child(odd) {
+  width: 50%;
+}
+
+.seeko-multicheck-control-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.seeko-multicheck-control-box {
+  display: inline-block;
+  position: relative;
+  height: 16px;
+  min-width: 16px;
+  width: 16px;
+  margin-right: 5px;
+  border: 1px solid #363636;
+  border-radius: 3px;
+  background-color: #3d3d3d;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+input[type=checkbox].seeko-multicheck-control-checkbox:checked + .seeko-multicheck-control-label .seeko-multicheck-control-box {
+  background-color: #37c4ff;
+}
+
+.seeko-multicheck-control-icon-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -12px;
+}
+
+.seeko-multicheck-control-icon-item {
+  margin: 0 12px 12px 0;
+}
+
+.seeko-multicheck-control-icon-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  -webkit-box-shadow: 0 0 0 1px #363636;
+  box-shadow: 0 0 0 1px #363636;
+  border-radius: 4px;
+}
+
+input[type=checkbox].seeko-multicheck-control-checkbox:checked + .seeko-multicheck-control-icon-label {
+  -webkit-box-shadow: 0 0 0 2px #37c4ff;
+  box-shadow: 0 0 0 2px #37c4ff;
+}
+
+.customize-control-seeko-divider {
+  margin-bottom: 0;
+}
+
+.seeko-divider-control {
+  height: 1px;
+  margin: 0 -20px 12px;
+  background-color: #404040;
+}
+
+.seeko-divider-control-empty .seeko-divider-control {
+  height: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.seeko-color-control input {
+  display: none;
+}
+
+.seeko-toggle-control.seeko-input-group {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.seeko-position-control {
+  max-width: 92px;
+}
+
+.seeko-position-control-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+input[type=radio].seeko-position-control-radio {
+  display: none;
+}
+
+.seeko-position-control-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 5px;
+  background-color: #0096CE;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+input[type=radio].seeko-position-control-radio:checked + .seeko-position-control-button {
+  background-color: #3d3d3d;
+  border: 1px solid #363636;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.seeko-position-control-icon {
+  padding: 0 4px;
+}
+
+.seeko-image-upload-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 93px;
+  height: 93px;
+  background-color: #3d3d3d;
+  border: 1px solid #363636;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.seeko-image-upload-control-icon {
+  display: block;
+  opacity: 0.5;
+  min-width: 26px;
+  margin-bottom: 5px;
+  padding: 4px 8px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 0;
+}
+
+.seeko-image-upload-control-label {
+  opacity: 0.5;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.4em;
+}
+
+.seeko-image-upload-control-preview {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.seeko-image-upload-control-remove {
+  display: none;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+}
+
+.seeko-image-upload-control-remove img {
+  position: relative;
+}
+
+.seeko-image-upload-control-remove:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #FF1800;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.seeko-image-upload-control-remove:hover:before {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.seeko-image-upload-control.has-image .seeko-image-upload-control-icon,
+.seeko-image-upload-control.has-image .seeko-image-upload-control-label {
+  display: none;
+}
+
+.seeko-image-upload-control.has-image .seeko-image-upload-control-preview {
+  display: block;
+}
+
+.seeko-image-upload-control.has-image:hover .seeko-image-upload-control-remove {
+  display: block;
+}
+
+.seeko-radio-image-control-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 0 -9px;
+}
+
+input[type=radio].seeko-radio-image-control-radio {
+  display: none;
+}
+
+.seeko-radio-image-control-button {
+  position: relative;
+  width: 25%;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.seeko-radio-image-control-button img {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input[type=radio].seeko-radio-image-control-radio:checked + .seeko-radio-image-control-button img {
+  -webkit-box-shadow: 0 0 0 3px #37c4ff;
+  box-shadow: 0 0 0 3px #37c4ff;
+}
+
+input[type=radio].seeko-radio-image-control-radio:checked + .seeko-radio-image-control-button:after {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  width: 18px;
+  height: 18px;
+  background: url(../img/radio-check.svg) no-repeat center center;
+  content: '';
+}
+
+.customize-control-seeko-background {
+  position: relative;
+}
+
+.seeko-background-control {
+  margin-bottom: -12px;
+}
+
+.seeko-background-control .hidden {
+  display: none;
+}
+
+.seeko-background-control li[class*=seeko-col-]:not(.customize-control) {
+  margin-bottom: 0;
+}
+
+.seeko-background-control-attachment,
+.seeko-background-control-size {
+  position: absolute;
+  bottom: 26px;
+  right: 1px;
+  max-width: 127px;
+}
+
+.seeko-background-control-attachment > .seeko-control,
+.seeko-background-control-size > .seeko-control {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.seeko-background-control-size {
+  bottom: -7px;
+}
+
+.seeko-background-control-type .seeko-choose-control-button {
+  min-width: 32px;
+}
+
+.seeko-box-model-control {
+  position: relative;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input {
+  position: absolute;
+  width: 43px;
+  height: 27px;
+  padding: 3px 5px;
+  border: 1px solid #363636;
+  border-radius: 2px;
+  background-color: #3d3d3d;
+  color: white;
+  text-align: center;
+  outline: none;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 12px;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input:hover {
+  background-color: #383838;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #37c4fc;
+  background-color: #383838;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input::-webkit-inner-spin-button, .seeko-box-model-control input.seeko-box-model-control-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999999;
+  opacity: 1;
+  /* Firefox */
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #999999;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #999999;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input.seeko-box-model-control-top {
+  top: 6px;
+  left: 50%;
+  margin-left: -21px;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input.seeko-box-model-control-right {
+  top: 50%;
+  /*rtl:ignore*/
+  right: 6px;
+  /*rtl:ignore*/
+  margin-top: -14px;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input.seeko-box-model-control-bottom {
+  bottom: 6px;
+  left: 50%;
+  margin-left: -21px;
+}
+
+.seeko-box-model-control input.seeko-box-model-control-input.seeko-box-model-control-left {
+  top: 50%;
+  /*rtl:ignore*/
+  left: 6px;
+  /*rtl:ignore*/
+  margin-top: -14px;
+}
+
+.seeko-box-model-control .seeko-control-units-container {
+  position: relative;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.seeko-box-model-control .seeko-control-unit-selector {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background-color: #3d3d3d;
+  border-radius: 2px;
+}
+
+.seeko-box-model-control .seeko-control-unit-selector .selected-unit {
+  margin: 3px;
+}
+
+.seeko-box-model-control-property {
+  position: relative;
+  float: left;
+  min-width: 154px;
+  min-height: 102px;
+  padding: 39px 54px;
+  border: 1px dashed #808080;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.seeko-box-model-control-title {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  color: #9e9e9e;
+  font-size: 9px;
+}
+
+.customize-control-seeko-box-model .seeko-responsive-switcher {
+  left: -23px;
+}
+
+.customize-control-seeko-box-model .seeko-responsive-control .seeko-viewport {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+}

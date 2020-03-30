@@ -1,0 +1,24 @@
+@mixin pricing-table-colors($end-color, $start-color,  $deg) {
+  
+  @include valid-gradient-directional($start-color, $end-color, $deg);
+  
+  $mix-color: mix($start-color, $end-color);
+  $color: color-yiq($mix-color);
+  
+  .pricing-title,
+  .pricing-price,
+  .pricing-desc,
+  .pricing-description,
+  .pricing-features li {
+    color: $color;
+  }
+  .pricing-features li {
+    
+    @if $color == $yiq-text-light {
+      border-bottom-color: rgba($color, .15);
+    } @else if $color == $yiq-text-dark {
+       border-bottom-color: rgba($color, .07);
+    }
+  }
+  
+}

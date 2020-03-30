@@ -1,0 +1,33 @@
+// Text truncate
+// Requires inline-block or block for proper styling
+
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-overflow ($font-size, $line-height, $lines-to-show) {
+  
+  @if($lines-to-show == 0) {
+    
+    display: inline-block;
+    max-height: inherit;
+    -webkit-line-clamp: inherit;
+    -webkit-box-orient: inherit;
+    overflow: visible;
+    text-overflow: unset;
+    
+  } @else {
+    
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-height: $font-size * $line-height * $lines-to-show;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+  }
+}

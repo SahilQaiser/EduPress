@@ -1,0 +1,159 @@
+/* Seeko Tabs */
+
+
+$sko-tab-title-color: $headings-color;
+$sko-tab-inactive-color: #DDE1FA;;
+$sko-tab-active-color: $primary;
+$sko-tab-border-color: $border-color;
+
+
+.sko-nav-tabs {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  
+  padding-bottom: spacer(2);
+  
+  .sko-item {
+    @include flex();
+    @include align-items(center);
+    padding: spacer(1);
+    transform: translateY(1px);
+    
+    .icon {
+      color: $headings-color;
+    }
+    .icon.sko-icon-hover {
+      color: $gray-300;
+    }
+
+    .icon,
+    .sko-title {
+      @include transition(color .25s ease-out);
+    }
+    .sko-title {
+      margin: 0;
+    }
+    .sko-icon {
+      height: $icon-size-lg;
+      margin-right: spacer(3);
+      @include flex('inline');
+      @include align-items(center);
+    }
+    
+  }
+  
+  
+  li > a:hover,
+  li > a.active {
+     text-decoration: none;
+    .sko-item {
+      
+      .sko-title {
+        text-decoration: none;
+        @include transition(color .25s ease-out .1s);
+      }
+      
+    }
+  }
+  
+  li > a.active .sko-item {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+}
+
+// Tabs Colors ***
+
+
+// Border Color
+.sko-nav-tabs {
+  border-color: $sko-tab-border-color;
+}
+
+// Background Color
+
+// Title
+.sko-nav-tabs .sko-item .sko-title,
+.sko-nav-tabs .sko-item .sko-icon .icon:not(.sko-icon-hover) {
+  color: $sko-tab-title-color;
+}
+
+
+// Icon Inactive Color 
+.sko-nav-tabs .sko-item .sko-icon .sko-icon-hover {
+  color: $sko-tab-inactive-color;
+}
+
+// Active Color
+.sko-nav-tabs li > a:hover .sko-item .sko-title,
+.sko-nav-tabs li > a:hover .sko-item .sko-icon-hover,
+.sko-nav-tabs li > a.active .sko-item .sko-title,
+.sko-nav-tabs li > a.active .sko-item .sko-icon-hover {
+  color: $sko-tab-active-color;
+}
+
+.sko-nav-tabs li > a.active .sko-item {
+  border-color: $sko-tab-active-color;
+}
+
+
+@include media-breakpoint-down(md) {
+  .sko-nav-tabs {
+    .sko-item {
+      padding: spacer(1);
+    }
+    
+    li > a.active {
+      .sko-item {
+        border-bottom: none;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .sko-nav-tabs {
+    padding-bottom: 0;
+    
+    .sko-item {
+      padding: spacer(3) spacer(3) spacer(5) spacer(3);
+    }
+  }
+}
+
+
+.sko-nav-tabs.sko-tabs-right {
+  @include justify-content(flex-end);
+}
+
+.sko-nav-tabs.sko-tabs-full {
+  @include justify-content(space-between);
+}
+
+.sko-nav-tabs.sko-tabs-center {
+  @include justify-content(center);
+}
+
+
+// Tab Content
+
+.sko-tab-content {
+  padding-top: spacer(5);
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

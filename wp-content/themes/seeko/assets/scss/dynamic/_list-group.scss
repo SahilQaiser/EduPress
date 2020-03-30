@@ -1,0 +1,11 @@
+.list-group-item-action {
+	@include hover-focus {
+	}
+}
+.list-group-item {
+	@include hover-focus {
+	}
+}
+@each $color, $value in $theme-colors {
+	@include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+}

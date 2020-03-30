@@ -1,0 +1,289 @@
+/* Image Avatar */
+
+.img-dynamic {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  background: $img-default-bg;
+}
+
+.img-card {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.aspect-ratio .img-card > img {
+  max-width: none;
+  @include size(100%, 100%);
+}
+
+.img-shadow {
+  position: absolute;
+  left: $img-shadow-padding-x;
+  right: $img-shadow-padding-x;
+  bottom: $img-shadow-padding-bottom;
+  height: $img-shadow-height;
+  z-index: 1;
+  text-align: center;
+
+  img {
+    height: 100% !important;
+    @include blur(20px);
+    opacity: .8;
+  }
+}
+
+
+.shadow-on .img-shadow {
+  animation: shadowIn .75s forwards;
+}
+
+.img-shadow img,
+.svq-slick .img-dynamic .img-shadow img {
+  width: $img-shadow-width;
+  margin: 0 auto;
+}
+
+
+// aspect-ratio
+
+.img-dynamic.aspect-ratio {
+  
+  //ratio
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%;
+  }
+  
+  .img-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: none;
+    
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include transition(transform .3s ease-out);
+      object-fit: cover;
+      -o-object-fit: cover;
+      
+      &.avatar {
+        border-radius: 0;
+      }
+      
+    }
+  }
+}
+
+// ie
+
+.ie-11 {
+  .img-dynamic.aspect-ratio .img-card {
+    > img {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+@include aspect-ratio(2,1);
+@include aspect-ratio(3,2);
+@include aspect-ratio(3,4);
+@include aspect-ratio(4,3);
+@include aspect-ratio(16,9);
+
+
+.img-round {
+  .img-card {
+    border-radius: $border-radius;
+  }
+}
+
+
+// progressive loading
+
+.progressive--not-loaded {
+  @include blur(20px);
+  transform: scale(1.05);
+}
+
+.progressive--is-loaded {
+  @include blur(20px);
+  animation: sharpen 0.5s forwards;
+  transform: scale(1);
+}
+
+@include animate-keyframe( sharpen ) {
+0% {
+    @include blur(20px);
+  }
+  50% {
+    @include blur(10px);
+  }
+  100% {
+    @include blur(0);
+  }
+}
+
+@include animate-keyframe( scale ) {
+  0% {
+    @include blur(0);
+    transform: scale(1);
+  }
+  
+  100% {
+    @include blur(0);
+    transform: scale(1.3);
+  }
+}
+
+
+@include animate-keyframe( shadowIn ) {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30%, 0);
+  }
+  50% {
+    opacity: .25;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@include animate-keyframe( progFadeIn ) {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include animate-keyframe( progFadeInOverlay ) {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .25;
+  }
+  100% {
+    opacity: $img-overlay-opacity;
+  }
+}
+
+
+// avatar
+
+.avatar {
+  &,
+  & .img-card {
+    border-radius: $avatar-border-radius;
+  }
+}
+
+// avatar status
+
+.avatar-status {
+  .img-card {
+    &:after {
+      @extend %avatar-status-after;
+    }
+  }
+  
+  
+  // online 
+  &.is-online {
+    .img-card{
+      &:after {
+        background: $avatar-status-online;
+      }
+    }
+  }
+}
+
+
+
+
+// avatar square
+
+.avatar-square-xs {
+  @include avatar-square($avatar-square-size-xs, .25rem, $avatar-square-border-radius-xs);
+  height: $avatar-square-size-xs;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.avatar-square-sm {
+  @include avatar-square($avatar-square-size-sm, .25rem, $avatar-square-border-radius-sm);
+}
+
+.avatar-square {
+  @include avatar-square($avatar-square-size, .375rem, $avatar-square-border-radius);
+}
+
+.avatar-square-lg {
+  @include avatar-square($avatar-square-size-lg, .375rem, $avatar-square-border-radius-lg);
+}
+
+.avatar-square,
+.avatar-square-lg {
+  .img-shadow {
+    bottom: -.125rem;
+    img {
+      @include blur(8px);
+    }
+  }
+}
+
+
+//no script
+.no-js {
+  .img-dynamic {
+    
+    noscript {
+      .img-card {
+        opacity: 1;
+      }
+      
+      &,
+      & > span {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      
+      > span {
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

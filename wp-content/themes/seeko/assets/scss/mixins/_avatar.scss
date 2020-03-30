@@ -1,0 +1,30 @@
+// Avatar
+
+@mixin avatar-square($size, $status-size, $border-radius) {
+  width: $size;
+  &,
+  & .img-card {
+    border-radius: $border-radius;
+  }
+  
+  &.avatar-status {
+    .img-card {
+      &:after {
+        @include size($status-size, $status-size);
+        bottom: $status-size;
+        right: $status-size;
+      }
+    }
+  }
+}
+
+@mixin avatar-status($w: .3rem, $h: .3rem) {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 3;
+  @include size($w, $h);
+  border-radius: 50%;
+  //background: $avatar-status-offline;
+  background: transparent;
+}

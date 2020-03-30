@@ -1,0 +1,5 @@
+.jumbotron {
+	@include border-radius($border-radius-lg);
+	@include media-breakpoint-up(sm) {
+	}
+}

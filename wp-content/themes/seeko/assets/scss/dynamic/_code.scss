@@ -1,0 +1,7 @@
+kbd {
+	@include border-radius($border-radius-sm);
+}
+pre {
+	border-radius: $border-radius;
+	background: $light;
+}

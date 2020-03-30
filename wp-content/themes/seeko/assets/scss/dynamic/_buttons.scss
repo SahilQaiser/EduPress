@@ -1,0 +1,43 @@
+.btn, input[type="submit"], input[type="button"], input[type="reset"], button {
+	@extend %btn;
+}
+@each $color, $value in $theme-colors {
+	.btn-#{$color}, input[type="submit"].btn-#{$color} {
+		@extend %btn-#{$color};
+	}
+}
+@each $color, $value in $theme-colors {
+	.btn-outline-#{$color}, input[type="submit"].btn-outline-#{$color} {
+		@extend %btn-outline-#{$color};
+	}
+}
+.btn.btn-sm, input[type="submit"].btn.btn-sm {
+	@extend %btn-sm;
+}
+.btn-xs {
+	.icon {
+		font-size: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - 2px);
+		height: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - 2px);
+	}
+}
+.btn-square.btn-sm {
+	padding: $btn-padding-y-sm;
+}
+@each $color, $value in $theme-gradients {
+	$aux: map-get($theme-colors, $color);
+	.btn-gradient-#{$color} {
+		@include button-gradient($value, $aux);
+	}
+}
+.btn[class*="btn-gradient-"] {
+	padding-top: calc(#{$btn-padding-y} + #{$btn-border-width});
+	padding-bottom: calc(#{$btn-padding-y} + #{$btn-border-width});
+}
+.btn-sm[class*="btn-gradient-"] {
+	padding-top: calc(#{$btn-padding-y-sm} + #{$btn-border-width});
+	padding-bottom: calc(#{$btn-padding-y-sm} + #{$btn-border-width});
+}
+@each $color, $value in $tag-colors {
+	.btn-tag.btn-tag-#{$color}, .btn.btn-tag-#{$color}, .btn-tag-#{$color} {
+	}
+}

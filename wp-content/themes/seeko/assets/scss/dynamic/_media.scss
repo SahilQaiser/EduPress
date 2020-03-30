@@ -1,0 +1,7 @@
+.media-vertical {
+	.media-body {
+		h6 {
+			@include text-overflow($h6-font-size, $headings-line-height, 1);
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@include media-breakpoint-only(xs) {
+	.pagination {
+	}
+}
+.page-numbers, .page-links > *:not(.page-links-title) {
+	line-height: $pagination-line-height;
+	color: $pagination-color;
+	@include hover {
+		color: $pagination-hover-color;
+	}
+	@include icon-inside($font-size-base, $line-height-base);
+}
+.page-numbers.current, .page-numbers:focus, .page-links > span:not(.page-links-title), .page-links > span:not(.page-links-title):hover {
+	color: $pagination-active-color;
+	border-color: $pagination-active-border-color;
+}
+.prev.page-numbers, .next.page-numbers {
+	@include hover-focus {
+	}
+}
+.pagination-lg {
+	@include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+	@include icon-inside($font-size-lg, $line-height-lg);
+}
+.pagination-sm {
+	@include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+	@include icon-inside($font-size-sm, $line-height-sm);
+}

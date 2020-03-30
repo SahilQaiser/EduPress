@@ -1,0 +1,9 @@
+.btn-group, .btn-group-vertical {
+	> .btn {
+		@include hover {
+		}
+	}
+}
+.btn-group-sm > .btn {
+	@extend %btn-sm;
+}

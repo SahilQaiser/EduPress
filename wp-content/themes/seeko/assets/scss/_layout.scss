@@ -1,0 +1,153 @@
+/* Layout */
+
+.svq-breadcrumb-wrap {
+  padding-top: spacer(5);
+  padding-bottom: spacer(2);
+}
+.content-wrapper {
+  padding-top: spacer(5);
+  padding-bottom: spacer(5);
+}
+.svq-breadcrumb-wrap + .content-wrapper {
+  padding-top: 0;
+}
+#header {
+  box-shadow: 1px 1px 6px rgba($black, .05);
+  position: relative;
+  z-index: $zindex-dropdown - 1;
+}
+#header + .content-wrapper,
+.elementor-location-header + .content-wrapper,
+.stax-zone + .content-wrapper {
+  padding-top: 0;
+}
+
+#page-wrapper {
+  width: 100%;
+}
+
+.svq-page-header {
+  padding-top: spacer(6);
+  /*padding-bottom: spacer(5);*/
+}
+h1.page-title  {
+  margin-top: 0;
+}
+// Layout with sidebars
+
+@include media-breakpoint-up(lg) {
+  
+  // layout default
+  .layout {
+     @include grid();
+     @include grid-template(rows, 1fr);
+    
+    .col-main, 
+    .col-sidebar {
+      @include grid-row(1);
+    }
+    
+    .col-sidebar {
+      margin-top: spacer(6);
+    }
+    
+    &.sidebar-right {
+      .col-main {
+        @include grid-column(1,2);
+
+      }
+      .col-sidebar {
+        @include grid-column(2,3);
+      }
+    }
+
+    &.sidebar-left {
+
+      .col-main {
+        @include grid-column(2,3);
+      }
+
+      .col-sidebar {
+        @include grid-column(1,2);
+      }
+    }
+  }
+  
+  
+  // layout custom
+  
+  .layout-custom {
+     @include grid();
+     @include grid-template(rows, auto 1fr);
+    
+    &.sidebar-right {
+      .col-header {
+        @include grid-column(1,2);
+        @include grid-row(1,2);
+      }
+      .col-main {
+        @include grid-column(1,2);
+        @include grid-row(2,3);
+      }
+      
+      .col-sidebar {
+        @include grid-column(2,3);
+        @include grid-row(2,3);
+      }
+    }
+    
+    &.sidebar-left {
+      .col-header {
+        @include grid-column(2,3);
+        @include grid-row(1,2);
+      }
+      .col-main {
+        @include grid-column(2,3);
+        @include grid-row(2,3);
+      }
+      
+      .col-sidebar {
+        @include grid-column(1,2);
+        @include grid-row(1,3);
+        margin-top: spacer(6);
+      }
+      
+    }
+    
+    &.sidebar-single {
+      .col-header {
+        @include grid-column(1,2);
+        @include grid-row(1,2);
+      }
+      .col-main {
+        @include grid-column(2,3);
+        @include grid-row(1,3);
+      }
+      
+      .col-sidebar {
+        @include grid-column(1,2);
+        @include grid-row(2,3);
+      }
+    }
+    
+    
+  }
+  
+  .col-sidebar {
+    font-size: $font-size-sm;
+  }
+  
+  
+  // IE fixes
+  .ie-10 .layout:not(.sidebar-left):not(.sidebar-right),
+  .ie-11 .layout:not(.sidebar-left):not(.sidebar-right), 
+  .ie-10 .layout-custom:not(.sidebar-left):not(.sidebar-right):not(.sidebar-single),
+  .ie-11 .layout-custom:not(.sidebar-left):not(.sidebar-right):not(.sidebar-single) {
+    @include flex();  
+  }
+  
+}
+
+
+// Generate dynamic sidebar widths
+@include dual-dynamic-array($sidebar-widths, $grid-gutter-widths, 'sidebar');

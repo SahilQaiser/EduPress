@@ -1,0 +1,23 @@
+// Form control focus state
+
+@mixin big-shadow-default($default, $hover: $default) {
+  box-shadow: $big-shadow-base rgba(darken($default, 5%), .6);
+  
+  &:hover {
+    box-shadow: $big-shadow-hover rgba(darken($hover, 3%), .6);
+  }
+  
+  &.disabled,
+  &:disabled {
+    box-shadow: none;
+  }
+}
+
+@mixin big-shadow-focus($focus) {
+  &:active,
+  &.active,
+  &:focus,
+  &.focus{
+    box-shadow: $big-shadow-focus rgba(darken($focus, 10%), 1);
+  }
+}

@@ -1,0 +1,107 @@
+.navbar-brand {
+	img.seeko-logo {
+		max-height: calc(#{$header-height} - 2 * #{$navbar-padding-y} - 2 * #{$navbar-brand-padding-y});
+	}
+	@include hover-focus {
+	}
+}
+.navbar-nav {
+	.dropdown-menu {
+		@include media-breakpoint-down(md) {
+			.show > .dropdown-toggle::after {
+			}
+		}
+	}
+}
+.enable-shadow {
+	.navbar-nav {
+		.dropdown-menu {
+			@include media-breakpoint-down(md) {
+				.dropdown-item:before {
+				}
+				&:hover {
+				}
+				.dropdown-menu a.nav-link {
+				}
+			}
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	#header .navbar-expand-lg {
+		> li {
+		}
+	}
+}
+.navbar-toggler {
+	@include hover-focus {
+	}
+}
+.navbar-expand {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+		&#{$infix} {
+			@include media-breakpoint-down($breakpoint) {
+				> .container, > .container-fluid {
+				}
+			}
+			@include media-breakpoint-up($next) {
+				.navbar-nav {
+					.dropdown-menu {
+					}
+					.dropdown-menu-right {
+					}
+					.nav-link {
+					}
+				}
+				> .container, > .container-fluid {
+				}
+				.navbar-collapse {
+				}
+				.navbar-toggler {
+				}
+				.dropup {
+					.dropdown-menu {
+					}
+				}
+			}
+		}
+	}
+}
+.navbar-light {
+	.navbar-brand {
+		@include hover-focus {
+		}
+	}
+	.navbar-nav {
+		.nav-link {
+			@include hover-focus {
+			}
+		}
+	}
+	.navbar-text {
+		a {
+			@include hover-focus {
+			}
+		}
+	}
+}
+.navbar-dark {
+	.navbar-brand {
+		@include hover-focus {
+		}
+	}
+	.navbar-nav {
+		.nav-link {
+			@include hover-focus {
+			}
+		}
+	}
+	.navbar-text {
+		a {
+			@include hover-focus {
+			}
+		}
+	}
+}

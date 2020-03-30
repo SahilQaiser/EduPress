@@ -1,0 +1,194 @@
+// buttons extends
+
+
+// general button
+
+%btn-shape {
+  @include flex("inline");
+  @include align-items(center);
+  @include justify-content(center);
+  
+  font-weight: $btn-font-weight;
+  width: auto;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  box-shadow: none;
+  border-width: $btn-border-width;
+  border-style: solid;
+  text-align: center;
+  margin-bottom: $spacer;
+  
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+%btn-colors {
+  @include button-variant($btn-default-bg, transparent);
+}
+
+%btn {
+  @extend %btn-shape;
+  @extend %btn-colors;
+}
+
+// btn icon
+
+%btn-with-icon {
+  .icon + span,
+  span + .icon {
+    margin-left: 0.5rem;
+  }
+  span {
+    // @include flex-grow(1); // Is not ok for members at mobile view
+  }
+}
+
+
+// alternates color
+
+@each $color, $value in $theme-colors {
+  %btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  %btn-outline-#{$color} {
+    @if $color == "light" {
+      @include button-outline-variant($value, $gray-900);
+    } @else {
+      @include button-outline-variant($value, $white);
+    }
+  }
+}
+
+
+// alternates color shadows
+
+@each $color, $value in $theme-colors {
+  %btn-#{$color} {
+    @if $enable-big-shadow {
+      .enable-shadow & {
+        @include big-shadow-default($value);
+        @include big-shadow-focus($value);
+      }
+    }
+    
+  }
+  %btn-outline-#{$color} {
+    @if $enable-big-shadow {
+      .enable-shadow & {
+        @include big-shadow-default($value);
+        @include big-shadow-focus($value);
+      }
+    }
+  }
+}
+
+
+
+// btn link 
+
+%btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  background-color: transparent;
+  
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+  }
+
+  // No need for an active state here
+}
+
+// btn link shadow
+%btn-link {
+  @if $enable-big-shadow {
+    .enable-shadow & {
+      box-shadow: none !important;
+    }
+  }
+}
+
+// btn lg 
+
+%btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+
+// btn sm
+
+%btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+
+
+// btn xs
+
+%btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, 1, $btn-border-radius-xs);
+  min-height: $icon-size;  
+  @include flex(inline);
+}
+
+// btn tag
+
+%btn-tag {
+  @include flex("inline");
+  @include align-items(center);
+  background: $light;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+  margin-right: spacer(2);
+  margin-bottom: spacer(2);
+  vertical-align: middle;
+
+  color: $body-color;
+  background: $light;
+  
+  
+  @include button-size($btn-tag-padding-y, $btn-tag-padding-x, $btn-tag-font-size, $btn-tag-line-height, $btn-tag-border-radius);
+  
+  @include transition(color .15s ease-in-out, background-color .185s ease-in-out);
+  
+  
+  @include hover {
+    text-decoration: none;
+    color: color-yiq($primary, 200);
+    background-color: $primary;
+  }
+  
+}
+
+
+
+
+
+
+
+

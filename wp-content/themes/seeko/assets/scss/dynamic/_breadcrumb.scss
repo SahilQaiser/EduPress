@@ -1,0 +1,13 @@
+.svq-breadcrumb {
+	li {
+		a {
+			color: $breadcrumb-inactive-color;
+			&:hover {
+				color: $breadcrumb-hover-inactive-color;
+			}
+		}
+		+ li::before {
+			content: "#{$breadcrumb-divider}";
+		}
+	}
+}

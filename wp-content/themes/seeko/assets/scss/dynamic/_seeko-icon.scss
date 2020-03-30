@@ -1,0 +1,14 @@
+.sko-icon:hover, .sko-nav-tabs li > a:hover, .sko-nav-tabs li > a.active {
+	.sko-icon-hover {
+		color: $primary;
+	}
+}
+.btn:hover .sko-icon-hover {
+	color: $primary;
+}
+.btn-primary .sko-icon-hover {
+	color: lighten($primary, 15%);
+}
+.btn-primary:hover .sko-icon-hover {
+	color: $tertiary;
+}

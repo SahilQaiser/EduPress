@@ -1,0 +1,51 @@
+@include media-breakpoint-up(lg) {
+	.layout {
+		.col-main, .col-sidebar {
+		}
+		.col-sidebar {
+		}
+		&.sidebar-right {
+			.col-main {
+			}
+			.col-sidebar {
+			}
+		}
+		&.sidebar-left {
+			.col-main {
+			}
+			.col-sidebar {
+			}
+		}
+	}
+	.layout-custom {
+		&.sidebar-right {
+			.col-header {
+			}
+			.col-main {
+			}
+			.col-sidebar {
+			}
+		}
+		&.sidebar-left {
+			.col-header {
+			}
+			.col-main {
+			}
+			.col-sidebar {
+			}
+		}
+		&.sidebar-single {
+			.col-header {
+			}
+			.col-main {
+			}
+			.col-sidebar {
+			}
+		}
+	}
+	.col-sidebar {
+	}
+	.ie-10 .layout:not(.sidebar-left):not(.sidebar-right), .ie-11 .layout:not(.sidebar-left):not(.sidebar-right), .ie-10 .layout-custom:not(.sidebar-left):not(.sidebar-right):not(.sidebar-single), .ie-11 .layout-custom:not(.sidebar-left):not(.sidebar-right):not(.sidebar-single) {
+	}
+}
+@include dual-dynamic-array($sidebar-widths, $grid-gutter-widths, 'sidebar');

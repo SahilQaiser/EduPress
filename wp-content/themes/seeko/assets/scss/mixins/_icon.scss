@@ -1,0 +1,8 @@
+// Icon
+
+@mixin icon-inside($font-size, $line-height) {
+  .icon {
+    height: $font-size * $line-height;
+    line-height: $font-size * $line-height;
+  }
+}

@@ -1,0 +1,44 @@
+//Debug labels
+
+body {
+	&:before,
+	&:after {
+		position: fixed;
+		right: 0;	
+		text-align: center;
+		width: 50px;
+		color: #fff;
+		z-index: $zindex-tooltip + 1;
+	}
+	
+	&:before {
+		content: '';
+		bottom: 90px;
+		font-size: 1em;
+		height: 40px;
+		line-height: 40px;
+		
+		@each $breakpoint in map-keys($grid-breakpoints) {
+			@include media-breakpoint-up($breakpoint) {
+				$background: map-get($debug-colors, $breakpoint);
+				content:'#{$breakpoint}';
+				background: $background;
+			}
+		}
+	}
+	
+	&:after {
+		content: '@1x';
+		height: 20px;
+		line-height: 20px;
+		bottom: 70px;
+		font-size: 0.7em;
+		font-weight: 600;
+		background: map-get($screen-density-label, 1x);
+		
+		@include highdensity {
+			content: '@2x';
+			background: map-get($screen-density-label, 2x);
+		}
+	}
+}

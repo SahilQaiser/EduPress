@@ -1,0 +1,15 @@
+// Accent Style Mixins
+
+@mixin enable-accent($value: "outside") {
+  @if $enable-accent-style {
+    @if $value == "inside" {
+      .enable-accent & {
+        @content;
+      }
+    } @else if $value == "outside" {
+      .enable-accent {
+        @content;
+      }
+    }
+  }
+}

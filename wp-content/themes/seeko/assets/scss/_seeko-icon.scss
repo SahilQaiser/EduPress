@@ -1,0 +1,54 @@
+// Seeko Dual Color Icons
+
+.sko-icon {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+
+  .sko-icon-hover + * {
+    position: relative;
+    z-index: 2;
+    @include transition(all .25s ease-out);
+  }
+  .sko-icon-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #DDE1FA;
+    @include transition(all .25s ease-out .1s);
+  }
+  
+  .sko-icon-hover:not(.icon) {
+    opacity: 0;
+  }
+  
+}
+
+.sko-icon:hover,
+.sko-nav-tabs li > a:hover,
+.sko-nav-tabs li > a.active {
+  .sko-icon-hover + *:not(.icon) {
+    opacity: 0;
+    @include transition(all .25s ease-out .1s);
+  }
+  .sko-icon-hover:not(.icon) {
+    opacity: 1;
+    @include transition(all .25s ease-out);
+  }
+  
+  .sko-icon-hover {
+    color: $primary;
+  }
+}
+
+.btn:hover .sko-icon-hover {
+  color: $primary;
+}
+
+.btn-primary .sko-icon-hover {
+  color: lighten($primary, 15%);
+}
+.btn-primary:hover .sko-icon-hover {
+  color: $tertiary;
+}

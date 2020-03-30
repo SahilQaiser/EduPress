@@ -1,0 +1,31 @@
+.popover {
+	@include border-radius($border-radius-lg);
+	.arrow {
+		margin: 0 $border-radius-lg;
+	}
+}
+.bs-popover-top {
+	.arrow {
+		bottom: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+	}
+}
+.bs-popover-right {
+	.arrow {
+		left: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+		margin: $border-radius-lg 0;
+	}
+}
+.bs-popover-bottom {
+	.arrow {
+		top: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+	}
+}
+.bs-popover-left {
+	.arrow {
+		right: calc((#{$popover-arrow-height} + #{$popover-border-width}) * -1);
+		margin: $border-radius-lg 0;
+	}
+}
+.popover-header {
+	@include border-top-radius(calc(#{$border-radius-lg} - #{$popover-border-width}));
+}

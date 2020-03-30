@@ -1,0 +1,6 @@
+.dropdown-menu {
+	@extend %dropdown-menu;
+}
+.dropdown-menu a, .dropdown-item {
+	@extend %dropdown-item;
+}

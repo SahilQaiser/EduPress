@@ -1,0 +1,39 @@
+@include media-breakpoint-only(sm) {
+	.elementor-section-wrap > .elementor-element > .elementor-container {
+	}
+}
+@include media-breakpoint-only(xs) {
+	.elementor-section-wrap > .elementor-element > .elementor-container {
+	}
+}
+.sko-bg-outside-left {
+	@include media-breakpoint-up(sm) {
+		> .elementor-column-wrap {
+			> .elementor-widget-wrap {
+			}
+		}
+	}
+}
+.sko-bg-outside-right {
+	@include media-breakpoint-up(sm) {
+		> .elementor-column-wrap {
+			> .elementor-widget-wrap {
+			}
+		}
+	}
+}
+.elementor-counter .elementor-counter-number-wrapper.h1 {
+	font-weight: $headings-font-weight;
+}
+.elementor-widget-heading {
+	.elementor-widget-container {
+		.display, h1, h2, h3, h4, h5, h6 {
+			&.elementor-heading-title {
+				line-height: $headings-line-height;
+			}
+		}
+	}
+}
+.sko-icon .fa.icon-lg {
+	font-size: $icon-size-lg;
+}

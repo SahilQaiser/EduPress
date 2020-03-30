@@ -1,0 +1,43 @@
+// icon extends
+
+%icon-font-family {
+  font-family: $icon-font-family !important;
+}
+
+%icon {
+  display: inline-block;
+  width: auto;
+  font-size: $icon-size;
+  line-height: 1;
+}
+
+%icon-default {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+   //Better Font Rendering =========== 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+%icon-sm {
+  font-size: $icon-size-sm;
+  //height: $icon-size-sm;
+}
+
+%icon-lg {
+  font-size: $icon-size-lg;
+  height: $icon-size-lg;
+}
+
+// icon inside a .btn-xs
+
+%icon-xs {
+  @extend %icon-font-family;
+  line-height: 1;
+  font-size: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - .125rem);
+  height: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - .125rem);
+}

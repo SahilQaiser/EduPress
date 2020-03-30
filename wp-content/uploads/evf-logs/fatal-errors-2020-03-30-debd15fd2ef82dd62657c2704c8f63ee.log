@@ -1,0 +1,36 @@
+2020-03-30T07:01:22+00:00 CRITICAL Uncaught Error: Call to undefined function bp_nouveau_single_item_subnav_classes() in /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/templates/groups/single/buddymeet/home.php:8
+Stack trace:
+#0 /Applications/AMPPS/www/webRoot/edupress/wp-includes/template.php(724): require()
+#1 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-core/bp-core-template-loader.php(155): load_template('/Applications/A...', false)
+#2 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-core/bp-core-template-loader.php(61): bp_locate_template(Array, true, false)
+#3 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/includes/buddymeet-group-class.php(325): bp_get_template_part('groups/single/b...')
+#4 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/includes/buddymeet-group-class.php(120): BuddyMeet_Group->get_groups_template_part('buddymeet/home')
+#5 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-grou
+
+2020-03-30T07:03:44+00:00 CRITICAL Uncaught Error: Call to undefined function bp_nouveau_single_item_subnav_classes() in /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/templates/groups/single/buddymeet/home.php:8
+Stack trace:
+#0 /Applications/AMPPS/www/webRoot/edupress/wp-includes/template.php(724): require()
+#1 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-core/bp-core-template-loader.php(155): load_template('/Applications/A...', false)
+#2 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-core/bp-core-template-loader.php(61): bp_locate_template(Array, true, false)
+#3 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/includes/buddymeet-group-class.php(325): bp_get_template_part('groups/single/b...')
+#4 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/includes/buddymeet-group-class.php(120): BuddyMeet_Group->get_groups_template_part('buddymeet/home')
+#5 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-grou
+
+2020-03-30T07:04:19+00:00 CRITICAL Uncaught Error: Call to undefined function bp_nouveau_single_item_subnav_classes() in /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/templates/groups/single/buddymeet/home.php:8
+Stack trace:
+#0 /Applications/AMPPS/www/webRoot/edupress/wp-includes/template.php(724): require()
+#1 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-core/bp-core-template-loader.php(155): load_template('/Applications/A...', false)
+#2 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-core/bp-core-template-loader.php(61): bp_locate_template(Array, true, false)
+#3 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/includes/buddymeet-group-class.php(325): bp_get_template_part('groups/single/b...')
+#4 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/includes/buddymeet-group-class.php(120): BuddyMeet_Group->get_groups_template_part('buddymeet/home')
+#5 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-grou
+
+2020-03-30T07:12:40+00:00 CRITICAL Uncaught Error: Call to undefined function bp_nouveau_single_item_subnav_classes() in /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/templates/groups/single/buddymeet/home.php:8
+Stack trace:
+#0 /Applications/AMPPS/www/webRoot/edupress/wp-includes/template.php(724): require()
+#1 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-core/bp-core-template-loader.php(155): load_template('/Applications/A...', false)
+#2 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-core/bp-core-template-loader.php(61): bp_locate_template(Array, true, false)
+#3 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/includes/buddymeet-group-class.php(325): bp_get_template_part('groups/single/b...')
+#4 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddymeet/includes/buddymeet-group-class.php(120): BuddyMeet_Group->get_groups_template_part('buddymeet/home')
+#5 /Applications/AMPPS/www/webRoot/edupress/wp-content/plugins/buddypress/bp-grou
+

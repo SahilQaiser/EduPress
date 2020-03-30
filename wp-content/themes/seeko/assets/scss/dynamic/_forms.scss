@@ -1,0 +1,99 @@
+@include all-inputs {
+	@include form-control-colors($input-bg, $input-color, $input-placeholder-color, $input-border-color, $input-disabled-bg);
+	@include enable-dark("inside") {
+		@include form-control-colors($dark-bg, $dark-input-color, $dark-input-placeholder-color, $dark-input-border-color, $dark-input-disabled-bg);
+		@include form-control-hover($dark-input-hover-border-color);
+	}
+	@include form-control-focus($input-focus-border-color);
+	@include enable-accent("inside") {
+		@include form-control-focus($accent-input-focus-border-color);
+	}
+	@if $enable-rounded {
+		border-radius: $input-border-radius;
+	} @else {
+	}
+	&::-ms-expand {
+	}
+	@include placeholder {
+	}
+	&:disabled, &[readonly] {
+	}
+}
+@include all-height-inputs {
+}
+select, select.form-control {
+	&:not([size]):not([multiple]) {
+		background-image: str-replace(url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='#{$gray-500}' fill-rule='evenodd' d='M3.42547774,11.0929521 C3.33143351,11.0929521 3.23696374,11.0637059 3.15823893,11.0027764 C2.97525694,10.8614199 2.94674579,10.6059221 3.09483354,10.4316637 L7.56299841,5.15110521 C7.64257429,5.05686755 7.7621509,5.00162479 7.88896167,5 C8.00385734,5.00974872 8.13662567,5.0511808 8.21832925,5.14379367 L12.8992639,10.4243521 C13.0511815,10.595361 13.0286279,10.8516712 12.8494758,10.9966834 C12.6698981,11.1408833 12.4013826,11.1205735 12.2498906,10.9487522 L7.90172786,6.04351959 L3.75654748,10.9418469 C3.6727162,11.0413651 3.54930974,11.0929521 3.42547774,11.0929521 L3.42547774,11.0929521 Z' transform='matrix(1 0 0 -1 0 16.093)'/></svg>"), "#", "%23");
+		background-position-x: calc(100% - #{$input-padding-x});
+	}
+	&:focus::-ms-value {
+		color: $input-color;
+	}
+	&[multiple] option {
+		border-radius: $border-radius*0.75;
+	}
+}
+.col-form-label {
+	padding-top: calc(#{$input-padding-y} + #{$input-border-width});
+	padding-bottom: calc(#{$input-padding-y} + #{$input-border-width});
+}
+.col-form-label-lg {
+	padding-top: calc(#{$input-padding-y-lg} + #{$input-border-width});
+	padding-bottom: calc(#{$input-padding-y-lg} + #{$input-border-width});
+}
+.col-form-label-sm {
+	padding-top: calc(#{$input-padding-y-sm} + #{$input-border-width});
+	padding-bottom: calc(#{$input-padding-y-sm} + #{$input-border-width});
+}
+input.form-control-lg, .form-control-lg, select:not([size]):not([multiple]).form-control-lg {
+	@include border-radius($input-border-radius-lg);
+}
+input[type="checkbox"] + label, input[type="radio"] + label, .form-check-label, .form-check-wrapper {
+	padding-left: calc(#{$form-check-icon-size} + #{$form-check-input-gutter});
+}
+input[type="checkbox"] + label, input[type="radio"] + label, .form-check-label, .form-check-wrapper > .check-icon {
+	&:before {
+		top: calc((#{$input-line-height}*#{$font-size-base} - #{$form-check-icon-size})/2);
+	}
+}
+input[type="checkbox"] + label, input[type="checkbox"] + .check-icon {
+	&:after {
+		top: calc((#{$input-line-height}*#{$font-size-base} - #{$form-check-icon-size})/2);
+	}
+}
+input[type="radio"] + label, input[type="radio"] + .check-icon {
+	&:after {
+		top: calc((#{$input-line-height}*#{$font-size-base} - 10px)/2);
+		left: calc((#{$form-check-icon-size} - 10px)/2);
+	}
+}
+@include form-check-colors($form-check-label-color, $form-check-label-hover-color, $form-check-label-disabled-color, $form-check-icon-bg, $form-check-icon-border-color, $form-check-icon-disabled-border-color );
+@include enable-dark() {
+	@include form-check-colors($dark-form-check-label-color, $dark-form-check-label-hover-color, $dark-form-check-label-disabled-color, $dark-form-check-icon-bg, $dark-form-check-icon-border-color, $dark-form-check-icon-disabled-border-color);
+}
+@include form-check-colors-checked($form-check-icon-checked-color, $form-check-icon-checked-border-color, $form-check-checked-label-color);
+@include enable-accent() {
+	@include form-check-colors-checked($accent-form-check-icon-checked-color, $accent-form-check-icon-checked-border-color, $dark-form-check-checked-label-color);
+}
+.form-inline {
+	@include media-breakpoint-up(sm) {
+		label {
+		}
+		.form-group {
+		}
+		.form-control {
+		}
+		.form-control-plaintext {
+		}
+		.input-group {
+		}
+		.form-check {
+		}
+		.form-check-input {
+		}
+		.custom-control {
+		}
+		.custom-control-label {
+		}
+	}
+}

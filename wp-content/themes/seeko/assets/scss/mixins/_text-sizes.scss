@@ -1,0 +1,12 @@
+// Text Sizes
+
+@mixin text-small() {
+  font-size: $small-font-size;
+  line-height: 1.5;
+}
+
+@mixin text-big() {
+  font-size: $font-size-base * 1.125;
+  line-height: 1.75;
+}
+

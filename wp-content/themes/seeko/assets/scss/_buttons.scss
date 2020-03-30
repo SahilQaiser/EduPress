@@ -1,0 +1,239 @@
+// stylelint-disable selector-no-qualifying-type
+
+/* Buttons */
+
+//
+// Base styles
+//
+
+.btn,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button {
+  @extend %btn;
+  
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .btn elements
+  &:not([disabled]):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not([disabled]):not(.disabled):active,
+  &:not([disabled]):not(.disabled).active {
+    background-image: none;
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+//with icons 
+.btn {
+  @extend %btn-with-icon;
+}
+
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color},
+  input[type="submit"].btn-#{$color} {
+    @extend %btn-#{$color};
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color},
+  input[type="submit"].btn-outline-#{$color} {
+    @extend %btn-outline-#{$color};
+  }
+}
+
+.btn.btn-outline-facebook {
+  @include button-outline-variant($facebook-color, $facebook-color);
+}
+.btn.btn-outline-google {
+  @include button-outline-variant($google-color, $google-color);
+}
+
+.svq-facebook-connect.btn-outline-facebook {
+
+  .icon-facebook-fill:before {
+    background: $facebook-color;
+    color: #fff;
+    padding-bottom: 0;
+    display: inline-block;
+    line-height: 17px;
+    padding-top: 5px;
+    width: 24px;
+    transform: translateY(3px);
+    border-radius: 2px;
+  }
+  &:hover {
+    .icon-facebook-fill:before {
+      background: #fff;
+      color: $facebook-color;
+    }
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+
+.btn-link {
+  @extend %btn-link;
+}
+
+//
+// Button Sizes
+//
+
+.btn.btn-lg {
+  @extend %btn-lg;
+}
+
+.btn.btn-sm,
+input[type="submit"].btn.btn-sm  {
+  @extend %btn-sm;
+  
+  .icon {
+    @extend %icon-sm;
+  }
+}
+
+.btn.btn-xs,
+input[type="submit"].btn-xs {
+  @extend %btn-xs;
+}
+
+.btn-xs {
+  .icon {
+    font-size: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - 2px);
+    height: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2 - 2px);
+  }
+  span {
+    vertical-align: middle;
+  }
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+
+// Square Button 
+
+.btn-square {
+  padding: $btn-padding-y;
+}
+
+.btn-square.btn-sm {
+  padding: $btn-padding-y-sm;
+}
+
+.btn-square.btn-lg {
+  padding: $btn-padding-y-lg;
+}
+
+// Gradients
+
+@each $color, $value in $theme-gradients {
+  $aux: map-get($theme-colors, $color);
+  
+  .btn-gradient-#{$color} {
+     @include button-gradient($value, $aux);
+  }
+}
+
+.btn[class*="btn-gradient-"] {
+  padding-top: calc(#{$btn-padding-y} + #{$btn-border-width});
+  padding-bottom: calc(#{$btn-padding-y} + #{$btn-border-width});
+}
+
+.btn-sm[class*="btn-gradient-"] {
+  padding-top: calc(#{$btn-padding-y-sm} + #{$btn-border-width});
+  padding-bottom: calc(#{$btn-padding-y-sm} + #{$btn-border-width});
+}
+
+
+
+// btn tags
+
+.btn-tag {
+  @extend %btn-tag;
+}
+
+.btn-tag-sm {
+  font-size: $font-size-xs;
+}
+
+
+// btn tags colors
+@each $color, $value in $tag-colors {
+  .btn-tag.btn-tag-#{$color},
+  .btn.btn-tag-#{$color},
+  .btn-tag-#{$color} {
+    @include tag-color($value);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+.card-link {
+	@include hover {
+	}
+}
+.card-deck {
+	@include media-breakpoint-up(sm) {
+		.card {
+		}
+	}
+}
+.card-group {
+	@include media-breakpoint-up(sm) {
+		> .card {
+			+ .card {
+			}
+			@if $enable-rounded {
+				&:first-child {
+					.card-img-top, .card-header {
+					}
+					.card-img-bottom, .card-footer {
+					}
+				}
+				&:last-child {
+					.card-img-top, .card-header {
+					}
+					.card-img-bottom, .card-footer {
+					}
+				}
+				&:only-child {
+					.card-img-top, .card-header {
+					}
+					.card-img-bottom, .card-footer {
+					}
+				}
+				&:not(:first-child):not(:last-child):not(:only-child) {
+					.card-img-top, .card-img-bottom, .card-header, .card-footer {
+					}
+				}
+			}
+		}
+	}
+}
+.card-columns {
+	@include media-breakpoint-up(sm) {
+		.card {
+		}
+	}
+}

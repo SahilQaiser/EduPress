@@ -1,0 +1,36 @@
+
+/* Flex Menu */
+
+
+
+.flexMenu-popup.dropdown-menu {
+  right: 0;
+  left: inherit;
+  
+}
+.flexMenu-popup > li {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.flex-menu-overflow {
+  overflow: hidden;
+}
+
+.flexMenu-viewMore {
+  position: relative;
+}
+
+#header .flexMenu-viewMore {
+  
+  > a {
+    display: block;
+    color: $navbar-light-color;
+    padding: $nav-link-padding-y .75rem;
+    
+    .icon {
+      font-size: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2);
+      height: calc(#{$icon-size} - #{$btn-padding-y-xs} * 2);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.custom-control {
+	min-height: (1rem * $line-height-base);
+}
+.custom-control-label {
+	&::before {
+		top: (($line-height-base - $custom-control-indicator-size) / 2);
+	}
+	&::after {
+		top: (($line-height-base - $custom-control-indicator-size) / 2);
+	}
+}
+.custom-select {
+	@if $enable-rounded {
+	} @else {
+	}
+	&:focus {
+		&::-ms-value {
+			color: $input-color;
+		}
+	}
+}
+.custom-file-input {
+	@each $lang, $value in $custom-file-text {
+		&:lang(#{$lang}) ~ .custom-file-label::after {
+		}
+	}
+}
+.custom-file-label {
+	&::after {
+		height: calc(#{$custom-file-height} - #{$custom-file-border-width} * 2);
+	}
+}

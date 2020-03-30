@@ -1,0 +1,179 @@
+/* Accordion */
+
+//
+// Base styles
+//
+
+.accordion-card {
+  border: 1px solid transparent;
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 0;
+  border-radius: $accordion-card-border-radius;
+  
+  @include transition(border-color .4s ease-in, box-shadow .4s ease-in, margin .35s ease-in, padding .35s ease-out);
+}
+
+.accordion-header {
+  a[data-toggle="collapse"],
+  .accordion-head {
+    position: relative;
+    display: block;
+    padding: $accordion-head-padding ($accordion-head-padding + 1.25rem) $accordion-head-padding $accordion-head-padding-left;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+    opacity: .8;
+    @include transition(padding .3s ease-out, font-size .3s ease-out, line-height .3s ease-out, color .2s ease-out);
+    
+    &:before {
+      @include accordion-dash();
+    }
+  
+    //arrow
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      @include size(1rem, 1rem);
+      top: calc((#{$line-height-base}*#{$font-size-base} - 1rem)/2 + #{$accordion-head-padding});
+      right: 1rem;
+      opacity: 0;
+      @include transition(opacity .35s ease-in);
+    }
+  }
+}
+
+.accordion-body {
+  padding: $accordion-head-padding $accordion-head-padding $accordion-head-padding $accordion-head-padding-left;
+  @include transition(padding .5s ease-out);
+}
+
+// Show state
+.accordion-card.show {
+  margin-top: $accordion-head-padding;
+  margin-bottom: $accordion-head-padding;
+  padding: $accordion-card-show-padding;
+  
+  .accordion-header {
+    a[data-toggle="collapse"],
+    .accordion-head {
+      font-size: $font-size-lg;
+      
+      &:before {
+        top: calc((#{$line-height-base}*#{$font-size-lg} - 2px)/2 + #{$accordion-head-padding});
+      }
+    
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// color the accordion card
+@include accordion-card-colors($accordion-head-color, $accordion-dash-color, $accordion-arrow-color, $accordion-card-bg, $accordion-card-border-color, $accordion-card-hover-border-color);
+
+// dark accordion
+@include enable-dark() {
+  @include accordion-card-colors($dark-accordion-head-color, $dark-accordion-dash-color, $dark-accordion-arrow-color, $dark-accordion-card-bg, $dark-accordion-card-border-color, $dark-accordion-card-hover-border-color);
+}
+
+.accordion-card.is-valid .accordion-remove-trigger:hover {
+    &:before,
+    &:after {
+      background-color: $primary;
+    }
+}
+
+// accent
+@include enable-accent() {
+  .accordion-card.is-valid .accordion-remove-trigger:hover {
+      &:before,
+      &:after {
+        background-color: $dark-primary;
+      }
+  }
+}
+
+
+// Validation accordion special style
+.accordion-card.accordion-validation {
+  .accordion-header {
+    @include flex();
+    
+    a[data-toggle="collapse"],
+    .accordion-head {
+      padding-left: 0;
+      outline:0;
+      @include flex-grow(1);
+      
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.remove-existing-filters,
+.accordion-remove-trigger {
+  display: block;
+  position: relative;
+  width: ($accordion-head-padding + 1.25rem);
+  height: $line-height-base*$font-size-lg + 2*$accordion-head-padding;
+  outline: none;
+  @include flex-shrink(0);
+
+  &:before {
+    transition: background .3s ease-out, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  &:after {
+    opacity: 0;
+    transition: background .3s ease-out, opacity 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  &:before,
+  &:after {
+    @include accordion-dash();
+  }
+}
+
+// is valid
+.label-applied-filters > li.is-valid .remove-existing-filters,
+.label-remove-filters.is-valid .remove-existing-filters,
+.accordion-card.is-valid .accordion-remove-trigger {
+  &:before {
+    transform: rotate(225deg);
+    transition: background .3s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), color .3s ease-out;
+  }
+  &:after {
+    opacity: 1;
+    transform: rotate(-45deg);
+    transition: background .3s ease-out, opacity 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), color .3s ease-out;
+  }
+}
+
+// Show state
+.accordion-card.accordion-validation.show {
+  .accordion-header {
+    .accordion-remove-trigger {
+      &:before,
+      &:after {
+        top: calc((#{$line-height-base}*#{$font-size-lg} - 2px)/2 + #{$accordion-head-padding});
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

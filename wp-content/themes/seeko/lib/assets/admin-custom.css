@@ -1,0 +1,15 @@
+/* tgmpa error */
+#setting-error-tgmpa {
+    clear: both;
+    display: block;
+}
+#setting-error-tgmpa button.notice-dismiss {
+    display: none;
+}
+
+tr.bottom-border td {
+	border-bottom: 1px solid #ccc;
+}
+
+
+.import-demo {margin: 0 auto;}

@@ -1,0 +1,89 @@
+.sko-photo-gallery {
+	.sko-item-caption {
+		border-radius: $border-radius;
+	}
+}
+@include media-breakpoint-between(sm,md) {
+	.sko-photo-gallery {
+		.sko-item:first-child {
+		}
+		.sko-item:nth-child(2), .sko-item:nth-child(4), .sko-item:nth-child(6) {
+		}
+		.sko-item:nth-child(3), .sko-item:nth-child(5), .sko-item:nth-child(7) {
+		}
+		.sko-item:nth-child(2) {
+		}
+		.sko-item:nth-child(3) {
+		}
+		.sko-item:nth-child(4) {
+		}
+		.sko-item:nth-child(5) {
+		}
+		.sko-item:nth-child(6) {
+		}
+		.sko-item:nth-child(7) {
+		}
+		&.sko-tpl-6 {
+			.sko-item:nth-child(6) {
+			}
+		}
+		&.sko-tpl-5 {
+			.sko-item:nth-child(5) {
+			}
+		}
+		&.sko-tpl-4 {
+			.sko-item:nth-child(4) {
+			}
+		}
+		&.sko-tpl-3 {
+			.sko-item:nth-child(3) {
+			}
+		}
+		&.sko-tpl-2 {
+			.sko-item:nth-child(2) {
+			}
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.sko-photo-gallery {
+		&[class*="sko-tpl-"] {
+		}
+		.sko-item:first-child, .sko-item:nth-child(2), &.sko-tpl-3 .sko-item:nth-child(3) {
+		}
+		.sko-item:nth-child(3) {
+		}
+		.sko-item:nth-child(4) {
+		}
+		.sko-item:nth-child(5) {
+		}
+		.sko-item:nth-child(6), .sko-item:nth-child(7) {
+		}
+		.sko-item:first-child, &.sko-tpl-reverse .sko-item:nth-child(7), &.sko-tpl-reverse.sko-tpl-2 .sko-item:nth-child(2) {
+		}
+		.sko-item:nth-child(2), &.sko-tpl-reverse .sko-item:nth-child(6) {
+		}
+		.sko-item:nth-child(3), &.sko-tpl-reverse .sko-item:nth-child(4) {
+		}
+		.sko-item:nth-child(4), &.sko-tpl-reverse .sko-item:nth-child(3) {
+		}
+		.sko-item:nth-child(6), &.sko-tpl-reverse .sko-item:nth-child(2) {
+		}
+		.sko-item:nth-child(7), &.sko-tpl-reverse .sko-item:first-child, &.sko-tpl-2 .sko-item:nth-child(2) {
+		}
+		&.sko-tpl-6 .sko-item:nth-child(6), &.sko-tpl-reverse.sko-tpl-4 .sko-item:nth-child(4) {
+		}
+		&.sko-tpl-6.sko-tpl-reverse .sko-item:nth-child(6) {
+		}
+		&.sko-tpl-5 .sko-item:nth-child(4), &.sko-tpl-4 .sko-item:nth-child(4) {
+		}
+		&.sko-tpl-4 .sko-item:nth-child(4) {
+		}
+	}
+}
+@include media-breakpoint-up(xl) {
+	.sko-photo-gallery {
+		.sko-item {
+		}
+	}
+}

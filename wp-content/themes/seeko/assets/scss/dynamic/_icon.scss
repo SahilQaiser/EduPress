@@ -1,0 +1,5 @@
+.icon-google-color {
+	&:before {
+		@include size($icon-size,$icon-size);
+	}
+}

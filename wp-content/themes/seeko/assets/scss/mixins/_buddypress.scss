@@ -1,0 +1,41 @@
+// Buddypress Mixins
+
+
+// Bp Member Cover
+
+@mixin bp-cover-height($array) {
+  $prev: "";
+  
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $cover-height: map-get($array, $breakpoint);
+    
+    @if $cover-height and $cover-height != $prev and $cover-height != "" {
+      @include media-breakpoint-up($breakpoint) {
+        height: $cover-height;
+      }
+    }
+    $prev: $cover-height;
+  }
+}
+
+
+@mixin sq-sidebar($width) {
+  .sq-bp-sidebar {
+    width: $width;
+    max-width: $width;
+    flex: 0 0 $width;
+    flex-shrink: 0;
+  }
+  .sq-bp-sidebar + [class*="col-"] {
+    max-width: calc(100% - #{$width});
+  }
+}
+
+
+@mixin bp-sidebar($value) {
+  @include dual-dynamic-array($value, $grid-gutter-widths, 'bp-sidebar');
+}
+
+
+
+

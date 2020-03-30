@@ -1,0 +1,501 @@
+//
+// Buddypress buttons with microinteractions
+//
+
+// buttons
+
+.btn.bp-btn,
+.btn.btn-sm.bp-btn {
+  @include flex('inline');
+  border-radius: 100%;
+  @include transition(background .25s ease-out, color .25s ease-out, padding .25s ease-out, box-shadow .25s ease-out);
+  border: none;
+  
+  &:hover {
+    text-decoration: none;
+    color: $body-color;
+  }
+  
+  .icon + span,
+  .fa + span {
+    margin-left: .5rem;
+  }
+  
+}
+
+
+.bp-btn.btn-square.btn-sm {
+  padding: rem-px($btn-padding-y-sm, 18); 
+}
+
+.user-avatar-wrapper {
+  position: relative;
+  
+  .bp-btn.btn.btn-square {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: rem-px($btn-padding-y, 18);
+  }
+}
+
+
+// add friend / join 
+.bp-btn.friendship-button,
+.bp-btn.group-button {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  background: $gray-050;
+  margin-right: .25rem;
+  
+  span {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      margin-top: -1px;
+      height: 2px;
+    }
+  }
+  
+  
+  &.btn span {
+    width: $bp-btn-line + 10px;
+    height: $bp-btn-line + 10px;
+    
+    &:before,
+    &:after {
+      margin-left: -$bp-btn-line/2;
+      width: $bp-btn-line;
+    }
+  }
+}
+
+
+// not friends
+.bp-btn.not_friends,
+.bp-btn.group-button.join-group,
+.bp-btn.group-button.request-membership {
+  border-color: $primary;
+  background-color: $primary;
+  color: $primary;
+  box-shadow: 0 .65rem 1.5rem -.25rem rgba($primary, 0.5);
+  
+  
+  span {
+    &:before,
+    &:after {
+      background: $white;
+    }
+    
+    &:before {
+      transform: rotate(0);
+    }
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+  
+  &:hover {
+    background-color: darken($primary, 5%);
+    border-color: darken($primary, 5%);
+    
+  }
+  
+  &[data-svq-title] {
+    &:hover {
+      &:before {
+        background: $primary;
+      }
+      &:after {
+        border-top-color: $primary;
+      }
+    }
+  }
+}
+
+// awaiting response
+.bp-btn.awaiting_response_friend {
+  border-color: $warning;
+  color: $warning;
+  background: $warning;
+  box-shadow: 0 1rem 2rem -.75rem rgba($warning, 0.6);
+  
+  span {
+    &:before,
+    &:after {
+      background: $white;
+      margin-left: -0.5rem !important;
+    }
+    transform: translateX(-.25rem) rotate(180deg);
+    
+    &:before {
+      @include dash-to-arrow($bp-btn-line, 0.7, "top");
+    }
+    &:after {
+      @include dash-to-arrow($bp-btn-line, 0.7, "bottom");
+    }
+  }
+  
+  &[data-svq-title] {
+    &:hover {
+      &:before {
+        background: $warning;
+      }
+      &:after {
+        border-top-color: $warning;
+      }
+    }
+  }
+}
+
+
+// pending friend
+.bp-btn.pending_friend,
+.bp-btn.group-button.membership-requested {
+  border-color: mix($white, $primary, 40%);
+  background: mix($white, $primary, 40%);
+  
+  span {
+    transform: rotate(180deg);
+    @include transition(transform .3s cubic-bezier(0.215, 0.61, 0.355, 1));
+    
+    &:before,
+    &:after {
+      background: $white;
+      @include transition(background .3s ease-out .3s, transform .25s .1s cubic-bezier(0.215, 0.61, 0.355, 1));
+    }
+    
+    &:before {
+      z-index: 4;
+      transform: rotate(360deg);
+      animation: minimize .25s forwards .25s, pulseDotReversed .8s ease-out .5s infinite;
+    }
+    
+    &:after {
+      z-index: 3;
+      transform: rotate(270deg);
+      animation: minimize .25s forwards .25s, pulseDot .8s ease-out .5s infinite;
+    }
+  }
+  
+  // hover
+  &:hover {
+    border-color: $secondary;
+    background: $secondary;
+    
+    span {
+      
+      &:before {
+        animation: minimize .25s forwards .25s, pulseDotReversed .8s ease-out .5s forwards, minimizeReversed .25s forwards .25s;
+      }
+      &:after {
+        animation: minimize .25s forwards .25s, pulseDot .8s ease-out .5s forwards, minimizeReversed .25s forwards .25s;
+      }
+    }
+  }
+}
+
+
+// is friend
+.bp-btn.is_friend,
+.bp-btn.group-button.leave-group,
+.bp-btn.accept {
+  border-color: $tertiary;
+  background-color: $tertiary;
+  color: $white;
+  box-shadow: 0 .65rem 1.5rem -.25rem rgba($tertiary, 0.5);
+  
+  span {
+    animation: checkRotate .25s forwards .15s;
+      
+    &:before,
+    &:after {
+      background: $white;
+    }
+    &:before {
+      animation: minimizeReversed .15s forwards;
+    }
+    &:after {
+      opacity: 0;
+      transform-origin: center left;
+      animation: miniStepOne .15s forwards .15s, miniStepTwo .35s forwards .25s;
+    }
+  }
+}
+
+// is friend hover
+.bp-btn.is_friend,
+.bp-btn.group-button.leave-group {
+  &:hover {
+    border-color: $secondary;
+    background: $secondary;
+    box-shadow: none;
+    
+    span {
+      animation: checkRotateReversed .25s forwards;
+      
+      &:after {
+        opacity: 1;
+        animation: miniStepOne .15s forwards .15s, miniStepTwoReversed .15s forwards;
+      }
+    }
+  }
+}
+
+
+// accept friendship
+.bp-btn.accept {
+  
+  &:hover {
+    border-color: $tertiary;
+    background: $tertiary;
+    box-shadow: none; 
+  }
+  
+  &[data-svq-title] {
+    &:hover {
+      &:before {
+        background: $tertiary;
+      }
+      &:after {
+        border-top-color: $tertiary;
+      }
+    }
+  }
+}
+
+
+// reject friendship
+.bp-btn.reject {
+  border-color: $secondary;
+  background: $secondary;
+  box-shadow: none;
+  span {
+   animation: checkRotateReversed .25s forwards;
+    
+    &:before,
+    &:after {
+      background: $white;
+    }
+    &:before {
+      animation: minimizeReversed .15s forwards;
+    }
+    &:after {
+      opacity: 0;
+      transform-origin: center left;
+      animation: miniStepOne .15s forwards .15s;
+    }
+  }
+}
+
+
+// pubic message
+.bp-btn.mention {
+  color: $secondary;
+  &:hover {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    color: $body-color;
+    background: $gray-100;
+  }
+}
+
+#post-mention {
+  width: 100%;
+}
+
+@include media-breakpoint-up(lg) {
+  #post-mention {
+    width: calc(100% - 3.25rem);
+  }
+}
+
+
+// tooltip for bp
+
+[data-svq-title].not_friends {
+  &:before {
+    background: $primary;
+  }
+  &:after {
+    border-top-color: $primary;
+  }
+}
+
+[data-svq-title].pending_friend,
+[data-svq-title].is_friend,
+[data-svq-title].request-membership,
+[data-svq-title].leave-group {
+  &:before {
+    background: $secondary;
+  }
+  &:after {
+    border-top-color: $secondary;
+  }
+}
+
+// tooltip on page load
+
+[data-svq-pending].pending_friend,
+[data-svq-pending].request-membership {
+  &:before {
+    content: attr(data-svq-pending);
+    background: mix($white, $primary, 40%);
+  }
+  &:after {
+    border-top-color: mix($white, $primary, 40%);
+  }
+  &:before,
+  &:after {
+    animation: opacityTooltip 2s ease-out .5s;
+  }
+  &:hover {
+    &:before {
+      content: attr(data-svq-title);
+      background: $secondary;
+    }
+    &:after {
+      border-top-color: $secondary;
+    }
+  }
+}
+
+.member-promote-to-admin,
+.mod-promote-to-admin {
+  &:before {
+    background: $tertiary;
+  }
+  &:after {
+    border-top-color: $tertiary;
+  }
+}
+
+
+// buttons keyframes
+
+@include animate-keyframe( minimize ) {
+		0% {
+      transform: rotate(270deg) scale(1);
+      border-radius: 0;
+		}
+		100% {
+      transform: rotate(270deg) scale(4/no-unit-base($bp-btn-line), 2);
+      border-radius: 50%;
+		}
+}
+
+@include animate-keyframe( minimizeReversed ) {
+		0% {
+      transform: rotate(0) scale(4/no-unit-base($bp-btn-line), 2);
+      border-radius: 50%;
+		}
+    100% {
+      transform: rotate(0) scale(1);
+      border-radius: 0;
+		}
+}
+
+@include animate-keyframe( miniStepOne ) {
+		0% {
+      transform: rotate(0) scale(4/no-unit-base($bp-btn-line), 2);
+      opacity: 0;
+		}
+    100% {
+      transform: rotate(0) scale(.5, 1);
+      opacity: 1;
+		}
+}
+
+@include animate-keyframe( miniStepTwo ) {
+		0% {
+      transform: rotate(0) scale(.5, 1);
+		}
+    100% {
+      transform: rotate(-60deg) scale(.5, 1);
+		}
+}
+
+@include animate-keyframe( miniStepTwoReversed ) {
+    0% {
+      transform: rotate(-60deg) scale(.5, 1);
+		}
+    100% {
+      transform: rotate(0) scale(.5, 1);
+		}
+}
+
+@include animate-keyframe( checkRotate ) {
+		0% {
+      transform: translateX(0) rotate(180deg) ;
+		}
+    100% {
+      transform: translateX(1px) rotate(-60deg) ;
+		}
+}
+
+@include animate-keyframe( checkRotateReversed ) {
+    0% {
+      transform: translateX(1px) rotate(-60deg) ;
+		}
+		100% {
+      transform: translateX(0) rotate(180deg) ;
+		}
+}
+
+@include animate-keyframe( pulseDot ) {
+		0% {
+      transform: rotate(270deg) scale(4/no-unit-base($bp-btn-line), 2);
+      opacity: .1;
+      border-radius: 50%;
+		}
+		65% {
+      transform: rotate(270deg) scale(16/no-unit-base($bp-btn-line), 8);
+      border-radius: 50%;
+		}
+  
+    100% {
+      transform: rotate(270deg) scale(8/no-unit-base($bp-btn-line), 4);
+      opacity: .6;
+      border-radius: 50%;
+		}
+}
+
+@include animate-keyframe( pulseDotReversed ) {
+		0% {
+      transform: rotate(270deg) scale(2/no-unit-base($bp-btn-line), 1);
+      opacity: .4;
+      border-radius: 50%;
+		}
+		45% {
+      transform: rotate(270deg) scale(8/no-unit-base($bp-btn-line), 4);
+      opacity: 1;
+      border-radius: 50%;
+		}
+  
+    100% {
+      transform: rotate(270deg) scale(4/no-unit-base($bp-btn-line), 2);
+      opacity: .8;
+      border-radius: 50%;
+		}
+}
+
+@include animate-keyframe( opacityTooltip ) {
+		0% {
+      opacity: $tooltip-opacity;
+		}
+    90% {
+      opacity: $tooltip-opacity;
+    }
+    100% {
+      opacity: 0;
+		}
+}
